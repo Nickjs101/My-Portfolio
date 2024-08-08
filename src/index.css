@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* .gradientGreen{
+    @apply bg-clip-text bg-gradient-to-r from-[#9fef00] to-black inline;
+} */
+
+
+.primary-color {
+    /* @apply text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-400 inline-block; */
+    @apply text-transparent bg-clip-text bg-[#9fef00] inline-block;
+}
+
+.secondary-color{
+    @apply text-[#A4B1CDff];
+}
+.tertiary-color{
+    @apply text-[#141d2b];
+}
+
+
+.bg-primary-color {
+    @apply   bg-[#9fef00] ;
+}
+.bg-secondary-color{
+    @apply   bg-[#0b121f] ;
+}
+.bg-tertiary-color{
+    @apply   bg-[#A4B1CDff] ;
+}
+.bg-fourth-color{
+    @apply   bg-[#1A2332ff] ;
+}
+body{
+    @apply bg-[#0b121f];
+}
+
+.fade-effect{
+    @apply text-transparent bg-clip-text  inline-block;
+    @apply bg-gradient-to-b from-[#A4B1CDff] to-[#a4b1cd19] 
+    
+}
+
+.highlight-effect{
+    @apply relative z-[1] before:content-[''] before:absolute before:z-[-1] before:left-[-0.25em] before:right-[-0.25em] before:bg-gradient-to-r from-[#9fef00] to-[#0b121f00] before:origin-[center_right] before:transition-transform before:duration-[0.2s] before:ease-[ease-in-out] before:scale-x-0 before:inset-y-0 hover:before:origin-[center_left] hover:before:scale-x-100 hover:text-[#141d2b];
+}
+.active-highlight-effect{
+    @apply relative z-[1] before:content-[''] before:absolute before:z-[-1] before:left-[-0.25em] before:right-[-0.25em] before:bg-gradient-to-r from-[#9fef00] to-[#0b121f00] before:origin-[center_right] before:transition-transform before:duration-[0.2s] before:ease-[ease-in-out] before:scale-x-100 before:inset-y-0  text-[#141d2b];
+}
+
+.underline-effect{
+    @apply relative before:content-[''] before:absolute before:w-full before:h-0.5 before:bg-[#9fef00] before:origin-center before:-translate-x-2/4 before:translate-y-0 before:transition-transform before:duration-[0.3s] before:ease-[ease-in-out] before:scale-x-0 before:left-2/4 before:bottom-0 hover:before:-translate-x-2/4 hover:before:translate-y-0 hover:before:scale-x-100;
+}
+/* CSS HEX
+--powder-blue: #A4B1CDff;
+--black: #000000ff;
+--rich-black: #0B121Fff;
+--raisin-black: #1A2332ff;
+--rich-black-2: #141D2Bff; */
+
+
