@@ -42,18 +42,18 @@ const Cyberprojects = ({projectComponent, category, setprojectCategory, setproje
               <div className='text-gray-400 h-[70px] max-w-[1200px] mx-auto flex justify-between items-center'>
                   <h1 className='text-3xl font-bold primary-color ml-4 cursor-pointer' onClick={() => setCurrentContent('Main')}>&#10094; Projects</h1>
                   <div className='flex gap-5 mr-4'>
-                    <a href="#" onClick={() => {setprojectCategory('Cybersecurity');setCurrentComponent(projectCategory[0].Cybersecurity[0].component);}} className={`hidden md:block text-[#9fef00] font-semibold py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category == 'Cybersecurity'? 'shadow-none' : 'shadow-lg'}`}>
+                    <a href="/" onClick={() => {setprojectCategory('Cybersecurity');setCurrentComponent(projectCategory[0].Cybersecurity[0].component);}} className={`hidden md:block text-[#9fef00] font-semibold py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category === 'Cybersecurity'? 'shadow-none' : 'shadow-lg'}`}>
                       Cybersecurity
                     </a>
-                    <a href="#" onClick={() => {setprojectCategory('Cybersecurity');setCurrentComponent(projectCategory[0].Cybersecurity[0].component);}} className={`block md:hidden py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category == 'Cybersecurity'? 'shadow-none' : 'shadow-lg'}`}>
+                    <a href="/" onClick={() => {setprojectCategory('Cybersecurity');setCurrentComponent(projectCategory[0].Cybersecurity[0].component);}} className={`block md:hidden py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category === 'Cybersecurity'? 'shadow-none' : 'shadow-lg'}`}>
                       <FontAwesomeIcon style={{color: "#9fef00"}} icon='fa-solid fa-shield'/>
                     </a>
                     
 
-                    <a href="#" onClick={() => {setprojectCategory('SoftwareDev');setCurrentComponent(projectCategory[1].SoftwareDev[0].component);}} className={`hidden md:block text-[#9fef00] font-semibold py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category == 'SoftwareDev'? 'shadow-none' : 'shadow-lg'}`}>
+                    <a href="/" onClick={() => {setprojectCategory('SoftwareDev');setCurrentComponent(projectCategory[1].SoftwareDev[0].component);}} className={`hidden md:block text-[#9fef00] font-semibold py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category === 'SoftwareDev'? 'shadow-none' : 'shadow-lg'}`}>
                       Software Development
                     </a>
-                    <a href="#" onClick={() => {setprojectCategory('SoftwareDev');setCurrentComponent(projectCategory[1].SoftwareDev[0].component);}} className={`block md:hidden py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category == 'SoftwareDev'? 'shadow-none' : 'shadow-lg'}`}>
+                    <a href="/" onClick={() => {setprojectCategory('SoftwareDev');setCurrentComponent(projectCategory[1].SoftwareDev[0].component);}} className={`block md:hidden py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category === 'SoftwareDev'? 'shadow-none' : 'shadow-lg'}`}>
                       <FontAwesomeIcon style={{color: "#9fef00"}} icon='fa-solid fa-file-code'/>
                     </a>
                   </div>

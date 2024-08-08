@@ -23,9 +23,9 @@ const Education = () => {
                     </div>
                 </div>
                 <div className="relative h-[60vh] w-full my-[50px] px-[10px] lg:w-4/6 md:mx-auto">
-                    <img className='absolute top-[-30px] left-2 w-auto h-2/5 bg-gray-200 rounded-xl border border-white shadow-2xl' src={comp} alt="About Image" width={300} height={300} />
-                    <img className='absolute top-1/4 right-3 lg:right-0 w-auto h-3/5 z-10 bg-gray-300 rounded-xl border border-white shadow-2xl' src={gradpic} alt="About Image" width={300} height={300} />
-                    <img className='absolute bottom-[-50px] lg:bottom-[-30px] left-2 lg:left-[-20px] w-auto h-2/5 bg-gray-400 rounded-xl border border-white shadow-2xl' src={org} alt="About Image" width={300} height={300} />
+                    <img className='absolute top-[-30px] left-2 w-auto h-2/5 bg-gray-200 rounded-xl border border-white shadow-2xl' src={comp} alt="About " width={300} height={300} />
+                    <img className='absolute top-1/4 right-3 lg:right-0 w-auto h-3/5 z-10 bg-gray-300 rounded-xl border border-white shadow-2xl' src={gradpic} alt="About " width={300} height={300} />
+                    <img className='absolute bottom-[-50px] lg:bottom-[-30px] left-2 lg:left-[-20px] w-auto h-2/5 bg-gray-400 rounded-xl border border-white shadow-2xl' src={org} alt="About " width={300} height={300} />
                 </div>
             </div>
         </div>

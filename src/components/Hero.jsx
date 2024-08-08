@@ -19,7 +19,7 @@ const Hero = () => {
   return (
     <div id='Home' className='bg-secondary-color grid grid-cols-1 lg:grid-cols-3 lg:gap-8 max-w-[1200px]  md:h-auto lg:h-[50vh] mx-auto py-8 mt-0 md:mt-[50px]'>
         <div className='bg-gradient-to-r from-slate-900 to-slate-700 col-span-1 my-auto mx-auto h-auto w-[200px] sm:w-[250px] md:w-[400px] lg:w-[400px] rounded-[50%] shadow-xl'>
-            <img className='rounded-[50%]' src={heroimage} alt='Hero Image'/>
+            <img className='rounded-[50%]' src={heroimage} alt='Hero'/>
         </div>
         <div className='col-span-2 px-5 my-auto'>
             <h1 className=' my-5 lg:my-0 text-white text-4xl sm:text-5xl lg:text-6xl font-bold'>
@@ -67,7 +67,7 @@ const Hero = () => {
                         Resume/CV
                     </span>
                 </a>
-                <a onClick={(e) => gotoSection(e, 'contact')} href="#" class="group w-12 hover:w-44 h-12 hover:bg-rose-600 relative bg-rose-700 rounded text-neutral-50 duration-700 before:duration-700 before:hover:500 font-bold flex justify-start gap-2 items-center p-2 pr-6 before:absolute before:-z-10 before:left-8 before:hover:left-40 before:w-6 before:h-6 before:bg-sky-700 before:hover:bg-sky-600 before:rotate-45">
+                <a onClick={(e) => gotoSection(e, 'contact')} href="/" class="group w-12 hover:w-44 h-12 hover:bg-rose-600 relative bg-rose-700 rounded text-neutral-50 duration-700 before:duration-700 before:hover:500 font-bold flex justify-start gap-2 items-center p-2 pr-6 before:absolute before:-z-10 before:left-8 before:hover:left-40 before:w-6 before:h-6 before:bg-sky-700 before:hover:bg-sky-600 before:rotate-45">
                     <svg y="0" xmlns="http://www.w3.org/2000/svg" x="0" width="100" height="100" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet" class="w-8 h-8 shrink-0 fill-neutral-50">
                         <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
                     </svg>
