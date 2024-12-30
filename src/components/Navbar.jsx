@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function Navbar({setIsChatVisible}) {
+export default function Navbar() {
     const gotoSection = (event, id) => {
         event.preventDefault();
         const section = document.getElementById(id);
@@ -54,7 +54,7 @@ export default function Navbar({setIsChatVisible}) {
             </div>
             <a
               href="#contact"
-              onClick={() => setIsChatVisible(true)}
+              onClick={() => {}}
               className="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300"
             >
               Want to know More?
@@ -123,7 +123,7 @@ export default function Navbar({setIsChatVisible}) {
             className="bg-emerald-500 hover:bg-emerald-600 text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
             onClick={() => {
               setIsMenuOpen(false);
-              setIsChatVisible(true);
+              
             }}
           >
             Want to know More?

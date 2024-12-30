@@ -26,7 +26,7 @@ function App() {
   const [currentContent, setCurrentContent] = useState('Main');
   const [projectComponent, setprojectComponent] = useState(<Navbar/>);
   const [projectCategory, setprojectCategory] = useState('SoftwareDev');
-  const [isChatVisible, setIsChatVisible] = useState(false);
+ 
 
   const displayProject = useCallback((Component, Category) => {
     setprojectComponent(Component);
@@ -44,7 +44,7 @@ function App() {
     }
     return (
       <>
-        <Navbar setIsChatVisible={setIsChatVisible}/>
+        <Navbar/>
         <Hero/>
         <Skills/>
         <Certs/>
@@ -55,7 +55,7 @@ function App() {
           <Work displayProject={displayProject}/>
         </Provider>
         <Footer/>
-        <Chatbox setIsChatVisible={setIsChatVisible} isChatVisible={isChatVisible}/>
+        <Chatbox/>
       </>
     );
   }, [currentContent, projectComponent, projectCategory, displayProject]);
