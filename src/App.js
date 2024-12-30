@@ -3,12 +3,12 @@ import Navbar from "./components/navbar";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Work from "./components/projects-showcase";
-import Contact from "./components/terminal-chat";
 import Footer from "./components/Footer";
 import Certs from "./components/Certs";
 import Experience from "./components/Experience";
 import Cyberprojects from "./components/Cyberprojects";
 import Education from "./components/education";
+import Chatbox from "./components/chat-box2";
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGoogle, faLinux, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -26,6 +26,7 @@ function App() {
   const [currentContent, setCurrentContent] = useState('Main');
   const [projectComponent, setprojectComponent] = useState(<Navbar/>);
   const [projectCategory, setprojectCategory] = useState('SoftwareDev');
+  const [isChatVisible, setIsChatVisible] = useState(false);
 
   const displayProject = useCallback((Component, Category) => {
     setprojectComponent(Component);
@@ -43,7 +44,7 @@ function App() {
     }
     return (
       <>
-        <Navbar/>
+        <Navbar setIsChatVisible={setIsChatVisible}/>
         <Hero/>
         <Skills/>
         <Certs/>
@@ -53,8 +54,8 @@ function App() {
         <Provider store={projectStorage}>
           <Work displayProject={displayProject}/>
         </Provider>
-        <Contact/>
         <Footer/>
+        <Chatbox setIsChatVisible={setIsChatVisible} isChatVisible={isChatVisible}/>
       </>
     );
   }, [currentContent, projectComponent, projectCategory, displayProject]);

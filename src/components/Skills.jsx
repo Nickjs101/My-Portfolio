@@ -1,11 +1,4 @@
 import React from 'react';
-import js from '../assets/js.png';
-import c from '../assets/c-sharp.png';
-import java from '../assets/java.png';
-import bash from '../assets/gnu-bash.png';
-import php from '../assets/php.png';
-import sql from '../assets/sql-server.png';
-import python from '../assets/python.png';
 
 import { 
   SiGithubactions, 
