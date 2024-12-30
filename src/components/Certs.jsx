@@ -1,76 +1,215 @@
 import React, { useState } from 'react'
 import C1 from '../assets/Certificates/HCIA.jpg'
-import C2 from '../assets/Certificates/GoogleCC1.jpg'
-import C3 from '../assets/Certificates/GoogleCC2.jpg'
-import C4 from '../assets/Certificates/GoogleCC3.jpg'
-import C5 from '../assets/Certificates/JavaExplorer.jpg'
-import C6 from '../assets/Certificates/Onset.jpg'
+import C2 from '../assets/Certificates/Connect&Protect.jpg'
+import C3 from '../assets/Certificates/Foundation.jpg'
+import C4 from '../assets/Certificates/Playitsafe.jpg'
+import C5 from '../assets/Certificates/Sound.jpg'
+import C6 from '../assets/Certificates/ATV.jpg'
+import C7 from '../assets/Certificates/Tools.jpg'
+import C8 from '../assets/Certificates/JavaExplorer.jpg'
+import C9 from '../assets/Certificates/Onset.jpg'
+
+import Modal from './subcomponents/imagemodal'
 
 
 const Certs = () => {
-  const [imgsrc, setimagesrc] = useState(C1);
-  const [activeCert, setActiveCert] = useState(0);
+  
+  const certifications = [
+    {
+      id: 1,
+      title: "HCIA - Cloud Computing",
+      issuer: "Huawei",
+      date: "2023",
+      image: C1, // Replace with actual image path
+      link: "https://e.huawei.com/en/talent/#/cert/certificate-verification" // Replace with actual verification link
+    },
+    {
+      id: 2,
+      title: "Connect & Protect: Networks & Network Security",
+      issuer: "Cisco",
+      date: "2023",
+      image: C2,
+      link: "https://coursera.org/share/cb618813ca3f1139df72a1dd5fcf4cc3"
+    },
+    {
+      id: 3,
+      title: "Foundations of Cybersecurity",
+      issuer: "Google",
+      date: "2023",
+      image: C3,
+      link: "https://coursera.org/share/91d567af5011cdb524f4293113e39260"
+    },
+    {
+      id: 4,
+      title: "Play It Safe: Manage Security Risks",
+      issuer: "Google",
+      date: "2023",
+      image: C4,
+      link: "https://coursera.org/share/69b3c411e254e679811adaaedf35076b"
+    },
+    {
+      id: 5,
+      title: "Sound the Alarm: Detection and Response",
+      issuer: "Google",
+      date: "2023",
+      image: C5,
+      link: "https://coursera.org/share/e074d29b212fdc742f4bce993114b230"
+    },
+    {
+      id: 6,
+      title: "Assets, Threats, and Vulnerabilities",
+      issuer: "Google",
+      date: "2023",
+      image: C6,
+      link: "https://coursera.org/share/d288f3f61c9e6c47a7ff8f3414c51c16"
+    },
+    {
+      id: 7,
+      title: "Tools of the Trade: Linux and SQL",
+      issuer: "Google",
+      date: "2023",
+      image: C7,
+      link: "https://coursera.org/share/c55b2a188baaef58b85b6364e2b05635"
+    },
+    {
+      id: 8,
+      title: "Java Explorer",
+      issuer: "Oracle",
+      date: "2023",
+      image: C8,
+      link: "#"
+    },
+    {
+      id: 9,
+      title: "ONE STI Educators Training Starter",
+      issuer: "STI",
+      date: "2023",
+      image: C9,
+      link: "#"
+    }
+  ]
 
-  const imagePaths = [C1, C2, C3, C4, C5, C6];
-  const certNames = [
-    "HCIA - Cloud Computing",
-    "Connect & Protect: Networks & Network Security",
-    "Foundations of Cybersecurity",
-    "Play It Safe: Manage Security Risks",
-    "Java Explorer",
-    "ONE STI Educators Training Starter"
-  ];
-
-  const ChangeImage = (idx) => {
-    setimagesrc(imagePaths[idx]);
-    setActiveCert(idx);
-  };
-
-  const PrevCert = () => {
-    ChangeImage(activeCert === 0? certNames.length - 1: activeCert - 1 );
-  };
-  const NextCert = () => {
-    ChangeImage(activeCert === certNames.length - 1? 0: activeCert + 1 );
-  };
-
+  const [selectedCert, setSelectedCert] = useState(null)
+  
+    const openModal = (cert) => {
+      setSelectedCert(cert)
+    }
+  
+    const closeModal = () => {
+      setSelectedCert(null)
+    }
+  
   return (
-    <div id='Certifications' className=' max-w-[1200px] mx-auto my-[100px]'>
-      <div className=' shadow-xl md:grid md:grid-cols-2 rounded-xl py-5 px-2 mx-2 md:px-5 lg:mx-0'>
-        <h2 className='text-4xl md:text-5xl font-bold mb-8 col-span-2 text-center text-[#9fef00]'>Certifications</h2>
-        <div className='hidden md:block'>
-              <ul className='px-10 pb-10 mt-0 text-left align-center text-[#A4B1CDff] flex flex-col text-xl'>
-                  {certNames.map((name, idx) => (
-                      <li
-                      key={idx}
-                      onClick={() => ChangeImage(idx)}
-                      className={`py-2 highlight-effect ${activeCert === idx ? "active-highlight-effect" : ""}`}
-                      >
-                      {name}
-                      </li>
-                  ))}
-              </ul>
-        </div>
-        <h3 className='block md:hidden text-xl font-bold text-white text-center h-[59px] md:h-auto'>{certNames[activeCert]}</h3>
-        <div className='mx-auto w-auto py-5 md:py-0'>
-          <img className='h-[259px] lg:h-[400px] mx-auto rounded-lg' src={imgsrc} alt="Certificate" />
-        </div>
-        <div className='block md:hidden'>
-              <div className='flex flex-col items-center'>
-                  <div className='flex mt-2 items-center'>
-                      <button onClick={PrevCert} className="mx-5 text-[#A4B1CDff] text-xl text-bold">&#10094;</button>
-                      {imagePaths.map((_, idx) => (
-                      <button
-                          key={idx}
-                          onClick={() => ChangeImage(idx)}
-                          className={`w-2 h-2 mx-1 text-center rounded-full ${activeCert === idx ? 'bg-[#9fef00be]' : 'bg-gray-400'}`}
-                      ></button>
-                      ))}
-                      <button onClick={NextCert} className="mx-5 text-gray-400  text-xl text-bold">&#10095;</button>
+    <section id='Certifications' className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                  Professional Certifications
+                </h2>
+                <div className="h-1 w-20 bg-emerald-500 mx-auto rounded-full"></div>
+              </div>
+      
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {certifications.map((cert) => (
+                  <div
+                    key={cert.id}
+                    className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-slate-700 hover:border-emerald-500 transition-all duration-300 group"
+                  >
+                    <div className="flex flex-col h-full">
+                      <div className="mb-4">
+                        <div className="inline-block p-3 bg-emerald-500/10 rounded-lg mb-4">
+                          <svg
+                            className="w-8 h-8 text-emerald-500"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                            />
+                          </svg>
+                        </div>
+                        <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+                          {cert.title}
+                        </h3>
+                        <p className="text-slate-400">
+                          Issued by {cert.issuer} • {cert.date}
+                        </p>
+                      </div>
+                      <div className="mt-auto">
+                        <button
+                          onClick={() => openModal(cert)}
+                          className="text-emerald-500 hover:text-emerald-400 text-sm font-medium inline-flex items-center transition-colors"
+                        >
+                          View Certificate
+                          <svg
+                            className="w-4 h-4 ml-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
                   </div>
-              </div> 
-        </div>
-      </div>
-    </div>
+                ))}
+              </div>
+      
+              <Modal isOpen={!!selectedCert} onClose={closeModal}>
+                {selectedCert && (
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-bold text-white">
+                      {selectedCert.title}
+                    </h3>
+                    <div className="aspect-[16/9] bg-slate-800 rounded-lg overflow-hidden">
+                      <img
+                        src={selectedCert.image}
+                        alt={`${selectedCert.title} Certificate`}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <p className="text-slate-400">
+                        Issued by {selectedCert.issuer} • {selectedCert.date}
+                      </p>
+                      <a
+                        href={selectedCert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition-colors"
+                      >
+                        Verify Certificate
+                        <svg
+                          className="w-4 h-4 ml-2"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                )}
+              </Modal>
+            </div>
+    </section>
+    
   )
 }
 

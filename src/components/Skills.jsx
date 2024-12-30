@@ -7,33 +7,62 @@ import php from '../assets/php.png';
 import sql from '../assets/sql-server.png';
 import python from '../assets/python.png';
 
+import { 
+  SiGithubactions, 
+  SiTerraform, 
+  SiPython, 
+  SiMysql, 
+  SiGnubash, 
+  SiTailwindcss, 
+  SiReact, 
+  SiGit, 
+  SiJavascript, 
+  SiLinux, 
+  SiUnity, 
+  SiOpenai,
+  SiCsharp
+} from 'react-icons/si';
+import { FaAws } from 'react-icons/fa';
+
 const Skills = () => {
-  const techstack = [
-    { icon: js, name: 'Javascript' },
-    { icon: c, name: 'C#' },
-    { icon: java, name: 'Java' },
-    { icon: bash, name: 'Bash' },
-    { icon: php, name: 'PHP' },
-    { icon: sql, name: 'SQL' },
-    { icon: python, name: 'Python' },
+
+  const skills = [
+    { name: 'AWS', icon: <FaAws /> },
+    { name: 'GitHub Actions', icon: <SiGithubactions /> },
+    { name: 'Terraform', icon: <SiTerraform /> },
+    { name: 'Python', icon: <SiPython /> },
+    { name: 'SQL', icon: <SiMysql /> },
+    { name: 'Bash', icon: <SiGnubash /> },
+    { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
+    { name: 'React', icon: <SiReact /> },
+    { name: 'Git', icon: <SiGit /> },
+    { name: 'JavaScript', icon: <SiJavascript /> },
+    { name: 'Linux', icon: <SiLinux /> },
+    { name: 'Unity', icon: <SiUnity /> },
+    { name: 'C#', icon: <SiCsharp /> },
+    { name: 'ChatGPT', icon: <SiOpenai /> },
   ];
+  
 
   return (
     <div id='Skills' className='py-0 md:py-[100px] my-[100px] lg:my-[200px] relative'>
       {/* Content Box */}
-      <div className='bg-transparent border border-gray-600 text-gray-50 md:h-[150px] max-w-[1200px] mx-auto grid grid-cols-3 place-items-center md:flex md:justify-between md:items-center relative z-10'>
-        
-        <h2 className='text-gray-700 text-2xl md:text-4xl font-bold m-4'>
-          My <br /> Tech <br /> Stack
-        </h2>
-        {
-          techstack.map((skill) => (
-            <div key={skill.name} className='flex flex-col items-center m-4 sm:my-0 w-[40px] md:w-[100px]'>
-              <img src={skill.icon} alt={skill.name} />
-              <p className='mt-2'>{skill.name}</p>
+      <div className="container mx-auto px-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-center  mb-4 text-gray-800 dark:text-gray-100">My Tech Stack</h2>
+        <div className="h-1 w-20 bg-emerald-500 mx-auto rounded-full mb-8"></div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+          {skills.map((skill, index) => (
+            <div key={index} className="flex flex-col items-center group">
+              <div className="text-5xl mb-3 text-gray-700 dark:text-gray-300 group-hover:text-green-400 dark:group-hover:text-green-400 transition-colors duration-300">
+                {skill.icon}
+              </div>
+              <span className="text-md font-medium text-center text-gray-800 dark:text-gray-200 group-hover:text-green-400 dark:group-hover:text-green-400 transition-colors duration-300">
+                {skill.name}
+              </span>
             </div>
-          ))
-        }
+          ))}
+        </div>
       </div>
     </div>
   );
