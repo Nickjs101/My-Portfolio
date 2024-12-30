@@ -1,4 +1,4 @@
-import Hero from "./components/hero";
+import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 import About from "./components/About";
@@ -7,8 +7,8 @@ import Footer from "./components/Footer";
 import Certs from "./components/Certs";
 import Experience from "./components/Experience";
 import Cyberprojects from "./components/Cyberprojects";
-import Education from "./components/education";
-import Chatbox from "./components/chat-box2";
+import Education from "./components/Education";
+import Chatbox from "./components/Chat-box2";
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGoogle, faLinux, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
