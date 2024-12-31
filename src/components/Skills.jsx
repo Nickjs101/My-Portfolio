@@ -18,7 +18,6 @@ import {
 import { FaAws } from 'react-icons/fa';
 
 const Skills = () => {
-
   const skills = [
     { name: 'AWS', icon: <FaAws /> },
     { name: 'GitHub Actions', icon: <SiGithubactions /> },
@@ -35,29 +34,29 @@ const Skills = () => {
     { name: 'C#', icon: <SiCsharp /> },
     { name: 'ChatGPT', icon: <SiOpenai /> },
   ];
-  
 
   return (
-    <div id='Skills' className='py-0 md:py-[100px] my-[100px] lg:my-[200px] relative'>
-      {/* Content Box */}
-      <div className="container mx-auto px-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-center  mb-4 text-gray-800 dark:text-gray-100">My Tech Stack</h2>
+    <section id='Skills' className='py-12 sm:py-16 md:py-20 lg:py-24 my-12 sm:my-16 md:my-20 lg:my-24 relative bg-white dark:bg-slate-900'>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800 dark:text-gray-100">
+          My Tech Stack
+        </h2>
         <div className="h-1 w-20 bg-emerald-500 mx-auto rounded-full mb-8"></div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10">
           {skills.map((skill, index) => (
             <div key={index} className="flex flex-col items-center group">
-              <div className="text-5xl mb-3 text-gray-700 dark:text-gray-300 group-hover:text-green-400 dark:group-hover:text-green-400 transition-colors duration-300">
+              <div className="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-3 text-gray-700 dark:text-gray-300 group-hover:text-emerald-500 dark:group-hover:text-emerald-400 transition-colors duration-300">
                 {skill.icon}
               </div>
-              <span className="text-md font-medium text-center text-gray-800 dark:text-gray-200 group-hover:text-green-400 dark:group-hover:text-green-400 transition-colors duration-300">
+              <span className="text-xs sm:text-sm md:text-base font-medium text-center text-gray-800 dark:text-gray-200 group-hover:text-emerald-500 dark:group-hover:text-emerald-400 transition-colors duration-300">
                 {skill.name}
               </span>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

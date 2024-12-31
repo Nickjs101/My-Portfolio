@@ -1,17 +1,17 @@
+import React from 'react'
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, Download } from 'lucide-react'
 import { TypeAnimation } from 'react-type-animation'
-import heroimage from '../assets/headshot.JPG'
+import heroimage from '../assets/headshot.jpg'
 import resume from '../assets/NICK_JOSHUA_MONTEMAYOR_RESUME.pdf'
 
 export default function Hero() {
-
   const gotoSection = (event, id) => {
     event.preventDefault();
     const section = document.getElementById(id);
     
     window.scrollTo({
-      top: section.offsetTop, // adjust the scroll position
+      top: section.offsetTop,
       behavior: 'smooth',
     });
   }
@@ -52,22 +52,22 @@ export default function Hero() {
   ]
 
   return (
-    <section id='Home' className="min-h-screen flex items-center justify-center bg-slate-900 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl w-full py-12 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <section id='Home' className="min-h-screen flex items-center justify-center bg-slate-900 px-4 sm:px-6 lg:px-8 py-12 md:py-24">
+      <div className="max-w-7xl w-full">
+        <div className="flex flex-col md:flex-row gap-8 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="order-2 md:order-1"
+            className="w-full md:w-1/2 order-2 md:order-1"
           >
-            <h2 className="text-emerald-400 text-lg font-medium mb-2">
+            <h2 className="text-emerald-400 text-base sm:text-lg font-medium mb-2">
               Hi there! 👋 I'm
             </h2>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
               Nick Joshua
             </h1>
-            <div className="text-xl md:text-2xl text-slate-300 mb-6">
+            <div className="text-lg sm:text-xl md:text-2xl text-slate-300 mb-4 sm:mb-6 h-8">
               <TypeAnimation
                 sequence={[
                   'Full-Stack Developer',
@@ -80,18 +80,18 @@ export default function Hero() {
                 repeat={Infinity}
               />
             </div>
-            <p className="text-slate-400 text-lg mb-8 max-w-xl">
-            I specialize in supporting applications and developing tools that enhance workflows and productivity within organizations. With expertise in software development and cloud operations, I prioritize security in every aspect of my work to deliver reliable and efficient solutions.
+            <p className="text-slate-400 text-base sm:text-lg mb-6 sm:mb-8 max-w-xl">
+              I specialize in supporting applications and developing tools that enhance workflows and productivity within organizations. With expertise in software development and cloud operations, I prioritize security in every aspect of my work to deliver reliable and efficient solutions.
             </p>
             
             {/* Tech Stack */}
-            <div className="mb-8">
-              <h3 className="text-slate-300 font-medium mb-3">Tech Stack</h3>
+            <div className="mb-6 sm:mb-8">
+              <h3 className="text-slate-300 font-medium mb-2 sm:mb-3">Tech Stack</h3>
               <div className="flex flex-wrap gap-2">
                 {techStack.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-sm"
+                    className="px-2 sm:px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-xs sm:text-sm"
                   >
                     {tech}
                   </span>
@@ -111,7 +111,7 @@ export default function Hero() {
                   className={`text-slate-400 transition-colors duration-300 ${social.color}`}
                   aria-label={social.label}
                 >
-                  <social.icon className="w-6 h-6" />
+                  <social.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
               ))}
             </div>
@@ -121,9 +121,9 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="order-1 md:order-2 flex justify-center"
+            className="w-full md:w-1/2 order-1 md:order-2 flex justify-center mb-8 md:mb-0"
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-emerald-400/20">
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-emerald-400/20">
               <img
                 src={heroimage}
                 alt="Profile"
@@ -137,4 +137,3 @@ export default function Hero() {
     </section>
   )
 }
-

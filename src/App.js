@@ -9,6 +9,7 @@ import Experience from "./components/Experience";
 import Cyberprojects from "./components/Cyberprojects";
 import Education from "./components/Education";
 import Chatbox from "./components/Chat-box2";
+import AnimatedChatButton from "./components/subcomponents/animated-bot"
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGoogle, faLinux, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -22,15 +23,15 @@ import { useState, useCallback } from "react";
 library.add(faGoogle,faCode,faBug,faLinux,faDatabase,faFlag,faShieldHalved,faPeopleGroup,faLightbulb,faBookAtlas,faShield,faFileCode,faLinkedinIn,faGithub,faEnvelope,faDownload);
 
 function App() {
-
   const [currentContent, setCurrentContent] = useState('Main');
-  const [projectComponent, setprojectComponent] = useState(<Navbar/>);
-  const [projectCategory, setprojectCategory] = useState('SoftwareDev');
- 
+  const [projectComponent, setProjectComponent] = useState(<Navbar />);
+  const [projectCategory, setProjectCategory] = useState('SoftwareDev');
+  const [isChatVisible, setIsChatVisible] = useState(false);
+  const [isFabVisible, setIsFabVisible] = useState(false);
 
   const displayProject = useCallback((Component, Category) => {
-    setprojectComponent(Component);
-    setprojectCategory(Category);
+    setProjectComponent(Component);
+    setProjectCategory(Category);
     setCurrentContent('Projects');
   }, []);
 
@@ -38,33 +39,48 @@ function App() {
     if (currentContent === 'Projects') {
       return (
         <Provider store={projectStorage}>
-          <Cyberprojects  projectComponent={projectComponent} category={projectCategory} setprojectComponent={setprojectComponent} setprojectCategory={setprojectCategory} setCurrentContent={setCurrentContent} />
+          <Cyberprojects
+            projectComponent={projectComponent}
+            category={projectCategory}
+            setProjectComponent={setProjectComponent}
+            setProjectCategory={setProjectCategory}
+            setCurrentContent={setCurrentContent}
+          />
         </Provider>
       );
     }
     return (
       <>
-        <Navbar/>
-        <Hero/>
-        <Skills/>
-        <Certs/>
-        <About/>
-        <Experience/>
-        <Education/>
+        <Navbar
+          onWantToKnowMoreClick={() => {
+            setIsFabVisible(true);
+            setIsChatVisible(true);
+          }}
+        />
+        <Hero />
+        <Skills />
+        <Certs />
+        <About />
+        <Experience />
+        <Education />
         <Provider store={projectStorage}>
-          <Work displayProject={displayProject}/>
+          <Work displayProject={displayProject} />
         </Provider>
-        <Footer/>
-        <Chatbox/>
+        <Footer />
+        <Chatbox
+          isChatVisible={isChatVisible}
+          onClose={() => setIsChatVisible(false)}
+          hideFab={() => setIsFabVisible(false)}
+        />
+
+        {isFabVisible && !isChatVisible && (
+          <AnimatedChatButton onClick={() => setIsChatVisible(true)} />
+        )}
       </>
     );
-  }, [currentContent, projectComponent, projectCategory, displayProject]);
+  }, [currentContent, projectComponent, projectCategory, displayProject, isChatVisible, isFabVisible]);
 
-  return (
-    <div className="App">
-      {renderContent()}
-    </div>
-  )
+  return <div className="App">{renderContent()}</div>;
 }
 
 export default App;

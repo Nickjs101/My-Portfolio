@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function Navbar() {
+export default function Navbar({ onWantToKnowMoreClick }) {
     const gotoSection = (event, id) => {
         event.preventDefault();
         const section = document.getElementById(id);
@@ -22,6 +22,8 @@ export default function Navbar() {
     { name: 'Education', href: '#education', onclick: (e) => gotoSection(e, 'Education') },
     { name: 'Work', href: '#work', onclick: (e) => gotoSection(e, 'Work') },
   ]
+
+  
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
@@ -54,7 +56,7 @@ export default function Navbar() {
             </div>
             <a
               href="#contact"
-              onClick={() => {}}
+              onClick={onWantToKnowMoreClick}
               className="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300"
             >
               Want to know More?
@@ -123,7 +125,7 @@ export default function Navbar() {
             className="bg-emerald-500 hover:bg-emerald-600 text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
             onClick={() => {
               setIsMenuOpen(false);
-              
+              onWantToKnowMoreClick();
             }}
           >
             Want to know More?

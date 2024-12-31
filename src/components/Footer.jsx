@@ -8,7 +8,7 @@ const Footer = () => {
     const section = document.getElementById(id);
     
     window.scrollTo({
-      top: section.offsetTop, // adjust the scroll position
+      top: section.offsetTop,
       behavior: 'smooth',
     });
   }
@@ -48,18 +48,18 @@ const Footer = () => {
 
   return (
     <footer className="bg-slate-900 text-slate-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-8">
           {/* Brand and tagline */}
-          <div className="flex flex-col items-center md:items-start">
-            <h2 className="text-2xl font-bold text-emerald-400 mb-2">Nick.Js</h2>
-            <p className="text-sm text-center md:text-left">Crafting digital solutions with code and creativity</p>
+          <div className="flex flex-col items-center sm:items-start">
+            <h2 className="text-xl sm:text-2xl font-bold text-emerald-400 mb-2">Nick.Js</h2>
+            <p className="text-xs sm:text-sm text-center sm:text-left">Crafting digital solutions with code and creativity</p>
           </div>
 
           {/* Social links */}
-          <div className="flex flex-col items-center md:items-start">
-            <h3 className="text-lg font-semibold mb-4 text-white">Connect</h3>
-            <div className="flex space-x-4">
+          <div className="flex flex-col items-center sm:items-start">
+            <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-4 text-white">Connect</h3>
+            <div className="flex space-x-3 sm:space-x-4">
               {socialLinks.map((link) => (
                 <a
                   key={link.label}
@@ -67,26 +67,23 @@ const Footer = () => {
                   onClick={link.onclick}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-emerald-400 transition-colors duration-300"
+                  className={`text-slate-400 transition-colors duration-300 ${link.color}`}
                   aria-label={link.label}
                 >
-                  <link.icon className="w-6 h-6" />
+                  <link.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
               ))}
             </div>
           </div>
 
           {/* Copyright */}
-          <div className=" my-auto text-center text-sm">
+          <div className="text-center text-xs sm:text-sm">
             <p>&copy; {currentYear} Nick Joshua Montemayor. All rights reserved.</p>
           </div>
         </div>
-
-        
       </div>
     </footer>
   );
 };
 
 export default Footer;
-
