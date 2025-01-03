@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { ExternalLink, Github, ArrowRight, FileText } from 'lucide-react'
 
-import { projects } from '../assets/data/projects'
+import { projects } from '../components/data/projects'
 
 export default function ProjectsShowcase() {
   return (

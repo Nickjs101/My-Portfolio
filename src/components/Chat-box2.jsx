@@ -1,77 +1,119 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Send } from "lucide-react";
+import langflowClient from './data/Langflowclient';
 
 export default function ChatBox({ isChatVisible, onClose, hideFab }) {
   const [messages, setMessages] = useState([
-    { text: "Welcome to AI Terminal. Type your message to begin.", isAi: true },
+    { sender: 'bot', text: "Welcome to AI Terminal. Type your message to begin." },
   ]);
   const [inputMessage, setInputMessage] = useState("");
   const chatAreaRef = useRef(null);
+  const [loading, setLoading] = useState(false);
 
+  // Auto-scroll chat to the bottom when messages are updated
   useEffect(() => {
     if (chatAreaRef.current) {
       chatAreaRef.current.scrollTop = chatAreaRef.current.scrollHeight;
     }
   }, [messages]);
 
-  const handleSendMessage = (e) => {
+  const handleSendMessage = async (e) => {
     e.preventDefault();
     if (!inputMessage.trim()) return;
 
-    const newMessage = { text: inputMessage, isAi: false };
+    const newMessage = { sender: 'user', text: inputMessage };
     setMessages([...messages, newMessage]);
     setInputMessage("");
+    setLoading(true);
 
-    setTimeout(() => {
-      const aiResponse = { text: "Processing your request...", isAi: true };
-      setMessages((prev) => [...prev, aiResponse]);
-    }, 1000);
+    const flowIdOrName = process.env.REACT_APP_FLOWID;
+    const langflowId = process.env.REACT_APP_LANGFLOW_ID;
+    const applicationToken = process.env.REACT_APP_FLOWID;
+    const client = new langflowClient('https://api.langflow.astra.datastax.com', applicationToken);
+
+    try {
+        const stream = false;
+        const tweaks = {
+            "Agent-aiEbf": {},
+            "ChatInput-DnyzU": {},
+            "ChatOutput-baKME": {}
+            };
+        const response = await client.runFlow(
+            flowIdOrName,
+            langflowId,
+            inputMessage,
+            'chat',
+            'chat',
+            tweaks,
+            stream,
+            (data) => console.log("Received:", data.chunk), // onUpdate
+            (message) => console.log("Stream Closed:", message), // onClose
+            (error) => console.log("Stream Error:", error) // onError
+        );
+        if (!stream && response && response.outputs) {
+            const flowOutputs = response.outputs[0];
+            const firstComponentOutputs = flowOutputs.outputs[0];
+            const output = firstComponentOutputs.outputs.message;
+
+            console.log("Final Output:", output)
+        }
+    } catch (error) {
+        console.error('Main Error', error.message);
+    }
+
+    // try {
+    //   await main(inputMessage,'chat', 'chat', 'false');
+    //   // const response = main(inputMessage);
+
+    //   // if (response?.outputs?.length > 0) {
+    //   //   const flowOutputs = response.outputs[0];
+    //   //   const firstComponentOutputs = flowOutputs.outputs[0];
+    //   //   const botReply = firstComponentOutputs.outputs.message.text;
+
+    //   //   setMessages((prev) => [...prev, { sender: 'bot', text: botReply }]);
+    //   // } else {
+    //   //   throw new Error("Unexpected response format.");
+    //   // }
+    // } catch (error) {
+    //   console.error("Chatbot Error:", error);
+    //   setMessages((prev) => [...prev, { sender: 'bot', text: "Sorry, something went wrong. Please try again later." }]);
+    // } finally {
+    //   setLoading(false);
+    // }
   };
 
   if (!isChatVisible) return null;
 
   return (
     <div className="fixed bottom-0 right-0 sm:bottom-4 sm:right-4 sm:w-[400px] md:w-[500px] lg:w-[600px] h-[400px] bg-[#0a0b14] rounded-lg overflow-hidden border border-[#00ff00] shadow-lg shadow-[#00ff00]/20 flex flex-col">
-      {/* Header with Swapped Name and Buttons */}
+      {/* Header */}
       <div className="bg-[#1a1b26] px-4 py-2 flex items-center justify-between border-b border-[#00ff00]">
         <div className="flex items-center gap-2">
           <span className="text-[#00ff00] font-mono">{">"}</span>
-          <span className="text-[#00ff00] font-mono text-sm sm:text-base">
-            AI Terminal Chat
-          </span>
+          <span className="text-[#00ff00] font-mono text-sm sm:text-base">AI Terminal Chat</span>
         </div>
         <div className="flex items-center gap-2">
-          {/* Header Buttons */}
-          <button
-            onClick={onClose}
-            className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-600 transition-colors"
-          ></button>
-          <button
-            onClick={() => alert("Yellow button clicked!")}
-            className="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-600 transition-colors"
-          ></button>
-          <button
-            onClick={() => {hideFab(); onClose();}}
-            className="w-3 h-3 rounded-full bg-green-500 hover:bg-green-600 transition-colors"
-          ></button>
+          <button onClick={onClose} className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-600 transition-colors"></button>
+          <button onClick={() => alert("Yellow button clicked!")} className="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-600 transition-colors"></button>
+          <button onClick={() => { hideFab(); onClose(); }} className="w-3 h-3 rounded-full bg-green-500 hover:bg-green-600 transition-colors"></button>
         </div>
       </div>
+      {/* Chat Messages */}
       <div ref={chatAreaRef} className="flex-1 overflow-y-auto p-4 font-mono text-sm sm:text-base">
         {messages.map((message, index) => (
           <div key={index} className="mb-4">
             <div className="flex items-start gap-2">
               <span className="text-[#00ff00] flex-shrink-0">
-                {message.isAi ? ">" : "$"}
+                {message.sender === 'bot' ? ">" : "$"}
               </span>
               <div className="flex-1">
-                <span className="text-white whitespace-pre-wrap break-words">
-                  {message.text}
-                </span>
+                <span className="text-white whitespace-pre-wrap break-words">{message.text}</span>
               </div>
             </div>
           </div>
         ))}
       </div>
+      {/* Input Form */}
       <form onSubmit={handleSendMessage} className="bg-[#1a1b26] h-12 border-t border-[#00ff00]">
         <div className="flex items-center px-4 h-full">
           <span className="text-[#00ff00] mr-2 flex-shrink-0">{">"}</span>
@@ -79,11 +121,11 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
             type="text"
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
-            placeholder="Type your command..."
+            placeholder="Type your message..."
             className="flex-1 bg-transparent text-[#00ff00] font-mono text-sm sm:text-base placeholder-[#00ff00]/50 focus:outline-none"
           />
-          <button type="submit" className="text-[#00ff00] hover:text-[#00ff00]/80 flex-shrink-0">
-            <Send className="w-4 h-4" />
+          <button type="submit" className="text-[#00ff00] hover:text-[#00ff00]/80 flex-shrink-0" disabled={loading}>
+            {loading ? "..." : <Send className="w-4 h-4" />}
           </button>
         </div>
       </form>
