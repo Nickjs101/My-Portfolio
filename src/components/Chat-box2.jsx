@@ -29,7 +29,15 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
     const flowIdOrName = process.env.REACT_APP_FLOWID;
     const langflowId = process.env.REACT_APP_LANGFLOW_ID;
     const applicationToken = process.env.REACT_APP_FLOWID;
-    const client = new langflowClient('https://api.langflow.astra.datastax.com', applicationToken);
+
+    const headers = {
+        'Authorization': `Bearer ${applicationToken}`,
+        'Content-Type': 'application/json',
+    };
+
+    const client = new langflowClient('/api', {
+        headers: headers,
+    });
 
     try {
         const stream = false;
