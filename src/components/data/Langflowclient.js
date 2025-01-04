@@ -75,7 +75,7 @@ export async function main(inputValue, inputType = 'chat', outputType = 'chat', 
     const flowIdOrName = process.env.REACT_APP_FLOWID;
     const langflowId = process.env.REACT_APP_LANGFLOW_ID;
     const applicationToken = process.env.REACT_APP_TOKEN;
-    const langflowClient = new LangflowClient('https://api.langflow.astra.datastax.com',
+    const langflowClient = new LangflowClient('/api',
         applicationToken);
 
     try {
