@@ -1,6 +1,6 @@
 // Note: Replace **<YOUR_APPLICATION_TOKEN>** with your actual Application token
 
-export default class LangflowClient {
+class LangflowClient {
     constructor(baseURL, applicationToken) {
         this.baseURL = baseURL;
         this.applicationToken = applicationToken;
@@ -70,3 +70,41 @@ export default class LangflowClient {
         }
     }
 }
+
+export async function main(inputValue, inputType = 'chat', outputType = 'chat', stream = false) {
+    const flowIdOrName = process.env.REACT_APP_FLOWID;
+    const langflowId = process.env.REACT_APP_LANGFLOW_ID;
+    const applicationToken = process.env.REACT_APP_TOKEN;
+    const langflowClient = new LangflowClient('https://api.langflow.astra.datastax.com',
+        applicationToken);
+
+    try {
+        const tweaks = {
+        "Agent-aiEbf": {},
+        "ChatInput-DnyzU": {},
+        "ChatOutput-baKME": {}
+        };
+        const response = await langflowClient.runFlow(
+          flowIdOrName,
+          langflowId,
+          inputValue,
+          inputType,
+          outputType,
+          tweaks,
+          stream,
+          (data) => console.log("Received:", data.chunk), // onUpdate
+          (message) => console.log("Stream Closed:", message), // onClose
+          (error) => console.log("Stream Error:", error) // onError
+      );
+      if (!stream && response && response.outputs) {
+          const flowOutputs = response.outputs[0];
+          const firstComponentOutputs = flowOutputs.outputs[0];
+          const output = firstComponentOutputs.outputs.message;
+
+          console.log("Final Output:", output.message.text);
+      }
+    } catch (error) {
+      console.error('Main Error', error.message);
+    }
+}
+

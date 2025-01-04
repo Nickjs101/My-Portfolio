@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Send } from "lucide-react";
-import langflowClient from './data/Langflowclient';
+import { main } from './data/Langflowclient';
 
 export default function ChatBox({ isChatVisible, onClose, hideFab }) {
   const [messages, setMessages] = useState([
@@ -26,49 +26,7 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
     setInputMessage("");
     setLoading(true);
 
-    const flowIdOrName = process.env.REACT_APP_FLOWID;
-    const langflowId = process.env.REACT_APP_LANGFLOW_ID;
-    const applicationToken = process.env.REACT_APP_FLOWID;
-
-    const headers = {
-        'Authorization': `Bearer ${applicationToken}`,
-        'Content-Type': 'application/json',
-    };
-
-    const client = new langflowClient('/api', {
-        headers: headers,
-    });
-
-    try {
-        const stream = false;
-        const tweaks = {
-            "Agent-aiEbf": {},
-            "ChatInput-DnyzU": {},
-            "ChatOutput-baKME": {}
-            };
-        const response = await client.runFlow(
-            flowIdOrName,
-            langflowId,
-            inputMessage,
-            'chat',
-            'chat',
-            tweaks,
-            stream,
-            (data) => console.log("Received:", data.chunk), // onUpdate
-            (message) => console.log("Stream Closed:", message), // onClose
-            (error) => console.log("Stream Error:", error) // onError
-        );
-        if (!stream && response && response.outputs) {
-            const flowOutputs = response.outputs[0];
-            const firstComponentOutputs = flowOutputs.outputs[0];
-            const output = firstComponentOutputs.outputs.message;
-
-            console.log("Final Output:", output)
-        }
-    } catch (error) {
-        console.error('Main Error', error.message);
-    }
-
+    await main(inputMessage);
     // try {
     //   await main(inputMessage,'chat', 'chat', 'false');
     //   // const response = main(inputMessage);
