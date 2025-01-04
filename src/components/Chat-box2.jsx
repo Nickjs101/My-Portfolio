@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Send } from "lucide-react";
-import { main } from './data/Langflowclient';
 
 export default function ChatBox({ isChatVisible, onClose, hideFab }) {
   const [messages, setMessages] = useState([
@@ -26,7 +25,6 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
     setInputMessage("");
     setLoading(true);
 
-    await main(inputMessage);
     // try {
     //   await main(inputMessage,'chat', 'chat', 'false');
     //   // const response = main(inputMessage);
