@@ -31,9 +31,7 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: {
-          'message' : inputMessage
-        },
+        body: JSON.stringify({'message' : inputMessage}),
       });
 
       if (!res.ok) {
