@@ -25,25 +25,26 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
     setInputMessage("");
     setLoading(true);
 
-    // try {
-    //   await main(inputMessage,'chat', 'chat', 'false');
-    //   // const response = main(inputMessage);
+    try {
+      const res = await fetch('https://624h4zvccge7jvb5i5s7ff5lzi0dalzq.lambda-url.ap-northeast-1.on.aws/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: {
+          'message' : inputMessage
+        },
+      });
 
-    //   // if (response?.outputs?.length > 0) {
-    //   //   const flowOutputs = response.outputs[0];
-    //   //   const firstComponentOutputs = flowOutputs.outputs[0];
-    //   //   const botReply = firstComponentOutputs.outputs.message.text;
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
 
-    //   //   setMessages((prev) => [...prev, { sender: 'bot', text: botReply }]);
-    //   // } else {
-    //   //   throw new Error("Unexpected response format.");
-    //   // }
-    // } catch (error) {
-    //   console.error("Chatbot Error:", error);
-    //   setMessages((prev) => [...prev, { sender: 'bot', text: "Sorry, something went wrong. Please try again later." }]);
-    // } finally {
-    //   setLoading(false);
-    // }
+      const data = await res.json();
+      console.log(data);
+    } catch (e) {
+      console.log("ERROR: " + e.message);
+    }
   };
 
   if (!isChatVisible) return null;
