@@ -16,12 +16,24 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
     }
   }, [messages]);
 
+  const extractMessageAndSender = (data) => {
+    try {
+      const outputs = data.outputs[0]?.outputs[0]?.results?.message;
+      const message = outputs?.text || "No message found";
+      const senderName = outputs?.sender_name || "No sender name found";
+      return { message, senderName };
+    } catch (error) {
+      console.error("Error extracting data:", error);
+      return { message: "Error", senderName: "Error" };
+    }
+  };
+
   const handleSendMessage = async (e) => {
     e.preventDefault();
     if (!inputMessage.trim()) return;
 
-    const newMessage = { sender: 'user', text: inputMessage };
-    setMessages([...messages, newMessage]);
+    const userMessage = { sender: 'user', text: inputMessage };
+    setMessages([...messages, userMessage]);
     setInputMessage("");
     setLoading(true);
 
@@ -39,7 +51,10 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
       }
 
       const data = await res.json();
-      console.log(data);
+      const { message, sender } = extractMessageAndSender(data);
+      const aiMessage = { sender: sender, text: message };
+      setMessages([...messages, aiMessage]);
+      console.log(data["outputs"]);
     } catch (e) {
       console.log("ERROR: " + e.message);
     }
