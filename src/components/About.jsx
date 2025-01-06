@@ -3,7 +3,7 @@ import aboutImg from '../assets/about.jpg'
 
 export default function About() {
   return (
-    <section id='About' className="min-h-screen bg-slate-900 py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+    <section id='About' className="min-h-screen bg-slate-900 py-24 md:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
           <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8">

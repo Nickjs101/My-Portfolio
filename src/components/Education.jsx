@@ -11,7 +11,7 @@ const achievements = [
 
 export default function Education() {
   return (
-    <section id='Education' className="min-h-screen bg-slate-900 py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+    <section id='Education' className="min-h-screen bg-slate-900 py-24 md:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
@@ -65,7 +65,7 @@ export default function Education() {
           <div className="w-full lg:w-1/2 grid grid-cols-2 gap-3 sm:gap-4">
             <div className="space-y-3 sm:space-y-4">
               <div className="relative aspect-square rounded-lg overflow-hidden group">
-                <div className="absolute inset-0 bg-emerald-500/10 group-hover:bg-emerald-500/20 transition-colors duration-300 z-10"></div>
+                <div className="absolute inset-0 bg-emerald-500/5 group-hover:bg-emerald-500/10 transition-colors duration-300 z-10"></div>
                 <img
                   src={comp}
                   alt="Computer Laboratory Session"
@@ -73,7 +73,7 @@ export default function Education() {
                 />
               </div>
               <div className="relative aspect-video rounded-lg overflow-hidden group">
-                <div className="absolute inset-0 bg-emerald-500/10 group-hover:bg-emerald-500/20 transition-colors duration-300 z-10"></div>
+                <div className="absolute inset-0 bg-emerald-500/5 group-hover:bg-emerald-500/10 transition-colors duration-300 z-10"></div>
                 <img
                   src={org}
                   alt="Tech Matrix Group"
@@ -82,7 +82,7 @@ export default function Education() {
               </div>
             </div>
             <div className="relative aspect-[3/4] rounded-lg overflow-hidden group">
-              <div className="absolute inset-0 bg-emerald-500/10 group-hover:bg-emerald-500/20 transition-colors duration-300 z-10"></div>
+              <div className="absolute inset-0 bg-emerald-500/5 group-hover:bg-emerald-500/10 transition-colors duration-300 z-10"></div>
               <img
                 src={gradpic}
                 alt="Graduation"

@@ -36,7 +36,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id='Skills' className='py-12 sm:py-16 md:py-20 lg:py-24 my-12 sm:my-16 md:my-20 lg:my-24 relative bg-white dark:bg-slate-900'>
+    <section id='Skills' className='py-24 md:py-20 relative bg-white dark:bg-slate-900'>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800 dark:text-gray-100">
           My Tech Stack

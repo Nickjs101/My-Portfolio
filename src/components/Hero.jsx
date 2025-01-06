@@ -52,14 +52,14 @@ export default function Hero() {
   ]
 
   return (
-    <section id='Home' className="min-h-screen flex items-center justify-center bg-slate-900 px-4 sm:px-6 lg:px-8 py-12 md:py-24">
+    <section id='Home' className="min-h-screen flex items-center justify-center bg-slate-900 px-4 sm:px-6 lg:px-8 py-24 md:py-24">
       <div className="max-w-7xl w-full">
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="w-full md:w-1/2 order-2 md:order-1"
+            transition={{ duration: 3 }}
+            className="w-full md:w-3/5 order-2 md:order-1"
           >
             <h2 className="text-emerald-400 text-base sm:text-lg font-medium mb-2">
               Hi there! 👋 I'm
@@ -120,16 +120,16 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="w-full md:w-1/2 order-1 md:order-2 flex justify-center mb-8 md:mb-0"
+            transition={{ duration: 3 }}
+            className="w-full md:w-2/5 order-1 md:order-2 flex justify-center mb-8 md:mb-0"
           >
-            <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-emerald-400/20">
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-5/6 md:h-5/6 rounded-full overflow-hidden border-4 border-emerald-400/20">
               <img
                 src={heroimage}
                 alt="Profile"
                 className="object-cover w-full h-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-emerald-400/10 to-slate-900/50" />
+              
             </div>
           </motion.div>
         </div>
