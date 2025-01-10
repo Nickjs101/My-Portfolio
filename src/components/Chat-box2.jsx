@@ -87,7 +87,7 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
     setLoading(true);
 
     try {
-      const res = await fetch('https://624h4zvccge7jvb5i5s7ff5lzi0dalzq.lambda-url.ap-northeast-1.on.aws/send_message', {
+      const res = await fetch('https://dwav3mbsqipmdaiyupddud3dza0akpct.lambda-url.ap-southeast-1.on.aws/send_message', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
