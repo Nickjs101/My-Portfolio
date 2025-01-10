@@ -20,7 +20,8 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
   const extractMessageAndSender = async (data) => {
     try {
       const outputs = data.outputs[0]?.outputs[0]?.results?.message;
-      const message = outputs?.text || "No message found";
+      const jsonText = JSON.parse(outputs?.text);
+      const message = jsonText.message || "No message found";
       const cleanedText = cleanMarkup(message);
       return cleanedText;
     } catch (error) {
