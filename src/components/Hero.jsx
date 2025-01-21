@@ -52,7 +52,9 @@ export default function Hero() {
   ]
 
   return (
-    <section id='Home' className="min-h-screen flex items-center justify-center bg-slate-900 px-4 sm:px-6 lg:px-8 py-24 md:py-24">
+    <section id='Home' className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-24 md:py-24" style={{
+      backgroundColor: 'var(--bg-primary)'
+    }}>
       <div className="max-w-7xl w-full">
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <motion.div
@@ -61,13 +63,13 @@ export default function Hero() {
             transition={{ duration: 3 }}
             className="w-full md:w-3/5 order-2 md:order-1"
           >
-            <h2 className="text-emerald-400 text-base sm:text-lg font-medium mb-2">
+            <h2 className="text-base sm:text-lg font-medium mb-2" style={{ color: 'var(--accent-primary)' }}>
               Hi there! 👋 I'm
             </h2>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4" style={{ color: 'var(--text-primary)' }}>
               Nick Joshua
             </h1>
-            <div className="text-lg sm:text-xl md:text-2xl text-slate-300 mb-4 sm:mb-6 h-8">
+            <div className="text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 h-8" style={{ color: 'var(--text-secondary)' }}>
               <TypeAnimation
                 sequence={[
                   'Full-Stack Developer',

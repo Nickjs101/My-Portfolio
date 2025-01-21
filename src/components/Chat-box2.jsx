@@ -121,12 +121,25 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
   if (!isChatVisible) return null;
 
   return (
-    <div className="fixed bottom-0 right-0 sm:bottom-4 sm:right-4 sm:w-[400px] md:w-[500px] lg:w-[600px] h-[400px] bg-[#0a0b14] rounded-lg overflow-hidden border border-[#00ff00] shadow-lg shadow-[#00ff00]/20 flex flex-col">
+    <div className="fixed bottom-0 right-0 sm:bottom-4 sm:right-4 sm:w-[400px] md:w-[500px] lg:w-[600px] h-[400px] rounded-lg overflow-hidden border transition-colors duration-200"
+        style={{
+            backgroundColor: 'var(--bg-tertiary)',
+            borderColor: 'var(--accent-primary)',
+            boxShadow: '0 0 20px var(--shadow-color)'
+        }}
+    >
       {/* Header */}
-      <div className="bg-[#1a1b26] px-4 py-2 flex items-center justify-between border-b border-[#00ff00]">
+      <div className="px-4 py-2 flex items-center justify-between"
+          style={{
+              backgroundColor: 'var(--bg-secondary)',
+              borderBottom: '1px solid var(--accent-primary)'
+          }}
+      >
         <div className="flex items-center gap-2">
-          <span className="text-[#00ff00] font-code">{">"}</span>
-          <span className="text-[#00ff00] font-code text-xs sm:text-base">AI Terminal</span>
+          <span style={{ color: 'var(--accent-primary)' }} className="font-code">{">"}</span>
+          <span style={{ color: 'var(--accent-primary)' }} className="font-code text-xs sm:text-base">
+              AI Terminal
+          </span>
         </div>
         <div className="flex items-center gap-2">
           <button onClick={onClose} className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-600 transition-colors"></button>
@@ -139,28 +152,44 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
         {messages.map((message, index) => (
           <div key={index} className="mb-4">
             <div className="flex items-start gap-2">
-              <span className="text-[#00ff00] flex-shrink-0">
+              <span style={{ color: 'var(--accent-primary)' }}>
                 {message.sender === 'AI' ? ">" : "$"}
               </span>
               <div className="flex-1">
-                <span className="text-neutral-100 whitespace-pre-wrap break-words">{message.text}</span>
+                <span style={{ color: 'var(--text-primary)' }} className="whitespace-pre-wrap break-words">
+                  {message.text}
+                </span>
               </div>
             </div>
           </div>
         ))}
       </div>
       {/* Input Form */}
-      <form onSubmit={handleSendMessage} className="bg-[#1a1b26] h-12 border-t border-[#00ff00]">
+      <form onSubmit={handleSendMessage} className="h-12"
+          style={{
+              backgroundColor: 'var(--bg-secondary)',
+              borderTop: '1px solid var(--accent-primary)'
+          }}
+      >
         <div className="flex items-center px-4 h-full">
-          <span className="text-[#00ff00] mr-2 flex-shrink-0">{">"}</span>
+          <span style={{ color: 'var(--accent-primary)' }} className="mr-2">{">"}</span>
           <input
             type="text"
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
             placeholder="Type your message..."
-            className="flex-1 bg-transparent text-[#00ff00] font-code text-sm sm:text-base placeholder-[#00ff00]/50 focus:outline-none"
+            className="flex-1 bg-transparent focus:outline-none font-code text-sm sm:text-base"
+            style={{
+                color: 'var(--accent-primary)',
+                '::placeholder': { color: 'var(--text-secondary)' }
+            }}
           />
-          <button type="submit" className="text-[#00ff00] hover:text-[#00ff00]/80 flex-shrink-0" disabled={loading}>
+          <button 
+            type="submit" 
+            className="flex-shrink-0 transition-colors duration-200"
+            style={{ color: 'var(--accent-primary)' }}
+            disabled={loading}
+          >
             {loading ? "..." : <Send className="w-4 h-4" />}
           </button>
         </div>

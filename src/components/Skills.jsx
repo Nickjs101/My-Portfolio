@@ -36,9 +36,13 @@ const Skills = () => {
   ];
 
   return (
-    <section id='Skills' className='py-24 md:py-20 relative bg-white dark:bg-slate-900'>
+    <section id='Skills' className='py-24 md:py-20 relative' style={{
+      backgroundColor: 'var(--bg-primary)'
+    }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800 dark:text-gray-100">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4" style={{
+          color: 'var(--text-primary)'
+        }}>
           My Tech Stack
         </h2>
         <div className="h-1 w-20 bg-emerald-500 mx-auto rounded-full mb-8"></div>
@@ -46,10 +50,20 @@ const Skills = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10">
           {skills.map((skill, index) => (
             <div key={index} className="flex flex-col items-center group">
-              <div className="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-3 text-gray-700 dark:text-gray-300 group-hover:text-emerald-500 dark:group-hover:text-emerald-400 transition-colors duration-300">
+              <div className="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-3 transition-colors duration-300"
+                style={{
+                  color: 'var(--text-secondary)',
+                  ':hover': { color: 'var(--accent-primary)' }
+                }}
+              >
                 {skill.icon}
               </div>
-              <span className="text-xs sm:text-sm md:text-base font-medium text-center text-gray-800 dark:text-gray-200 group-hover:text-emerald-500 dark:group-hover:text-emerald-400 transition-colors duration-300">
+              <span className="text-xs sm:text-sm md:text-base font-medium text-center transition-colors duration-300"
+                style={{
+                  color: 'var(--text-secondary)',
+                  ':hover': { color: 'var(--accent-primary)' }
+                }}
+              >
                 {skill.name}
               </span>
             </div>

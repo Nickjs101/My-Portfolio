@@ -68,66 +68,45 @@ const experiences = [
   }
 ]
 
-export default function ProfessionalExperience() {
+export default function Experience() {
   return (
-    <section id='Experience' className="min-h-screen bg-slate-900 py-24 md:py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Professional Experience
-          </h2>
-          <div className="h-1 w-20 bg-emerald-500 mx-auto rounded-full"></div>
-        </div>
-
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-4 sm:left-1/2 sm:transform sm:-translate-x-1/2 h-full w-1 bg-emerald-500/20"></div>
-
-          <div className="space-y-12 sm:space-y-16">
-            {experiences.map((experience, index) => (
-              <div
-                key={experience.id}
-                className={`relative flex flex-col sm:flex-row items-start sm:items-center ${
-                  index % 2 === 0 ? 'sm:justify-start' : 'sm:justify-end'
-                }`}
-              >
-                {/* Timeline dot */}
-                <div className="absolute left-4 sm:left-1/2 sm:transform sm:-translate-x-1/2">
-                  <div className="w-4 h-4 bg-emerald-500 rounded-full"></div>
+    <section id="Experience" className="py-24 md:py-32" style={{ backgroundColor: 'var(--bg-primary)' }}>
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-4xl font-bold mb-12 text-center" style={{ color: 'var(--text-primary)' }}>
+          Experience
+        </h2>
+        
+        <div className="space-y-12">
+          {experiences.map((exp, index) => (
+            <div key={index} className="card p-6 rounded-lg transition-all duration-300">
+              <div className="flex flex-col md:flex-row justify-between mb-4">
+                <div>
+                  <h3 className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>
+                    {exp.title}
+                  </h3>
+                  <p className="text-lg" style={{ color: 'var(--accent-primary)' }}>
+                    {exp.company}
+                  </p>
                 </div>
-
-                {/* Content card */}
-                <div className={`ml-12 sm:ml-0 sm:w-5/12 ${index % 2 === 0 ? 'sm:pr-8' : 'sm:pl-8'}`}>
-                  <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-slate-700 hover:border-emerald-500 transition-all duration-300">
-                    <div className="flex flex-col sm:flex-row justify-between items-start mb-4">
-                      <div>
-                        <h3 className="text-lg sm:text-xl font-semibold text-white">
-                          {experience.title}
-                        </h3>
-                        <p className="text-emerald-400 text-sm sm:text-base">{experience.company}</p>
-                      </div>
-                      <span className="text-xs sm:text-sm text-slate-400 bg-slate-800 px-2 py-1 sm:px-3 sm:py-1 rounded-full mt-2 sm:mt-0">
-                        {experience.period}
-                      </span>
-                    </div>
-
-                    <ul className="space-y-3 sm:space-y-4">
-                      {experience.responsibilities.map((resp, idx) => (
-                        <li key={idx} className="space-y-1">
-                          <h4 className="text-emerald-400 font-medium text-sm sm:text-base">
-                            {resp.title}
-                          </h4>
-                          <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                            {resp.description}
-                          </p>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                <p style={{ color: 'var(--text-secondary)' }}>
+                  {exp.period}
+                </p>
               </div>
-            ))}
-          </div>
+              
+              <div className="space-y-4">
+                {exp.responsibilities.map((resp, idx) => (
+                  <div key={idx} className="space-y-1">
+                    <h4 className="font-medium text-sm sm:text-base" style={{ color: 'var(--accent-primary)' }}>
+                      {resp.title}
+                    </h4>
+                    <p className="text-xs sm:text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                      {resp.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

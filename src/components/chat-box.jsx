@@ -55,18 +55,20 @@ export default function ChatBox() {
   return (
     <>
     {isVisible && (
-    <div className="fixed bottom-4 right-4 w-[440px] h-[600px] bg-[#1a1f2d] rounded-lg shadow-xl flex flex-col">
+    <div className="fixed bottom-4 right-4 w-[440px] h-[600px] rounded-lg shadow-xl flex flex-col" style={{
+      backgroundColor: 'var(--bg-tertiary)',
+      boxShadow: '0 0 20px var(--shadow-color)'
+    }}>
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-gray-700">
+      <div className="flex items-center justify-between p-4 border-b" style={{
+        backgroundColor: 'var(--bg-secondary)',
+        borderColor: 'var(--card-border)'
+      }}>
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-            <svg
-              viewBox="0 0 24 24"
-              className="w-5 h-5 text-white"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
+          <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{
+            backgroundColor: 'var(--accent-primary)'
+          }}>
+            <svg className="w-5 h-5" style={{ color: 'var(--text-primary)' }}>
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -75,14 +77,11 @@ export default function ChatBox() {
             </svg>
           </div>
           <div>
-            <h3 className="font-medium text-white">AI Assistant</h3>
-            <p className="text-sm text-green-500">Online</p>
+            <h3 className="font-medium" style={{ color: 'var(--text-primary)' }}>AI Assistant</h3>
+            <p style={{ color: 'var(--accent-primary)' }}>Online</p>
           </div>
         </div>
-        <button 
-          className="text-gray-400 hover:text-white"
-          onClick={() => setIsVisible(false)}
-        >
+        <button className="transition-colors duration-200" style={{ color: 'var(--text-secondary)' }}>
           <X className="w-6 h-6" />
         </button>
       </div>
@@ -90,23 +89,16 @@ export default function ChatBox() {
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map((message, index) => (
-          <div
-            key={index}
-            className={`flex flex-col ${
-              message.isAi ? 'items-start' : 'items-end'
-            }`}
-          >
-            <div
-              className={`max-w-[80%] rounded-lg p-3 ${
-                message.isAi
-                ? 'bg-[#2a2f3d] text-white'
-                : 'bg-green-500 text-white'
-              }`}
-            >
+          <div key={index} className={`flex flex-col ${message.isAi ? 'items-start' : 'items-end'}`}>
+            <div className="max-w-[80%] rounded-lg p-3" style={{
+              backgroundColor: message.isAi ? 'var(--bg-secondary)' : 'var(--accent-primary)',
+              color: message.isAi ? 'var(--text-primary)' : 'var(--text-primary)'
+            }}>
               {message.text}
-              <div className={`text-xs mt-1 ${
-                message.isAi ? 'text-gray-400' : 'text-green-100'
-              }`}>
+              <div style={{ 
+                color: message.isAi ? 'var(--text-secondary)' : 'var(--text-primary)',
+                opacity: 0.7 
+              }}>
                 {message.time}
               </div>
             </div>
@@ -119,7 +111,11 @@ export default function ChatBox() {
         {actionButtons.map((button, index) => (
           <button
             key={index}
-            className="px-4 py-2 bg-[#2a2f3d] text-white rounded-lg text-sm hover:bg-[#3a3f4d] transition-colors"
+            className="px-4 py-2 rounded-lg text-sm transition-colors"
+            style={{
+              backgroundColor: 'var(--bg-secondary)',
+              color: 'var(--text-primary)'
+            }}
           >
             {button}
           </button>
@@ -127,18 +123,26 @@ export default function ChatBox() {
       </div>
 
       {/* Input */}
-      <form onSubmit={handleSendMessage} className="p-4 border-t border-gray-700">
+      <form onSubmit={handleSendMessage} className="p-4 border-t" style={{
+        borderColor: 'var(--card-border)'
+      }}>
         <div className="relative">
           <input
             type="text"
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
             placeholder="Type your message..."
-            className="w-full bg-[#2a2f3d] text-white rounded-lg pl-4 pr-12 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full rounded-lg pl-4 pr-12 py-3 focus:outline-none focus:ring-2"
+            style={{
+              backgroundColor: 'var(--bg-secondary)',
+              color: 'var(--text-primary)',
+              borderColor: 'var(--card-border)'
+            }}
           />
           <button
             type="submit"
-            className="absolute right-2 top-1/2 -translate-y-1/2 text-green-500 hover:text-green-400"
+            className="absolute right-2 top-1/2 -translate-y-1/2 transition-colors"
+            style={{ color: 'var(--accent-primary)' }}
           >
             <Send className="w-6 h-6" />
           </button>
