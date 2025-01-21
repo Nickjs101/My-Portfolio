@@ -1,58 +1,72 @@
 import React from 'react'
+import { projectStyles as styles } from './ProjectStyles'
+import GoogleImage from '../../assets/Works/tradingjournal.jpg'
 
 const Project5 = () => {
+  const skills = ["Network Security", "Cloud Security", "Security Operations", "Incident Response"]
+
   return (
-    <div className="font-sans leading-relaxed tracking-wide flex flex-col justify-center items-center">
-      <div className="max-w-4xl mx-auto p-0 md:p-6 shadow-lg rounded-lg secondary-color">
-        <h1 className="text-3xl lg:text-5xl font-bold mb-4 text-white rounded-lg">Incident Report Analysis</h1>
-
-        <h2 className="text-xl font-semibold mb-2">Summary</h2>
-        <p className="mb-4">
-          The company recently experienced a DDOS attack that compromised the internal network for two hours until it was resolved. During the attack the organization’s network services suddenly stopped responding due to an incoming flood of ICMP packets. Normal internal network traffic could not access any network resources.
+    <div style={styles.container} className="font-sans leading-relaxed tracking-wide flex flex-col items-center">
+      <div className="max-w-4xl w-full p-0 md:p-6 rounded-lg">
+        <img src={GoogleImage} alt="Google Cybersecurity" className="w-full h-auto mb-6 rounded-lg"/>
+        
+        <h1 style={styles.heading} className="text-3xl lg:text-5xl font-bold mb-4">
+          Google Cybersecurity Professional Certificate
+        </h1>
+        
+        <h2 style={styles.heading} className="text-2xl font-semibold mb-4">Program Overview</h2>
+        <p style={styles.text} className="mb-4">
+          The <strong style={styles.subheading}>Google Cybersecurity Professional Certificate</strong> program has provided me with comprehensive training in various aspects of cybersecurity. This industry-recognized certification has equipped me with practical skills and knowledge essential for a career in cybersecurity.
+        </p>
+        
+        <h2 style={styles.heading} className="text-2xl font-semibold mb-4">Key Learning Areas</h2>
+        <ul style={styles.text} className="list-disc pl-6 mb-4 space-y-2">
+          <li>Network Security and Protocols</li>
+          <li>Security Operations and Incident Response</li>
+          <li>Python Programming for Security</li>
+          <li>Linux and SQL for Security</li>
+          <li>Asset and Threat Management</li>
+        </ul>
+        
+        <h2 style={styles.heading} className="text-2xl font-semibold mb-4">Certifications Earned</h2>
+        <p style={styles.text} className="mb-4">
+          • Foundations of Cybersecurity<br/>
+          • Play It Safe: Manage Security Risks<br/>
+          • Connect and Protect: Networks and Network Security<br/>
+          • Tools of the Trade: Linux and SQL<br/>
+          • Assets, Threats, and Vulnerabilities<br/>
+          • Sound the Alarm: Detection and Response<br/>
+          • Automate Cybersecurity Tasks with Python<br/>
+          • Put It to Work: Prepare for Cybersecurity Jobs
         </p>
 
-        <h2 className="text-xl font-semibold mb-2">Identify</h2>
-        <p className="mb-4">
-          The company’s cybersecurity team then investigated the security event. They found out that a malicious actor had sent a flood of ICMP pings into the company’s network through an unconfigured firewall. This vulnerability allowed a malicious attacker to overwhelm the company’s network through a distributed denial of service (DDoS) attack.
-        </p>
+        <div className="flex justify-center my-8">
+          <a 
+            href="https://www.coursera.org/account/accomplishments/professional-cert/XXXXXXXX" 
+            target="_blank" 
+            rel="noopener noreferrer"  
+            className="font-semibold py-2 px-4 rounded-lg shadow-lg transition-colors duration-300"
+            style={{
+              backgroundColor: 'var(--accent-primary)',
+              color: 'var(--text-primary)'
+            }}
+          >
+            View Certificate
+          </a>
+        </div>
 
-        <h2 className="text-xl font-semibold mb-2">Protect</h2>
-        <p className="mb-4">
-          To address this security event the network security team implemented:
-          <ul className="list-disc ml-6">
-            <li>A new firewall rule to limit the rate of incoming ICMP packets</li>
-            <li>Source IP address verification on the firewall to check for spoofed IP addresses on incoming ICMP packets</li>
-            <li>An IDS/IPS system to filter out some ICMP traffic based on suspicious characteristics</li>
-          </ul>
-        </p>
-
-        <h2 className="text-xl font-semibold mb-2">Detect</h2>
-        <p className="mb-4">
-          To detect abnormal traffic patterns the team will implement network monitoring software.
-        </p>
-
-        <h2 className="text-xl font-semibold mb-2">Respond</h2>
-        <p className="mb-4">
-          The incident management team responded by blocking incoming ICMP packets to neutralize the attack and stopping all non-critical network services offline.
-        </p>
-
-        <h2 className="text-xl font-semibold mb-2">Recover</h2>
-        <p className="mb-4">
-          After managing the attack the team restored critical network services to normal.
-        </p>
-
-        <h2 className="text-xl font-semibold mb-2">Reflections/Notes</h2>
-        <p className="mb-4">
-          <strong>Image Format:</strong> Portable Network Graphic (PNG)
-          <br />
-          <strong>Bits Per Pixel:</strong> 32
-          <br />
-          <strong>Color:</strong> Truecolour with alpha
-          <br />
-          <strong>Dimensions:</strong> 1865 x 2048
-          <br />
-          <strong>Interlaced:</strong> Yes
-        </p>
+        <h2 style={styles.heading} className="text-2xl font-bold mb-4">Skills Acquired</h2>
+        <div className="flex flex-wrap mb-4">
+          {skills.map((skill, index) => (
+            <span 
+              key={index} 
+              className="py-1 px-3 m-1 rounded-full font-semibold transition-colors duration-300"
+              style={styles.tag}
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   )

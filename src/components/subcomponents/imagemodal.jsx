@@ -4,11 +4,17 @@ export default function Modal({ isOpen, onClose, children }) {
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="relative bg-slate-900 rounded-lg max-w-3xl w-full border border-slate-700">
+    <div className="fixed inset-0 backdrop-blur-sm z-50 flex items-center justify-center p-4" style={{
+      backgroundColor: 'rgba(0, 0, 0, 0.5)'
+    }}>
+      <div className="relative rounded-lg max-w-3xl w-full border" style={{
+        backgroundColor: 'var(--bg-primary)',
+        borderColor: 'var(--card-border)'
+      }}>
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors"
+          className="absolute top-4 right-4 transition-colors duration-200"
+          style={{ color: 'var(--text-secondary)' }}
         >
           <svg
             className="w-6 h-6"

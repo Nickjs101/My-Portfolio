@@ -1,135 +1,81 @@
-import React from 'react'
+import React from "react"
+import Timeline from "./subcomponents/Timeline"
 
 const experiences = [
   {
-    id: 1,
     title: "IT Instructor",
     company: "SYLLABUS Inc. (STI College-Angeles)",
     period: "Aug 2023 - Jun 2024",
-    current: true,
-    responsibilities: [
-      {
-        title: "Curriculum Development",
-        description: "Designed and implemented comprehensive course materials for subjects such as Computer Programming, Computer Graphics, Game Development, and Human-Computer Interaction, ensuring alignment with industry standards and best practices."
-      },
-      {
-        title: "Project Supervision",
-        description: "Guided students in creating innovative web portfolios, programming projects, and capstone projects, fostering critical thinking and problem-solving skills."
-      },
-      {
-        title: "Technical Workshops",
-        description: "Organized and conducted workshops on emerging technologies, providing hands-on experience with tools like Unity, Android Studio, and various programming languages."
-      },
-      {
-        title: "Mentorship",
-        description: "Acted as a mentor and advisor for students, providing guidance on academic and career development in the IT field."
-      }
-    ]
+    year: "2024",
+    content: (
+      <div>
+        <ul className="list-disc pl-5 space-y-2 text-sm md:text-base" style={{ color: 'var(--text-secondary)' }}>
+          <li>
+            Designed and implemented comprehensive course materials for subjects such as Computer Programming, Computer
+            Graphics, Game Development, and Human-Computer Interaction.
+          </li>
+          <li>Guided students in creating innovative web portfolios, programming projects, and capstone projects.</li>
+          <li>
+            Organized and conducted workshops on emerging technologies, providing hands-on experience with tools like
+            Unity, Android Studio, and various programming languages.
+          </li>
+          <li>
+            Acted as a mentor and advisor for students, providing guidance on academic and career development in the IT
+            field.
+          </li>
+        </ul>
+      </div>
+    ),
   },
   {
-    id: 2,
     title: "Service Crew",
     company: "Fusion Manpower (Jollibee)",
     period: "Jul 2019 - Sep 2019",
-    responsibilities: [
-      {
-        title: "Customer Service Excellence",
-        description: "Delivered exceptional customer service, ensuring a positive dining experience and maintaining high satisfaction rates."
-      },
-      {
-        title: "Operational Efficiency",
-        description: "Assisted in various operational tasks, including food preparation, order management, and cleanliness maintenance, contributing to a well-organized and efficient work environment."
-      }
-    ]
+    year: "2019",
+    content: (
+      <div>
+        <ul className="list-disc pl-5 space-y-2 text-sm md:text-base" style={{ color: 'var(--text-secondary)' }}>
+          <li>
+            Delivered exceptional customer service, ensuring a positive dining experience and maintaining high
+            satisfaction rates.
+          </li>
+          <li>
+            Assisted in various operational tasks, including food preparation, order management, and cleanliness
+            maintenance, contributing to a well-organized and efficient work environment.
+          </li>
+        </ul>
+      </div>
+    ),
   },
   {
-    id: 3,
     title: "IT Technician (OJT)",
     company: "PC Bytes",
     period: "Oct 2018 - Dec 2018",
-    responsibilities: [
-      {
-        title: "Technical Support",
-        description: "Provided comprehensive IT support to clients, including hardware troubleshooting, system diagnostics, and software installation."
-      },
-      {
-        title: "System Maintenance",
-        description: "Performed routine maintenance on computer systems, ensuring optimal performance and reliability."
-      },
-      {
-        title: "Customer Service",
-        description: "Engaged with clients to understand their technical needs, offering tailored solutions and fostering positive client relationships."
-      },
-      {
-        title: "Network Configuration",
-        description: "Set up and configured local area networks (LAN), optimizing connectivity and security."
-      }
-    ]
-  }
+    year: "2018",
+    content: (
+      <div>
+        <ul className="list-disc pl-5 space-y-2 text-sm md:text-base" style={{ color: 'var(--text-secondary)' }}>
+          <li>
+            Provided comprehensive IT support to clients, including hardware troubleshooting, system diagnostics, and
+            software installation.
+          </li>
+          <li>Performed routine maintenance on computer systems, ensuring optimal performance and reliability.</li>
+          <li>
+            Engaged with clients to understand their technical needs, offering tailored solutions and fostering positive
+            client relationships.
+          </li>
+          <li>Set up and configured local area networks (LAN), optimizing connectivity and security.</li>
+        </ul>
+      </div>
+    ),
+  },
 ]
 
-export default function ProfessionalExperience() {
+export default function ExperienceTimeline() {
   return (
-    <section id='Experience' className="min-h-screen bg-slate-900 py-24 md:py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Professional Experience
-          </h2>
-          <div className="h-1 w-20 bg-emerald-500 mx-auto rounded-full"></div>
-        </div>
-
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-4 sm:left-1/2 sm:transform sm:-translate-x-1/2 h-full w-1 bg-emerald-500/20"></div>
-
-          <div className="space-y-12 sm:space-y-16">
-            {experiences.map((experience, index) => (
-              <div
-                key={experience.id}
-                className={`relative flex flex-col sm:flex-row items-start sm:items-center ${
-                  index % 2 === 0 ? 'sm:justify-start' : 'sm:justify-end'
-                }`}
-              >
-                {/* Timeline dot */}
-                <div className="absolute left-4 sm:left-1/2 sm:transform sm:-translate-x-1/2">
-                  <div className="w-4 h-4 bg-emerald-500 rounded-full"></div>
-                </div>
-
-                {/* Content card */}
-                <div className={`ml-12 sm:ml-0 sm:w-5/12 ${index % 2 === 0 ? 'sm:pr-8' : 'sm:pl-8'}`}>
-                  <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-slate-700 hover:border-emerald-500 transition-all duration-300">
-                    <div className="flex flex-col sm:flex-row justify-between items-start mb-4">
-                      <div>
-                        <h3 className="text-lg sm:text-xl font-semibold text-white">
-                          {experience.title}
-                        </h3>
-                        <p className="text-emerald-400 text-sm sm:text-base">{experience.company}</p>
-                      </div>
-                      <span className="text-xs sm:text-sm text-slate-400 bg-slate-800 px-2 py-1 sm:px-3 sm:py-1 rounded-full mt-2 sm:mt-0">
-                        {experience.period}
-                      </span>
-                    </div>
-
-                    <ul className="space-y-3 sm:space-y-4">
-                      {experience.responsibilities.map((resp, idx) => (
-                        <li key={idx} className="space-y-1">
-                          <h4 className="text-emerald-400 font-medium text-sm sm:text-base">
-                            {resp.title}
-                          </h4>
-                          <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                            {resp.description}
-                          </p>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+    <section id="Experience" className="py-24 md:py-32">
+      <Timeline data={experiences} />
     </section>
   )
 }
+
