@@ -1,6 +1,6 @@
 import React from 'react'
-import { projectStyles as styles } from './ProjectStyles'
-import PicoCTFImage from '../../assets/Works/picoctf.jpg'
+import { projectStyles as styles } from './ProjectStyles';
+import PicoCTFImage from '../../assets/Works/tradingjournal.jpg';
 
 const Project4 = () => {
   const skills = ["CTF", "Cryptography", "Forensics", "Binary Exploitation"]

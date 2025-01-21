@@ -15,13 +15,13 @@ export default function Education() {
       backgroundColor: 'var(--bg-primary)'
     }}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-10 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4" style={{
-            color: 'var(--text-primary)'
-          }}>
-            Education
-          </h2>
-          <div className="h-1 w-20 bg-emerald-500 mx-auto rounded-full"></div>
+        <div className="mb-2 sm:mb-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4" style={{
+                  color: 'var(--text-primary)'
+                }}>
+                  Education
+          </h1>
+          <div className="h-1 w-28" style={{ backgroundColor: 'var(--accent-primary)' }}></div>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start lg:items-center">
@@ -36,8 +36,6 @@ export default function Education() {
                 <span style={{ color: 'var(--accent-primary)' }} className="font-semibold">
                   STI College-Angeles
                 </span>
-                <span style={{ color: 'var(--text-secondary)' }} className="hidden sm:inline">•</span>
-                <span style={{ color: 'var(--text-secondary)' }}>2019 - 2023</span>
               </div>
               
               <div className="space-y-3 sm:space-y-4">
@@ -70,39 +68,16 @@ export default function Education() {
             </div>
           </div>
 
-          <div className="w-full lg:w-1/2 grid grid-cols-2 gap-3 sm:gap-4">
-            <div className="space-y-3 sm:space-y-4">
-              <div className="relative aspect-square rounded-lg overflow-hidden group">
-                <div className="absolute inset-0 transition-colors duration-300 z-10"
-                  style={{
-                    backgroundColor: 'var(--accent-primary)',
-                    opacity: 0.05,
-                    ':hover': { opacity: 0.1 }
-                  }}
-                ></div>
-                <img
-                  src={comp}
-                  alt="Computer Laboratory Session"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="relative aspect-video rounded-lg overflow-hidden group">
-                <div className="absolute inset-0 bg-emerald-500/5 group-hover:bg-emerald-500/10 transition-colors duration-300 z-10"></div>
-                <img
-                  src={org}
-                  alt="Tech Matrix Group"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-            </div>
-            <div className="relative aspect-[3/4] rounded-lg overflow-hidden group">
-              <div className="absolute inset-0 bg-emerald-500/5 group-hover:bg-emerald-500/10 transition-colors duration-300 z-10"></div>
-              <img
-                src={gradpic}
-                alt="Graduation"
-                className="object-cover w-full h-full"
-              />
-            </div>
+          <div className="relative h-[60vh] w-full md:w-2/3 my-[50px] px-[10px] lg:w-1/3 md:mx-auto">
+            <img className='absolute top-[-30px] left-2 w-auto h-2/5 rounded-xl border border-white shadow-2xl' style={{
+                borderColor: 'var(--card-border)'
+              }} src={comp} alt="About " width={300} height={300} />
+            <img className='absolute top-1/4 right-3 lg:right-0 w-auto h-3/5 z-10 rounded-xl border border-white shadow-2xl' style={{
+                borderColor: 'var(--card-border)'
+              }} src={gradpic} alt="About " width={300} height={300} />
+            <img className='absolute bottom-[-50px] lg:bottom-[-30px] left-2 lg:left-[-20px] w-auto h-2/5 rounded-xl border border-white shadow-2xl' style={{
+                borderColor: 'var(--card-border)'
+              }} src={org} alt="About " width={300} height={300} />
           </div>
         </div>
       </div>

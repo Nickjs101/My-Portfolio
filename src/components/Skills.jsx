@@ -45,7 +45,9 @@ const Skills = () => {
         }}>
           My Tech Stack
         </h2>
-        <div className="h-1 w-20 bg-emerald-500 mx-auto rounded-full mb-8"></div>
+        <div className="h-1 w-20 mx-auto rounded-full mb-8" style={{
+            backgroundColor: 'var(--button-bg)'
+          }}></div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10">
           {skills.map((skill, index) => (

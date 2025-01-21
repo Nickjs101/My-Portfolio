@@ -1,6 +1,6 @@
 import React from 'react'
-import { projectStyles as styles } from './ProjectStyles'
-import HTBImage from '../../assets/Works/htb.jpg'
+import { projectStyles as styles } from './ProjectStyles';
+import HTBImage from '../../assets/Works/tradingjournal.jpg';
 
 const Project1 = () => {
   const skills = ["Penetration Testing", "Linux", "Network Security"]

@@ -1,6 +1,6 @@
 import React from 'react';
 import { projectStyles as styles } from './ProjectStyles';
-import THMImage from '../../assets/Works/thm.jpg';
+import THMImage from '../../assets/Works/tradingjournal.jpg';
 
 const Project2 = () => {
   const skills = ["Network Security", "Web Security", "Linux", "OSINT"];

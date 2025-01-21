@@ -1,6 +1,6 @@
 import React from 'react'
 import { projectStyles as styles } from './ProjectStyles'
-import GoogleImage from '../../assets/Works/google.jpg'
+import GoogleImage from '../../assets/Works/tradingjournal.jpg'
 
 const Project5 = () => {
   const skills = ["Network Security", "Cloud Security", "Security Operations", "Incident Response"]

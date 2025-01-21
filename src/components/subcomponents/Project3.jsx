@@ -1,6 +1,6 @@
 import React from 'react'
-import { projectStyles as styles } from './ProjectStyles'
-import PortSwiggerImage from '../../assets/Works/portswigger.jpg'
+import { projectStyles as styles } from './ProjectStyles';
+import PortSwiggerImage from '../../assets/Works/tradingjournal.jpg';
 
 const Project3 = () => {
   const skills = ["Web Security", "Burp Suite", "Vulnerability Assessment"]
