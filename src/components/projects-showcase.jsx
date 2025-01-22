@@ -1,6 +1,6 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { ExternalLink, Github, ArrowRight, FileText } from 'lucide-react'
+// import { motion } from 'framer-motion'
+// import { ExternalLink, Github, ArrowRight, FileText } from 'lucide-react'
 import { projectStyles as styles } from './subcomponents/ProjectStyles'
 import { useSelector } from 'react-redux'
 
