@@ -1,6 +1,6 @@
 import React from 'react'
 
-import HCIA from '../assets/Certificates/HCIAlogo.svg'
+import HCIA from '../assets/Certificates/HCIAlogo.png'
 import GCC from '../assets/Certificates/GCClogo.png'
 
 import Courses from "./Courses";
