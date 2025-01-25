@@ -6,7 +6,7 @@ const AppProject1 = () => {
   const technologies = ["Java", "XML", "Android Studio", "SQLite"];
 
   return (
-    <div style={styles.container} className="font-sans leading-relaxed tracking-wide flex flex-col justify-center items-center">
+    <div className="font-sans leading-relaxed tracking-wide flex flex-col justify-center items-center">
       <div className="max-w-4xl mx-auto p-0 md:p-6 rounded-lg">
         <img src={TradeHistoryImage} alt="Trade History" className="w-full h-auto mb-6 rounded-lg"/>
         
