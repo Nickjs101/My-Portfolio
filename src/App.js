@@ -24,28 +24,23 @@ library.add(faGoogle,faCode,faBug,faLinux,faDatabase,faFlag,faShieldHalved,faPeo
 
 function App() {
   const [currentContent, setCurrentContent] = useState('Main');
-  const [projectComponent, setProjectComponent] = useState(<Navbar />);
-  const [projectCategory, setProjectCategory] = useState('SoftwareDev');
+  const [projectComponent, setprojectComponent] = useState(<Navbar/>);
+  const [projectCategory, setprojectCategory] = useState('SoftwareDev');
   const [isChatVisible, setIsChatVisible] = useState(false);
   const [isFabVisible, setIsFabVisible] = useState(false);
 
   const displayProject = useCallback((Component, Category) => {
-    setProjectComponent(Component);
-    setProjectCategory(Category);
+    setprojectComponent(Component);
+    setprojectCategory(Category);
     setCurrentContent('Projects');
   }, []);
 
   const renderContent = useCallback(() => {
+
     if (currentContent === 'Projects') {
       return (
         <Provider store={projectStorage}>
-          <Cyberprojects
-            projectComponent={projectComponent}
-            category={projectCategory}
-            setProjectComponent={setProjectComponent}
-            setProjectCategory={setProjectCategory}
-            setCurrentContent={setCurrentContent}
-          />
+          <Cyberprojects  projectComponent={projectComponent} category={projectCategory} setprojectComponent={setprojectComponent} setprojectCategory={setprojectCategory} setCurrentContent={setCurrentContent} />
         </Provider>
       );
     }
@@ -78,6 +73,8 @@ function App() {
         )}
       </>
     );
+  
+  
   }, [currentContent, projectComponent, projectCategory, displayProject, isChatVisible, isFabVisible]);
 
   return <div className="App">{renderContent()}</div>;

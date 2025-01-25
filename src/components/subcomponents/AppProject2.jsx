@@ -9,7 +9,7 @@ const AppProject2 = () => {
   const skills = ["C#", "Unity", "OOP"]
 
   return (
-    <div style={styles.container} className="font-sans leading-relaxed tracking-wide flex flex-col items-center">
+    <div className="font-sans leading-relaxed tracking-wide flex flex-col items-center">
       <div className="max-w-4xl w-full p-0 md:p-6 rounded-lg">
         <img src={KodyAdventureImage} alt="Kody's Adventure" className="w-full h-auto mb-6 rounded-lg"/>
         

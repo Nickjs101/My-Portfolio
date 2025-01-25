@@ -1,68 +1,76 @@
 import React from 'react'
-import { projectStyles as styles } from './ProjectStyles';
-import PortSwiggerImage from '../../assets/Works/tradingjournal.jpg';
 
 const Project3 = () => {
-  const skills = ["Web Security", "Burp Suite", "Vulnerability Assessment"]
-
   return (
-    <div style={styles.container} className="font-sans leading-relaxed tracking-wide flex flex-col items-center">
-      <div className="max-w-4xl w-full p-0 md:p-6 rounded-lg">
-        <img src={PortSwiggerImage} alt="PortSwigger Academy" className="w-full h-auto mb-6 rounded-lg"/>
+    <div className="font-sans leading-relaxed tracking-wide flex flex-col justify-center items-center">
+      <div className="w-full mx-auto p-0 md:p-6 rounded-lg secondary-color">
+        <h1 className="text-3xl lg:text-5xl font-bold mb-4 text-white rounded-lg">Vulnerability Assessment Report</h1>
         
-        <h1 style={styles.heading} className="text-3xl lg:text-5xl font-bold mb-4">
-          PortSwigger Web Security Academy
-        </h1>
+        <h2 className="text-xl font-semibold mb-2">1st January 20XX</h2>
         
-        <h2 style={styles.heading} className="text-2xl font-semibold mb-4">Training Overview</h2>
-        <p style={styles.text} className="mb-4">
-          Through <strong style={styles.subheading}>PortSwigger's Web Security Academy</strong>, I've gained comprehensive knowledge in web application security testing and vulnerability assessment. This platform has provided me with practical experience using industry-standard tools and methodologies.
+        <h3 className="text-lg font-semibold mb-2 text-white">System Description</h3>
+        <p className="mb-4">
+          The server hardware consists of a powerful CPU processor and 128GB of memory. It runs on the latest version of Linux operating system and hosts a MySQL database management system. It is configured with a stable network connection using IPv4 addresses and interacts with other servers on the network. Security measures include SSL/TLS encrypted connections.
         </p>
         
-        <h2 style={styles.heading} className="text-2xl font-semibold mb-4">Key Areas of Study</h2>
-        <ul style={styles.text} className="list-disc pl-6 mb-4 space-y-2">
-          <li>SQL Injection and Authentication Vulnerabilities</li>
-          <li>Cross-Site Scripting (XSS) and CSRF</li>
-          <li>Access Control and Privilege Escalation</li>
-          <li>Server-Side Request Forgery (SSRF)</li>
-          <li>XML External Entity (XXE) Injection</li>
-        </ul>
-        
-        <h2 style={styles.heading} className="text-2xl font-semibold mb-4">Practical Experience</h2>
-        <p style={styles.text} className="mb-4">
-          • Completed numerous hands-on labs across different vulnerability types<br/>
-          • Mastered the use of Burp Suite for web application testing<br/>
-          • Developed custom exploits for various security vulnerabilities<br/>
-          • Practiced responsible disclosure and documentation
+        <h3 className="text-lg font-semibold mb-2 text-white">Scope</h3>
+        <p className="mb-4">
+          The scope of this vulnerability assessment relates to the current access controls of the system. The assessment will cover a period of three months from June 20XX to August 20XX. NIST SP 800-30 Rev. 1 is used to guide the risk analysis of the information system.
         </p>
-
-        <div className="flex justify-center my-8">
-          <a 
-            href="https://portswigger.net/web-security" 
-            target="_blank" 
-            rel="noopener noreferrer"  
-            className="font-semibold py-2 px-4 rounded-lg shadow-lg transition-colors duration-300"
-            style={{
-              backgroundColor: 'var(--accent-primary)',
-              color: 'var(--text-primary)'
-            }}
-          >
-            View Academy
-          </a>
+        
+        <h3 className="text-lg font-semibold mb-2 text-white">Purpose</h3>
+        <p className="mb-4">
+          The database server is a centralized computer system that stores and manages a large amount of data. The server is used to store customer campaign and analytic data that can later be analyzed to track performance and personalize marketing efforts. It is important to secure the system because of its regular use for marketing operations.
+        </p>
+        
+        <h3 className="text-lg font-semibold mb-2 text-white">Risk Assessment</h3>
+        <div className='overflow-x-auto'>
+          <table className="min-w-full bg-fourth-color mb-4 text-center">
+            <thead>
+              <tr className='bg-tertiary-color tertiary-color'>
+                <th className="py-2">Threat Source</th>
+                <th className="py-2">Threat Event</th>
+                <th className="py-2">Likelihood</th>
+                <th className="py-2">Severity</th>
+                <th className="py-2">Risk</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="py-2">Hacker</td>
+                <td className="py-2">Obtain sensitive information via exfiltration</td>
+                <td className="py-2">3</td>
+                <td className="py-2">3</td>
+                <td className="py-2">9</td>
+              </tr>
+              <tr>
+                <td className="py-2">Employee</td>
+                <td className="py-2">Accidentally alter data and disrupt operations</td>
+                <td className="py-2">2</td>
+                <td className="py-2">3</td>
+                <td className="py-2">6</td>
+              </tr>
+              <tr>
+                <td className="py-2">Customer</td>
+                <td className="py-2">Alter or Delete customer information</td>
+                <td className="py-2">1</td>
+                <td className="py-2">3</td>
+                <td className="py-2">3</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-
-        <h2 style={styles.heading} className="text-2xl font-bold mb-4">Skills Developed</h2>
-        <div className="flex flex-wrap mb-4">
-          {skills.map((skill, index) => (
-            <span 
-              key={index} 
-              className="py-1 px-3 m-1 rounded-full font-semibold transition-colors duration-300"
-              style={styles.tag}
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
+        
+        
+        <h3 className="text-lg font-semibold mb-2 text-white">Approach</h3>
+        <p className="mb-4">
+          Risks that were measured considered the data storage and management processes of the business. Potential threat sources and events were determined by using the likelihood of the security incident given that the database server is open to the public. The severity of the potential incidents was weighted against its impact on the day-to-day operational needs of the company.
+        </p>
+        
+        <h3 className="text-lg font-semibold mb-2 text-white">Remediation Strategy</h3>
+        <p className="mb-4">
+          Implementation of authentication, authorization, and auditing mechanisms to ensure that only authorized users access the database server. This includes using strong passwords, role-based access controls, and multi-factor authentication to limit user privileges. Encryption of data in motion using TLS instead of SSL. IP allow-listing to corporate offices to prevent random users from the internet from connecting to the database.
+        </p>
       </div>
     </div>
   )

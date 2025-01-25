@@ -52,7 +52,18 @@ const Timeline = ({ data }) => {
               </h3>
               <h4 className="text-lg font-semibold mb-2" style={{ color: 'var(--accent-primary)' }}>{item.company}</h4>
               <p className="block text-sm mb-4"style={{ color: 'var(--text-secondary)' }}>{item.period}</p>
-              {item.content}
+              <ul className="space-y-3 sm:space-y-4">
+                      {item.responsibilities.map((resp, idx) => (
+                        <li key={idx} className="space-y-1">
+                          <h4 className="font-medium text-sm sm:text-base" style={{ color: 'var(--accent-primary)' }}>
+                            {resp.title}
+                          </h4>
+                          <p className="text-xs sm:text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                            {resp.description}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
             </div>
           </div>
         ))}

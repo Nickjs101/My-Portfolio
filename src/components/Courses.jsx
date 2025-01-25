@@ -116,12 +116,9 @@ const Courses = () => {
             >
               <div className="flex flex-col h-full">
                 <div className="mb-4">
-                  <div className="inline-block p-1 rounded-lg mb-4" style={{
-                    backgroundColor: 'var(--accent-secondary)', 
-                    opacity: 0.8
-                  }}>
+                  <div className="inline-block p-2 rounded-lg mb-4 bg-emerald-400/10">
                     <svg
-                      className="w-12 h-12"
+                      className="w-10 h-10"
                       fill="none"
                       stroke="var(--accent-primary)"
                       viewBox="0 0 24 24"
