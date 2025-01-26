@@ -69,6 +69,7 @@ export default function ProjectsShowcase({ displayProject }) {
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
                     </a>}
                     <a
+                      href='#docs'
                       onClick={() => displayProject(project.component, project.type)}
                       className="p-1 sm:p-2 text-slate-400 hover:text-emerald-400 transition-colors"
                       aria-label="View Documentation"
@@ -99,6 +100,7 @@ export default function ProjectsShowcase({ displayProject }) {
 
         <div className="flex justify-center mt-8 sm:mt-12">
           <a
+            href='#AllProjects'
             onClick={() => displayProject(AppProject2, 'SoftwareDev')}
             className="group inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 text-white rounded-full text-sm sm:text-base font-medium transition-colors duration-300"style={{
               backgroundColor: 'var(--button-bg)',

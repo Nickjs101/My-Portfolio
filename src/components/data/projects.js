@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import TradeHistoryImage from '../../assets/Works/tradingjournal.jpg'
 import KodyAdventureImage from '../../assets/Works/kodymain.jpg';
 import Linux from '../../assets/Linux/Picture3.png';
 import vul from '../../assets/Linux/Picture2.png';
