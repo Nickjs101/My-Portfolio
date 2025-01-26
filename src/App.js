@@ -47,13 +47,11 @@ function App() {
     }
     return (
       <>
-        <Navbar
-          onWantToKnowMoreClick={() => {
+        <Navbar/>
+        <Hero onWantToKnowMoreClick={() => {
             setIsFabVisible(true);
             setIsChatVisible(true);
-          }}
-        />
-        <Hero />
+          }}/>
         <Skills />
         <Certs />
         <About />

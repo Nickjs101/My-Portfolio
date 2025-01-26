@@ -4,8 +4,9 @@ import { Github, Linkedin, Mail, FileText } from 'lucide-react'
 import { TypeAnimation } from 'react-type-animation'
 import heroimage from '../assets/headshot.jpg'
 import resume from '../assets/NICK_JOSHUA_MONTEMAYOR_RESUME.pdf'
+import { InteractiveHoverButton } from '../components/subcomponents/interactive-hover-button'
 
-export default function Hero() {
+export default function Hero({ onWantToKnowMoreClick }) {
   const gotoSection = (event, id) => {
     event.preventDefault();
     const section = document.getElementById(id);
@@ -85,6 +86,8 @@ export default function Hero() {
             <p className="text-slate-400 text-base sm:text-lg mb-6 sm:mb-8 max-w-xl">
               I specialize in supporting applications and developing tools that enhance workflows and productivity within organizations. With expertise in software development and cloud operations, I prioritize security in every aspect of my work to deliver reliable and efficient solutions.
             </p>
+
+            <InteractiveHoverButton onClick={onWantToKnowMoreClick} text="Try Me!" className="mb-6 sm:mb-8 primary-color border-primary"/>
             
             {/* Tech Stack */}
             <div className="mb-6 sm:mb-8">

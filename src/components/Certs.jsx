@@ -46,7 +46,7 @@ const Certs = () => {
             <div
               key={cert.id}
               className={`bg-transparent rounded-lg shadow-sm flex items-center justify-center p-2 transition-all duration-300 hover:shadow-md ${
-                cert.inProgress ? "opacity-60" : ""
+                cert.inProgress ? "opacity-50" : ""
               }`}
             >
               <a
@@ -56,10 +56,11 @@ const Certs = () => {
                 className="relative w-full aspect-square"
                 title={cert.title}
               >
-                <img src={cert.badge || "/placeholder.svg"} alt={cert.title} fill className="object-contain" />
+                <img src={cert.badge} alt={cert.title} fill className="object-cover" />
               </a>
             </div>
           ))}
+          <div class="hexagon"></div>
         </div>
       </div>
       <Courses />

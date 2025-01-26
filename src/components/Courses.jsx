@@ -17,6 +17,7 @@ const Courses = () => {
       issuer: "Google",
       date: "2023",
       image: C2,
+      hasLink: true,
       link: "https://coursera.org/share/cb618813ca3f1139df72a1dd5fcf4cc3"
     },
     {
@@ -25,6 +26,7 @@ const Courses = () => {
       issuer: "Google",
       date: "2023",
       image: C3,
+      hasLink: true,
       link: "https://coursera.org/share/91d567af5011cdb524f4293113e39260"
     },
     {
@@ -33,6 +35,7 @@ const Courses = () => {
       issuer: "Google",
       date: "2023",
       image: C4,
+      hasLink: true,
       link: "https://coursera.org/share/69b3c411e254e679811adaaedf35076b"
     },
     {
@@ -41,6 +44,7 @@ const Courses = () => {
       issuer: "Google",
       date: "2023",
       image: C5,
+      hasLink: true,
       link: "https://coursera.org/share/e074d29b212fdc742f4bce993114b230"
     },
     {
@@ -49,6 +53,7 @@ const Courses = () => {
       issuer: "Google",
       date: "2023",
       image: C6,
+      hasLink: true,
       link: "https://coursera.org/share/d288f3f61c9e6c47a7ff8f3414c51c16"
     },
     {
@@ -57,6 +62,7 @@ const Courses = () => {
       issuer: "Google",
       date: "2023",
       image: C7,
+      hasLink: true,
       link: "https://coursera.org/share/c55b2a188baaef58b85b6364e2b05635"
     },
     {
@@ -65,6 +71,7 @@ const Courses = () => {
       issuer: "Oracle",
       date: "2023",
       image: C8,
+      hasLink: false,
       link: "#"
     },
     {
@@ -73,6 +80,7 @@ const Courses = () => {
       issuer: "STI",
       date: "2023",
       image: C9,
+      hasLink: false,
       link: "#"
     }
   ]
@@ -187,7 +195,7 @@ const Courses = () => {
                 <p style={{ color: 'var(--text-secondary)' }}>
                   Issued by {selectedCert.issuer} • {selectedCert.date}
                 </p>
-                {/* <a
+                {selectedCert.hasLink && <a
                   href={selectedCert.link}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -211,7 +219,7 @@ const Courses = () => {
                       d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                     />
                   </svg>
-                </a> */}
+                </a>}
               </div>
             </div>
           )}

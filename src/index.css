@@ -9,8 +9,8 @@
 :root {
     /* Light theme defaults */
     --bg-primary: #F2F8FC;
-    --bg-secondary: #f8f9fa;
-    --bg-tertiary: #e9ecef;
+    --bg-secondary: #e9ecef;
+    --bg-tertiary: #f8f9fa;
     --text-primary: #141d2b;
     --text-secondary: #4a5568;
     --accent-primary: #9fef00;
@@ -28,9 +28,9 @@
 }
 
 [data-theme='dark'] {
-    --bg-primary: #141d2b;
+    --bg-primary: #0b121f;
     --bg-secondary: #1a2332;
-    --bg-tertiary: #0b121f;
+    --bg-tertiary: #141d2b;
     --text-primary: #ffffff;
     --text-secondary: #A4B1CD;
     --accent-primary: #82cc00;
@@ -88,6 +88,11 @@ body {
     @apply transition-colors duration-200;
 }
 
+.border-primary {
+    border-color: var(--accent-primary);
+    border-width: 2px
+}
+
 /* Update effects to use CSS variables */
 .fade-effect {
     @apply text-transparent bg-clip-text inline-block;
@@ -101,7 +106,7 @@ body {
     before:ease-[ease-in-out] before:scale-x-0 hover:before:origin-[center_left] 
     hover:before:scale-x-100;
     &:before {
-        background: linear-gradient(to right, var(--accent-primary), transparent);
+        background-color: linear-gradient(to right, var(--accent-primary), transparent);
     }
     &:hover {
         color: var(--text-primary);
@@ -190,4 +195,18 @@ body {
         background-color: var(--button-hover);
     }
 }
+  
+.container {
+    width: 96%;
+    height: 100%; /* Full viewport height */
+    position: relative;
+  }
+  
+  .hexagon {
+    width: 70%;
+    height: 70%;
+    opacity: 0.2;
+    background-color: var(--text-secondary);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
   

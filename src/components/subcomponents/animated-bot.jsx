@@ -5,7 +5,7 @@ export default function AnimatedChatButton({ onClick }) {
   return (
     <button
       onClick={onClick}
-      className="fixed bottom-8 right-8 w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 focus:outline-none focus:ring-2"
+      className="fixed bottom-8 right-8 w-12 h-12 rounded-full flex items-center justify-center shadow-xl shadow-slate-900 transition-all duration-200 focus:outline-none focus:ring-2"
       style={{
         backgroundColor: 'var(--accent-primary)',
         opacity: 0.9,
@@ -17,7 +17,7 @@ export default function AnimatedChatButton({ onClick }) {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{
             backgroundColor: 'var(--bg-secondary)',
-            opacity: 0.2
+            opacity: 0.9
           }}>
             <div className="text-2xl animate-pulse" style={{ color: 'var(--accent-primary)' }}>
               <FaRobot />
