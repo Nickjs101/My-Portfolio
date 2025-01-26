@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ThemeToggle from './ThemeToggle'
 
-export default function Navbar({ onWantToKnowMoreClick }) {
+export default function Navbar() {
     const gotoSection = (event, id) => {
         event.preventDefault();
         const section = document.getElementById(id);
@@ -65,14 +65,14 @@ export default function Navbar({ onWantToKnowMoreClick }) {
             </div>
             <a
               href="#contact"
-              onClick={onWantToKnowMoreClick}
+              onClick={(e) => gotoSection(e, 'Contact')}
               className="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300"
               style={{
                 backgroundColor: 'var(--button-bg)',
                 color: 'var(--text-primary)'
               }}
             >
-              Want to know More?
+              Contact Me
             </a>
           </div>
 
@@ -149,12 +149,9 @@ export default function Navbar({ onWantToKnowMoreClick }) {
                 backgroundColor: 'var(--button-bg)',
                 color: 'var(--text-primary)'
             }}
-            onClick={() => {
-              setIsMenuOpen(false);
-              onWantToKnowMoreClick();
-            }}
+            onClick={(e) => gotoSection(e, 'Contact')}
           >
-            Want to know More?
+            Contact Me
           </a>
         </div>
       </div>

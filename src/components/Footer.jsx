@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope, FaFileDownload } from 'react-icons/fa';
+import { Github, Linkedin, Mail, FileText } from 'lucide-react'
 import resume from '../assets/NICK_JOSHUA_MONTEMAYOR_RESUME.pdf';
 
 export default function Footer() {
@@ -29,7 +29,7 @@ export default function Footer() {
               className="transition-transform hover:scale-110"
               style={{ color: 'var(--text-secondary)' }}
             >
-              <FaGithub className="w-6 h-6" />
+              <Github className="w-6 h-6" />
             </a>
             <a
               href="https://www.linkedin.com/in/nickjmont"
@@ -38,14 +38,14 @@ export default function Footer() {
               className="transition-transform hover:scale-110"
               style={{ color: 'var(--text-secondary)' }}
             >
-              <FaLinkedin className="w-6 h-6" />
+              <Linkedin className="w-6 h-6" />
             </a>
             <a
               href="mailto:nick@example.com"
               className="transition-transform hover:scale-110"
               style={{ color: 'var(--text-secondary)' }}
             >
-              <FaEnvelope className="w-6 h-6" />
+              <Mail className="w-6 h-6" />
             </a>
             <a
               href={resume}
@@ -54,7 +54,7 @@ export default function Footer() {
               className="transition-transform hover:scale-110"
               style={{ color: 'var(--text-secondary)' }}
             >
-              <FaFileDownload className="w-6 h-6" />
+              <FileText className="w-6 h-6" />
             </a>
           </div>
         </div>

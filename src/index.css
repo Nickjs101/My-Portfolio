@@ -8,7 +8,7 @@
 /* Theme configuration using CSS variables */
 :root {
     /* Light theme defaults */
-    --bg-primary: #FAF9F6;
+    --bg-primary: #F2F8FC;
     --bg-secondary: #f8f9fa;
     --bg-tertiary: #e9ecef;
     --text-primary: #141d2b;
@@ -42,7 +42,7 @@
     --card-border: #1e293b;
     --button-bg: #82cc00;
     --button-hover: #9fef00;
-    --input-bg: #1a2332;
+    --input-bg: #141d2b;
     --input-border: #1e293b;
     --shadow-color: rgba(0, 0, 0, 0.3);
 }

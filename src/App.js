@@ -8,6 +8,7 @@ import Certs from "./components/Certs";
 import Experience from "./components/Experience";
 import Cyberprojects from "./components/Cyberprojects";
 import Education from "./components/Education";
+import Contact from "./components/Contact";
 import Chatbox from "./components/Chat-box2";
 import AnimatedChatButton from "./components/subcomponents/animated-bot"
 
@@ -61,6 +62,7 @@ function App() {
         <Provider store={projectStorage}>
           <Work displayProject={displayProject} />
         </Provider>
+        <Contact />
         <Footer />
         <Chatbox
           isChatVisible={isChatVisible}

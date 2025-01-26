@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Download } from 'lucide-react'
+import { Github, Linkedin, Mail, FileText } from 'lucide-react'
 import { TypeAnimation } from 'react-type-animation'
 import heroimage from '../assets/headshot.jpg'
 import resume from '../assets/NICK_JOSHUA_MONTEMAYOR_RESUME.pdf'
@@ -33,13 +33,13 @@ export default function Hero() {
     },
     { 
       icon: Mail, 
-      href: 'mailto:nick@example.com', 
+      href: '#contact', 
       onclick: (e) => gotoSection(e, 'Contact'),
       label: 'Email Contact',
       color: 'hover:text-emerald-400'
     },
     { 
-      icon: Download, 
+      icon: FileText, 
       href: resume,
       onclick: () => {},
       label: 'Download Resume',
@@ -47,8 +47,8 @@ export default function Hero() {
     }
   ]
 
-  const techStack = [
-    'React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'JavaScript', 'HTML/CSS'
+  const Ican = [
+    'Cloud', 'AI Automation', 'Cybersecurity', 'Software Development'
   ]
 
   return (
@@ -88,12 +88,12 @@ export default function Hero() {
             
             {/* Tech Stack */}
             <div className="mb-6 sm:mb-8">
-              <h3 className="text-slate-300 font-medium mb-2 sm:mb-3">Tech Stack</h3>
+              <h3 className="font-medium mb-2 sm:mb-3" style={{ color: 'var(--text-primary)' }}>What I Do?</h3>
               <div className="flex flex-wrap gap-2">
-                {techStack.map((tech) => (
+                {Ican.map((tech) => (
                   <span
                     key={tech}
-                    className="px-2 sm:px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-xs sm:text-sm"
+                    className="button px-2 sm:px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-xs sm:text-sm"
                   >
                     {tech}
                   </span>
