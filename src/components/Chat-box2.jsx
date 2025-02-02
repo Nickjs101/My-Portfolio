@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Send } from "lucide-react";
+import { v4 as uuidv4 } from 'uuid';
 
 export default function ChatBox({ isChatVisible, onClose, hideFab }) {
 
@@ -9,6 +10,7 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
   const [inputMessage, setInputMessage] = useState("");
   const chatAreaRef = useRef(null);
   const [loading, setLoading] = useState(false);
+  const [sessionId, setSessionID] = useState(-1);
 
   // Auto-scroll chat to the bottom when messages are updated
   useEffect(() => {
@@ -17,13 +19,13 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
     }
   }, [messages]);
 
-  const extractMessageAndSender = async (data) => {
+  const extractMessage= async (data) => {
     try {
-      const outputs = data.outputs[0]?.outputs[0]?.results?.message;
-      const jsonText = JSON.parse(outputs?.text);
-      const message = jsonText.message || "No message found";
-      const cleanedText = cleanMarkup(message);
-      return cleanedText;
+      const outputs = data.output;
+      // const jsonText = JSON.parse(outputs);
+      const message = outputs || "No message found";
+      // const cleanedText = cleanMarkup(message);
+      return message;
     } catch (error) {
       console.error("Error extracting data:", error);
       return "An error occurred while processing the response. Please try again.";
@@ -74,6 +76,10 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
     });
   };
 
+  const generateSessionId = () => {
+    return uuidv4();
+  };
+
   const handleSendMessage = async (e) => {
     e.preventDefault();
     if (!inputMessage.trim()) return;
@@ -87,13 +93,24 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
     setMessages((prevMessages) => [...prevMessages, placeholderMessage]);
     setLoading(true);
 
+    const WEBHOOK_URL = 'https://nickjs.app.n8n.cloud/webhook/3c974edd-aa4b-481d-a0b5-24c303a57cc0';
+    const BEARER_TOKEN = 'NickjsAISolutions';
+
+    if(sessionId === -1) {
+      setSessionID(generateSessionId());
+    }
+
     try {
-      const res = await fetch('https://dwav3mbsqipmdaiyupddud3dza0akpct.lambda-url.ap-southeast-1.on.aws/send_message', {
+      const res = await fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: {
+          'Authorization': `Bearer ${BEARER_TOKEN}`,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({'message' : inputMessage}),
+        body: JSON.stringify({
+          'sessionId' : sessionId,
+          'chatInput' : inputMessage
+        }),
       });
 
       if (!res.ok) {
@@ -101,7 +118,7 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
       }
 
       const data = await res.json();
-      const message = await extractMessageAndSender(data);
+      const message = await extractMessage(data);
       await simulateTypingEffect(message);
 
     } catch (e) {
