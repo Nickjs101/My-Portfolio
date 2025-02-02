@@ -31,21 +31,6 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
       return "An error occurred while processing the response. Please try again.";
     }
   };
-
-  const cleanMarkup = (text) => {
-    if (!text || typeof text !== "string") {
-      console.error("cleanMarkup: Received invalid text:", text);
-      return "Invalid response text.";
-    }
-  
-    const cleanedText = text
-      .replace(/[*#`>-]/g, "") // Remove *, **, ###, `, >, - symbols
-      .replace(/\[.*?\]\(.*?\)/g, "") // Remove Markdown links
-      .replace(/ {2,}/g, " ") // Normalize extra spaces without affecting newlines
-      .replace(/(\n\s*)+/g, "\n") // Ensure single newlines are preserved and normalized
-      .trim();
-    return cleanedText;
-  };
   
   const simulateTypingEffect = async (fullMessage) => {
     if (!fullMessage || typeof fullMessage !== "string") {
