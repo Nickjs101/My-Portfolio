@@ -10,7 +10,7 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
   const [inputMessage, setInputMessage] = useState("");
   const chatAreaRef = useRef(null);
   const [loading, setLoading] = useState(false);
-  const [sessionId, setSessionID] = useState(-1);
+  const [sessionId, setSessionID] = useState(0);
 
   // Auto-scroll chat to the bottom when messages are updated
   useEffect(() => {
@@ -18,6 +18,12 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
       chatAreaRef.current.scrollTop = chatAreaRef.current.scrollHeight;
     }
   }, [messages]);
+
+  useEffect(() => {
+    if(sessionId === 0){
+      setSessionID(generateSessionId());
+    }
+  }, [sessionId]);
 
   const extractMessage= async (data) => {
     try {
@@ -81,11 +87,8 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
     const WEBHOOK_URL = 'https://nickjs.app.n8n.cloud/webhook/3c974edd-aa4b-481d-a0b5-24c303a57cc0';
     const BEARER_TOKEN = 'NickjsAISolutions';
 
-    if(sessionId === -1) {
-      setSessionID(generateSessionId());
-    }
-
     try {
+
       const res = await fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: {
