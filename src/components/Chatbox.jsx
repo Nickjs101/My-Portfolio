@@ -114,7 +114,7 @@ export default function ChatBox({ isChatVisible, onClose, hideFab }) {
 
       setMessages((prevMessages) => {
         const updatedMessages = [...prevMessages];
-        updatedMessages[updatedMessages.length - 1] = {sender: "AI", text: "An error occurred. Please try again."};
+        updatedMessages[updatedMessages.length - 1] = {sender: "AI", text: "Chat is currently offline. Email me below for a demo."};
         return updatedMessages;
       });
       

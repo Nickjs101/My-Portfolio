@@ -9,7 +9,7 @@ import Experience from "./components/Experience";
 import Cyberprojects from "./components/Cyberprojects";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
-import Chatbox from "./components/Chat-box2";
+import Chatbox from "./components/Chatbox";
 import AnimatedChatButton from "./components/subcomponents/animated-bot"
 
 import { library } from '@fortawesome/fontawesome-svg-core'
