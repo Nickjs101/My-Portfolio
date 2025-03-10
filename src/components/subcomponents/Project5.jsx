@@ -3,7 +3,7 @@ import React from 'react'
 const Project5 = () => {
   return (
     <div className="font-sans leading-relaxed tracking-wide flex flex-col justify-center items-center">
-      <div className="max-w-4xl mx-auto p-0 md:p-6 shadow-lg rounded-lg secondary-color">
+      <div className="max-w-4xl mx-auto p-0 md:p-6 rounded-lg secondary-color">
         <h1 className="text-3xl lg:text-5xl font-bold mb-4 text-white rounded-lg">Incident Report Analysis</h1>
 
         <h2 className="text-xl font-semibold mb-2">Summary</h2>

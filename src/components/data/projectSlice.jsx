@@ -2,13 +2,13 @@ import {createSlice} from '@reduxjs/toolkit';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import TradeHistoryImage from '../../assets/Works/tradingjournal.jpg'
 import KodyAdventureImage from '../../assets/Works/kodymain.jpg';
-import Project1 from './Project1'
-import Project2 from './Project2'
-import Project3 from './Project3'
-import Project4 from './Project4'
+import Project1 from '../../components/subcomponents/Project1'
+import Project2 from '../../components/subcomponents/Project2'
+import Project3 from '../../components/subcomponents/Project3'
+import Project4 from '../../components/subcomponents/Project4'
 // import Project5 from './Project5'
-import AppProject1 from './AppProject1'
-import AppProject2 from './AppProject2'
+import AppProject1 from '../../components/subcomponents/AppProject1'
+import AppProject2 from '../../components/subcomponents/AppProject2'
 
 const initialState = {
     projects: [

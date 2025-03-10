@@ -7,8 +7,8 @@ import Linux5 from '../../assets/Linux/Picture5.png'
 
 const Project1 = () => {
   return (
-    <div className=" font-sans leading-relaxed tracking-wide flex flex-col justify-center items-center">
-      <div className="max-w-4xl mx-auto p-0 md:p-6 shadow-lg rounded-lg secondary-color">
+    <div className="font-sans leading-relaxed tracking-wide flex flex-col justify-center items-center">
+      <div className="max-w-4xl mx-auto p-0 md:p-6 rounded-lg secondary-color">
         
         <h1 className="text-3xl lg:text-5xl font-bold mb-4 text-white rounded-lg">File Permissions in Linux</h1>
         <h2 className="text-xl font-semibold mb-2">Project Description</h2>

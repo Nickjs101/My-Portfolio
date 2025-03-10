@@ -1,41 +1,78 @@
 import React from 'react';
-import js from '../assets/js.png';
-import c from '../assets/c-sharp.png';
-import java from '../assets/java.png';
-import bash from '../assets/gnu-bash.png';
-import php from '../assets/php.png';
-import sql from '../assets/sql-server.png';
-import python from '../assets/python.png';
+
+import { 
+  SiGithubactions, 
+  SiTerraform, 
+  SiPython, 
+  SiMysql, 
+  SiGnubash, 
+  SiTailwindcss, 
+  SiReact, 
+  SiGit, 
+  SiJavascript, 
+  SiLinux, 
+  SiUnity, 
+  SiOpenai,
+  SiCsharp
+} from 'react-icons/si';
+import { FaAws } from 'react-icons/fa';
 
 const Skills = () => {
-  const techstack = [
-    { icon: js, name: 'Javascript' },
-    { icon: c, name: 'C#' },
-    { icon: java, name: 'Java' },
-    { icon: bash, name: 'Bash' },
-    { icon: php, name: 'PHP' },
-    { icon: sql, name: 'SQL' },
-    { icon: python, name: 'Python' },
+  const skills = [
+    { name: 'AWS', icon: <FaAws /> },
+    { name: 'GitHub Actions', icon: <SiGithubactions /> },
+    { name: 'Terraform', icon: <SiTerraform /> },
+    { name: 'Python', icon: <SiPython /> },
+    { name: 'SQL', icon: <SiMysql /> },
+    { name: 'Bash', icon: <SiGnubash /> },
+    { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
+    { name: 'React', icon: <SiReact /> },
+    { name: 'Git', icon: <SiGit /> },
+    { name: 'JavaScript', icon: <SiJavascript /> },
+    { name: 'Linux', icon: <SiLinux /> },
+    { name: 'Unity', icon: <SiUnity /> },
+    { name: 'C#', icon: <SiCsharp /> },
+    { name: 'ChatGPT', icon: <SiOpenai /> },
   ];
 
   return (
-    <div id='Skills' className='py-0 md:py-[100px] my-[100px] lg:my-[200px] relative'>
-      {/* Content Box */}
-      <div className='bg-transparent border border-gray-600 text-gray-50 md:h-[150px] max-w-[1200px] mx-auto grid grid-cols-3 place-items-center md:flex md:justify-between md:items-center relative z-10'>
-        
-        <h2 className='text-gray-700 text-2xl md:text-4xl font-bold m-4'>
-          My <br /> Tech <br /> Stack
+    <section id='Skills' className='py-24 md:py-20 relative' style={{
+      backgroundColor: 'var(--bg-primary)'
+    }}>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4" style={{
+          color: 'var(--text-primary)'
+        }}>
+          My Tech Stack
         </h2>
-        {
-          techstack.map((skill) => (
-            <div key={skill.name} className='flex flex-col items-center m-4 sm:my-0 w-[40px] md:w-[100px]'>
-              <img src={skill.icon} alt={skill.name} />
-              <p className='mt-2'>{skill.name}</p>
+        <div className="h-1 w-20 mx-auto rounded-full mb-8" style={{
+            backgroundColor: 'var(--button-bg)'
+          }}></div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10">
+          {skills.map((skill, index) => (
+            <div key={index} className="flex flex-col items-center group">
+              <div className="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-3 transition-colors duration-300"
+                style={{
+                  color: 'var(--text-secondary)',
+                  ':hover': { color: 'var(--accent-primary)' }
+                }}
+              >
+                {skill.icon}
+              </div>
+              <span className="text-xs sm:text-sm md:text-base font-medium text-center transition-colors duration-300"
+                style={{
+                  color: 'var(--text-secondary)',
+                  ':hover': { color: 'var(--accent-primary)' }
+                }}
+              >
+                {skill.name}
+              </span>
             </div>
-          ))
-        }
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

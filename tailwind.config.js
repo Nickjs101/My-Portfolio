@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        code: ['"Fira Code"', 'monospace'], 
+      },
+    },
     screens: {
       'sm': '640px',
       'smmd': '700px',
@@ -12,6 +16,8 @@ module.exports = {
       '2xl': '1536px',
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }
 
