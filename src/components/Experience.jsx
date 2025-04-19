@@ -3,6 +3,34 @@ import Timeline from "./subcomponents/Timeline"
 
 const experiences = [
   {
+    title: "Associate Support Engineer",
+    company: "Qstrike Innovations Phils. OPC",
+    period: "Aug 2024 - Present",
+    year: "2025",
+    responsibilities: [
+      {
+        title: "Technical Support",
+        description: "Provide expert-level support to U.S.-based employees and end-users, diagnosing and resolving software issues across the platform’s customization tools and interfaces."
+      },
+      {
+        title: "Ticket Management & Documentation",
+        description: "Document support interactions in the ticketing system, escalate complex issues to software engineers or development teams, and collaborate with Developers, QA, WebGA, and Project Managers to drive timely resolutions."
+      },
+      {
+        title: "Infrastructure Management",
+        description: "Manage and configure AWS infrastructure—including EC2 instances, VPC networks, S3 storage, Route 53 DNS, and CloudFront CDN—to meet developer requirements and ensure operational reliability."
+      },
+      {
+        title: "Automation & Tool Development",
+        description: "Design and implement automations using Jenkins, GitHub Actions, Ansible, Terraform, and Bash; created a custom automation tool that reduced command execution times by 90%, significantly boosting developer productivity."
+      },
+      {
+        title: "Application Integration & Maintenance",
+        description: "Improve application integration, perform routine maintenance tasks, and monitor system health to uphold high service availability and performance standards."
+      }
+    ]
+  },  
+  {
     title: "IT Instructor",
     company: "SYLLABUS Inc. (STI College-Angeles)",
     period: "Aug 2023 - Jun 2024",

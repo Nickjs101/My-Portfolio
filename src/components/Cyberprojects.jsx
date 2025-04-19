@@ -1,19 +1,19 @@
 import React, {useEffect, useState, useMemo} from 'react'
-import { useSelector } from 'react-redux'
-// import { addProject } from './subcomponents/projectSlice'
 import Sidebar from './subcomponents/Sidebar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { SoftwareDev, Cybersecurity, Automation, DevOps } from '../components/data/projects'
 
 
 
 const Cyberprojects = ({projectComponent, category, setprojectCategory, setprojectComponent, setCurrentContent}) => {
     const [currentComponent, setCurrentComponent] = useState(projectComponent);
-    const projectCategory = useSelector((state) => state.project.projects);
 
     const Categories = useMemo(() => ({
-      'Cybersecurity': projectCategory[0].Cybersecurity,
-      'SoftwareDev': projectCategory[1].SoftwareDev,
-    }), [projectCategory]);
+      "Cybersecurity": Cybersecurity,
+      "Software Development": SoftwareDev,
+      "Automation": Automation,
+      "DevOps": DevOps,
+    }), []);
 
     const [Projects, setProjects] = useState(Categories[category]);
 
@@ -42,20 +42,48 @@ const Cyberprojects = ({projectComponent, category, setprojectCategory, setproje
               <div className='text-gray-400 h-[70px] max-w-[1200px] mx-auto flex justify-between items-center'>
                   <h1 className='text-3xl font-bold primary-color ml-4 cursor-pointer' onClick={() => setCurrentContent('Main')}>&#10094; Projects</h1>
                   <div className='flex gap-5 mr-4'>
-                    <a href="#Cybersecurity" onClick={() => {setprojectCategory('Cybersecurity');setCurrentComponent(projectCategory[0].Cybersecurity[0].component);}} className={`hidden md:block text-[#9fef00] font-semibold py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category === 'Cybersecurity'? 'shadow-none' : 'shadow-lg'}`}>
-                      Cybersecurity
-                    </a>
-                    <a href="#Cybersecurity" onClick={() => {setprojectCategory('Cybersecurity');setCurrentComponent(projectCategory[0].Cybersecurity[0].component);}} className={`block md:hidden py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category === 'Cybersecurity'? 'shadow-none' : 'shadow-lg'}`}>
-                      <FontAwesomeIcon style={{color: "#9fef00"}} icon='fa-solid fa-shield'/>
-                    </a>
-                    
+                    {Categories["Cybersecurity"]?.length > 0 && (
+                      <>
+                      <a href="#Cybersecurity" onClick={() => {setprojectCategory('Cybersecurity');setCurrentComponent(Cybersecurity[0].component);}} className={`hidden md:block text-[#9fef00] font-semibold py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category === 'Cybersecurity'? 'shadow-none' : 'shadow-lg'}`}>
+                        Cybersecurity
+                      </a>
+                      <a href="#Cybersecurity" onClick={() => {setprojectCategory('Cybersecurity');setCurrentComponent(Cybersecurity[0].component);}} className={`block md:hidden py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category === 'Cybersecurity'? 'shadow-none' : 'shadow-lg'}`}>
+                        <FontAwesomeIcon style={{color: "#9fef00"}} icon='fa-solid fa-shield'/>
+                      </a>
+                      </>
+                    )}
+                    {Categories["Software Development"]?.length > 0 && (
+                      <>
+                      <a href="#Software Development" onClick={() => {setprojectCategory('Software Development');setCurrentComponent(SoftwareDev[0].component);}} className={`hidden md:block text-[#9fef00] font-semibold py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category === 'Software Development'? 'shadow-none' : 'shadow-lg'}`}>
+                        Software Development
+                      </a>
+                      <a href="#Software Development" onClick={() => {setprojectCategory('Software Development');setCurrentComponent(SoftwareDev[0].component);}} className={`block md:hidden py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category === 'Software Development'? 'shadow-none' : 'shadow-lg'}`}>
+                        <FontAwesomeIcon style={{color: "#9fef00"}} icon='fa-solid fa-file-code'/>
+                      </a>
+                      </>
+                    )}
 
-                    <a href="#SoftwareDev" onClick={() => {setprojectCategory('SoftwareDev');setCurrentComponent(projectCategory[1].SoftwareDev[0].component);}} className={`hidden md:block text-[#9fef00] font-semibold py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category === 'SoftwareDev'? 'shadow-none' : 'shadow-lg'}`}>
-                      Software Development
-                    </a>
-                    <a href="#SoftwareDev" onClick={() => {setprojectCategory('SoftwareDev');setCurrentComponent(projectCategory[1].SoftwareDev[0].component);}} className={`block md:hidden py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category === 'SoftwareDev'? 'shadow-none' : 'shadow-lg'}`}>
-                      <FontAwesomeIcon style={{color: "#9fef00"}} icon='fa-solid fa-file-code'/>
-                    </a>
+                    {Categories["Automation"]?.length > 0 && (
+                      <>
+                      <a href="#Software Development" onClick={() => {setprojectCategory('Automation');setCurrentComponent(Automation[0].component);}} className={`hidden md:block text-[#9fef00] font-semibold py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category === 'Automation'? 'shadow-none' : 'shadow-lg'}`}>
+                        Automation
+                      </a>
+                      <a href="#Software Development" onClick={() => {setprojectCategory('Automation');setCurrentComponent(Automation[0].component);}} className={`block md:hidden py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category === 'Automation'? 'shadow-none' : 'shadow-lg'}`}>
+                        <FontAwesomeIcon style={{color: "#9fef00"}} icon='fa-solid fa-file-code'/>
+                      </a>
+                      </>
+                    )}
+
+                    {Categories["DevOps"]?.length > 0 && (
+                      <>
+                      <a href="#Software Development" onClick={() => {setprojectCategory('DevOps');setCurrentComponent(DevOps[0].component);}} className={`hidden md:block text-[#9fef00] font-semibold py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category === 'DevOps'? 'shadow-none' : 'shadow-lg'}`}>
+                        DevOps
+                      </a>
+                      <a href="#Software Development" onClick={() => {setprojectCategory('DevOps');setCurrentComponent(DevOps[0].component);}} className={`block md:hidden py-2 px-4 rounded-lg shadow-lg hover:shadow-none shadow-black hover:bg-primary-dark ${category === 'DevOps'? 'shadow-none' : 'shadow-lg'}`}>
+                        <FontAwesomeIcon style={{color: "#9fef00"}} icon='fa-solid fa-file-code'/>
+                      </a>
+                      </>
+                    )}
                   </div>
               </div>
       </div>

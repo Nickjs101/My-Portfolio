@@ -13,9 +13,11 @@ import {
   SiLinux, 
   SiUnity, 
   SiOpenai,
-  SiCsharp
+  SiN8N,
+  SiMake 
 } from 'react-icons/si';
-import { FaAws } from 'react-icons/fa';
+import { FaAws, FaSlack } from 'react-icons/fa';
+import { PiFileCSharp } from "react-icons/pi";
 
 const Skills = () => {
   const skills = [
@@ -31,8 +33,11 @@ const Skills = () => {
     { name: 'JavaScript', icon: <SiJavascript /> },
     { name: 'Linux', icon: <SiLinux /> },
     { name: 'Unity', icon: <SiUnity /> },
-    { name: 'C#', icon: <SiCsharp /> },
-    { name: 'ChatGPT', icon: <SiOpenai /> },
+    { name: 'C#', icon: <PiFileCSharp /> },
+    { name: 'OpenAI', icon: <SiOpenai /> },
+    { name: 'n8n', icon: <SiN8N /> },
+    { name: 'Make', icon: <SiMake /> },
+    { name: 'Slack', icon: <FaSlack /> },
   ];
 
   return (

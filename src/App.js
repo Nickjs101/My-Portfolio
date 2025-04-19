@@ -17,8 +17,6 @@ import { faGoogle, faLinux, faLinkedinIn, faGithub } from '@fortawesome/free-bra
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faCode, faBug, faDatabase, faFlag, faShieldHalved, faPeopleGroup, faLightbulb, faBookAtlas, faShield, faFileCode, faDownload} from '@fortawesome/free-solid-svg-icons'
 
-import {Provider} from 'react-redux'
-import projectStorage from './components/subcomponents/projectStorage'
 import { useState, useCallback } from "react";
 
 library.add(faGoogle,faCode,faBug,faLinux,faDatabase,faFlag,faShieldHalved,faPeopleGroup,faLightbulb,faBookAtlas,faShield,faFileCode,faLinkedinIn,faGithub,faEnvelope,faDownload);
@@ -26,7 +24,7 @@ library.add(faGoogle,faCode,faBug,faLinux,faDatabase,faFlag,faShieldHalved,faPeo
 function App() {
   const [currentContent, setCurrentContent] = useState('Main');
   const [projectComponent, setprojectComponent] = useState(<Navbar/>);
-  const [projectCategory, setprojectCategory] = useState('SoftwareDev');
+  const [projectCategory, setprojectCategory] = useState('Software Development');
   const [isChatVisible, setIsChatVisible] = useState(false);
   const [isFabVisible, setIsFabVisible] = useState(false);
 
@@ -40,9 +38,7 @@ function App() {
 
     if (currentContent === 'Projects') {
       return (
-        <Provider store={projectStorage}>
-          <Cyberprojects  projectComponent={projectComponent} category={projectCategory} setprojectComponent={setprojectComponent} setprojectCategory={setprojectCategory} setCurrentContent={setCurrentContent} />
-        </Provider>
+        <Cyberprojects  projectComponent={projectComponent} category={projectCategory} setprojectComponent={setprojectComponent} setprojectCategory={setprojectCategory} setCurrentContent={setCurrentContent} />
       );
     }
     return (
@@ -57,9 +53,7 @@ function App() {
         <About />
         <Experience />
         <Education />
-        <Provider store={projectStorage}>
-          <Work displayProject={displayProject} />
-        </Provider>
+        <Work displayProject={displayProject} />
         <Contact />
         <Footer />
         <Chatbox
