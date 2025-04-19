@@ -3,9 +3,10 @@ import { motion } from 'framer-motion'
 import { ExternalLink, Github, ArrowRight, FileText } from 'lucide-react'
 import AppProject2 from './subcomponents/AppProject2'
 
-import { projects } from '../components/data/projects'
+import { Latest } from '../components/data/projects'
 
 export default function ProjectsShowcase({ displayProject }) {
+  console.log(Latest);
   return (
     <section id='Work' className="py-24 md:py-20" style={{
       backgroundColor: 'var(--bg-primary)'
@@ -22,10 +23,10 @@ export default function ProjectsShowcase({ displayProject }) {
           layout
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
         >
-          {projects.slice(0, 3).map((project) => (
+          {Latest.slice(0, 3).map((project, index) => (
             <motion.div
               layout
-              key={project.id}
+              key={index}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -70,7 +71,7 @@ export default function ProjectsShowcase({ displayProject }) {
                     </a>}
                     <a
                       href='#docs'
-                      onClick={() => displayProject(project.component, project.type)}
+                      onClick={() => displayProject(project.component, project.category)}
                       className="p-1 sm:p-2 text-slate-400 hover:text-emerald-400 transition-colors"
                       aria-label="View Documentation"
                     >
@@ -101,7 +102,7 @@ export default function ProjectsShowcase({ displayProject }) {
         <div className="flex justify-center mt-8 sm:mt-12">
           <a
             href='#AllProjects'
-            onClick={() => displayProject(AppProject2, 'SoftwareDev')}
+            onClick={() => displayProject(AppProject2, 'Software Development')}
             className="group inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 text-white rounded-full text-sm sm:text-base font-medium transition-colors duration-300"style={{
               backgroundColor: 'var(--button-bg)',
               color: 'var(--text-primary)'
