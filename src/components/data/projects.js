@@ -4,7 +4,6 @@ import TradeHistoryImage from '../../assets/Works/tradingjournal.jpg'
 import Linux from '../../assets/Linux/Picture3.png';
 import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
-import AIAppointmentSetterCoverImage from '../../assets/Works/AIAppointmentSetterCoverImage.png';
 
 //Project Components
 import AppProject1 from '../../components/subcomponents/AppProject1'
@@ -13,30 +12,10 @@ import Project1 from '../../components/subcomponents/Project1'
 import Project2 from '../../components/subcomponents/Project2'
 import Project3 from '../../components/subcomponents/Project3'
 import Project4 from '../../components/subcomponents/Project4'
-import AppointmentSetterAIAgentSystem from '../../components/subcomponents/AppointmentSetterAIAgentSystem.jsx'
+
+
 
 export const Latest = [
-  {
-    id: 4,
-    title: "AI RAG & Appointment System",
-    category: "Automation",
-    description: "An advanced AI-powered system automating lead engagement and real-time appointment scheduling using ManyChat and n8n workflows.",
-    type: "Automation",
-    image: AIAppointmentSetterCoverImage,
-    skills: [
-      "ManyChat",
-      "n8n",
-      "Google Sheets",
-      "Cal.com",
-      "OpenAI GPT-4",
-      "Automation and Workflow Management"
-    ],
-    component: <AppointmentSetterAIAgentSystem />,
-    links: {
-      github: null,
-      live: null
-    }
-  },
   {
     title: "Kody's Adventure",
     category: "Software Development",
@@ -150,27 +129,7 @@ export const Cybersecurity = [
   },
 ]
 export const Automation = [
-  {
-    id: 4,
-    title: "AI RAG & Appointment System",
-    category: "Automation",
-    description: "An advanced AI-powered system automating lead engagement and real-time appointment scheduling using ManyChat and n8n workflows.",
-    type: "Automation",
-    image: AIAppointmentSetterCoverImage,
-    skills: [
-      "ManyChat",
-      "n8n",
-      "Google Sheets",
-      "Cal.com",
-      "OpenAI GPT-4",
-      "Automation and Workflow Management"
-    ],
-    component: <AppointmentSetterAIAgentSystem />,
-    links: {
-      github: null,
-      live: null
-    }
-  }
+
 ]
 export const DevOps = [
 
