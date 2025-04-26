@@ -4,6 +4,7 @@ import Linux from '../../assets/Linux/Picture3.png';
 import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
 import YouTubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
+import AppointmentSetterAgentCover from '../../assets/Works/AppointmentSetterAgentCover.png';
 
 import AppProject1 from '../../components/subcomponents/AppProject1';
 import AppProject2 from '../../components/subcomponents/AppProject2';
@@ -12,13 +13,30 @@ import Project2 from '../../components/subcomponents/Project2';
 import Project3 from '../../components/subcomponents/Project3';
 import Project4 from '../../components/subcomponents/Project4';
 import YouTubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation';
+import AppointmentSetterAIAgentSystem from '../../components/subcomponents/AppointmentSetterAIAgentSystem.jsx';
 
 export const Latest = [
+  {
+    id: 5,
+    title: 'AI RAG & Appointment System',
+    category: 'Automation',
+    description:
+      'An AI-powered system that enhances lead engagement, inquiry responses, and appointment scheduling for service providers using automation tools.',
+    type: 'Automation',
+    image: AppointmentSetterAgentCover,
+    skills: ['ManyChat', 'n8n', 'Google Sheets', 'OpenAI GPT-4', 'Cal.com'],
+    component: <AppointmentSetterAIAgentSystem />,
+    links: {
+      github: null,
+      live: null,
+    },
+  },
   {
     id: 4,
     title: 'YouTube Shorts Automation',
     category: 'Automation',
-    description: 'Streamlines video editing and uploading of YouTube Shorts for content creators using APIs and automation tools.',
+    description:
+      'Streamlines video editing and uploading of YouTube Shorts for content creators using APIs and automation tools.',
     type: 'Automation',
     image: YouTubeShortsAutomationCover,
     skills: [
@@ -159,10 +177,26 @@ export const Cybersecurity = [
 
 export const Automation = [
   {
+    id: 5,
+    title: 'AI RAG & Appointment System',
+    category: 'Automation',
+    description:
+      'An AI-powered system that enhances lead engagement, inquiry responses, and appointment scheduling for service providers using automation tools.',
+    type: 'Automation',
+    image: AppointmentSetterAgentCover,
+    skills: ['ManyChat', 'n8n', 'Google Sheets', 'OpenAI GPT-4', 'Cal.com'],
+    component: <AppointmentSetterAIAgentSystem />,
+    links: {
+      github: null,
+      live: null,
+    },
+  },
+  {
     id: 4,
     title: 'YouTube Shorts Automation',
     category: 'Automation',
-    description: 'Streamlines video editing and uploading of YouTube Shorts for content creators using APIs and automation tools.',
+    description:
+      'Streamlines video editing and uploading of YouTube Shorts for content creators using APIs and automation tools.',
     type: 'Automation',
     image: YouTubeShortsAutomationCover,
     skills: [
