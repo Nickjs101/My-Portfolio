@@ -5,7 +5,6 @@ import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
 import YouTubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
 import AppointmentSetterAgentCover from '../../assets/Works/AppointmentSetterAgentCover.png';
-import pagegeneratorCover from '../../assets/Works/pagegeneratorCover.png';
 
 import AppProject1 from '../../components/subcomponents/AppProject1';
 import AppProject2 from '../../components/subcomponents/AppProject2';
@@ -15,24 +14,8 @@ import Project3 from '../../components/subcomponents/Project3';
 import Project4 from '../../components/subcomponents/Project4';
 import YouTubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation';
 import AppointmentSetterAIAgentSystem from '../../components/subcomponents/AppointmentSetterAIAgentSystem.jsx';
-import AutomatedProjectPageGenerator from '../../components/subcomponents/AutomatedProjectPageGenerator.jsx';
 
 export const Latest = [
-  {
-    id: 6,
-    title: 'Automated Project Page Generator',
-    category: 'Software Development',
-    description:
-      'A tool that automates creation of project showcase pages using AI, reducing manual effort and accelerating deployments for portfolio updates.',
-    type: 'Software Development',
-    image: pagegeneratorCover,
-    skills: ['Git', 'n8n', 'GPT Language Models', 'Bash', 'Google Drive', 'Telegram', 'Netlify'],
-    component: <AutomatedProjectPageGenerator />,
-    links: {
-      github: 'https://github.com/Nickjs101/My-Portfolio',
-      live: null,
-    },
-  },
   {
     id: 5,
     title: 'AI RAG & Appointment System',
@@ -70,7 +53,6 @@ export const Latest = [
     },
   },
   {
-    id: 7,
     title: "Kody's Adventure",
     category: 'Software Development',
     description:
@@ -84,7 +66,6 @@ export const Latest = [
     },
   },
   {
-    id: 8,
     title: 'File Permissions in Linux',
     category: 'Cybersecurity',
     description:
@@ -98,7 +79,6 @@ export const Latest = [
     },
   },
   {
-    id: 9,
     title: 'Vulnerability Assessment Report',
     category: 'Cybersecurity',
     description:
@@ -115,21 +95,6 @@ export const Latest = [
 
 export const SoftwareDev = [
   {
-    id: 6,
-    title: 'Automated Project Page Generator',
-    category: 'Software Development',
-    description:
-      'A tool that automates creation of project showcase pages using AI, reducing manual effort and accelerating deployments for portfolio updates.',
-    image: pagegeneratorCover,
-    skills: ['Git', 'n8n', 'GPT Language Models', 'Bash', 'Google Drive', 'Telegram', 'Netlify'],
-    component: <AutomatedProjectPageGenerator />,
-    links: {
-      github: 'https://github.com/Nickjs101/My-Portfolio',
-      live: null,
-    },
-  },
-  {
-    id: 7,
     title: "Kody's Adventure",
     category: 'Software Development',
     description:
@@ -143,7 +108,6 @@ export const SoftwareDev = [
     },
   },
   {
-    id: 8,
     title: 'Trading Journal Mobile App',
     category: 'Cybersecurity',
     description:
@@ -160,7 +124,6 @@ export const SoftwareDev = [
 
 export const Cybersecurity = [
   {
-    id: 8,
     title: 'File Permissions in Linux',
     category: 'Cybersecurity',
     description:
@@ -174,7 +137,6 @@ export const Cybersecurity = [
     },
   },
   {
-    id: 9,
     title: 'Apply Filters to SQL Queries',
     description:
       'My organization is working to make their system secure. My job is to ensure the system is safe, investigate all potential security issues, and update employee computers as needed. The following steps provide examples of how I used SQL with filters to perform security-related tasks.',
@@ -187,7 +149,6 @@ export const Cybersecurity = [
     },
   },
   {
-    id: 10,
     title: 'Vulnerability Assessment Report',
     category: 'Cybersecurity',
     description:
@@ -201,7 +162,6 @@ export const Cybersecurity = [
     },
   },
   {
-    id: 11,
     title: 'Security Audit Report',
     description:
       'To address security controls issues, we need to implement confidentiality of the organization’s assets such as customers’ private data. Implementing data encryption both at rest and in transit should also be considered.',
