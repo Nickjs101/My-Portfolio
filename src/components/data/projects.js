@@ -5,6 +5,7 @@ import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
 import YouTubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
 import AppointmentSetterAgentCover from '../../assets/Works/AppointmentSetterAgentCover.png';
+import pagegeneratorCover from '../../assets/Works/pagegeneratorCover.png';
 
 import AppProject1 from '../../components/subcomponents/AppProject1';
 import AppProject2 from '../../components/subcomponents/AppProject2';
@@ -14,8 +15,32 @@ import Project3 from '../../components/subcomponents/Project3';
 import Project4 from '../../components/subcomponents/Project4';
 import YouTubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation';
 import AppointmentSetterAIAgentSystem from '../../components/subcomponents/AppointmentSetterAIAgentSystem.jsx';
+import AutomatedProjectPageGenerator from '../../components/subcomponents/AutomatedProjectPageGenerator.jsx';
 
 export const Latest = [
+  {
+    id: 6,
+    title: 'Automated Project Page Generator',
+    category: 'Software Development',
+    description:
+      'An AI-powered system that automates the creation and deployment of project showcase pages to streamline portfolio updates.',
+    type: 'SoftwareDevelopments',
+    image: pagegeneratorCover,
+    skills: [
+      'n8n Automation Platform',
+      'Git',
+      'GPT Language Models',
+      'Google Drive',
+      'Bash',
+      'Telegram',
+      'Netlify',
+    ],
+    component: <AutomatedProjectPageGenerator />,
+    links: {
+      github: 'https://github.com/nickjs101/My-Portfolio',
+      live: 'https://nickjsportfolio.netlify.app',
+    },
+  },
   {
     id: 5,
     title: 'AI RAG & Appointment System',
@@ -62,7 +87,8 @@ export const Latest = [
     component: <AppProject2 />,
     links: {
       github: 'https://github.com/Nickjs101/Kody-sAdventure',
-      live: 'https://mega.nz/file/luYB0LSJ#6gzzEFbbew4PBblpc2VvXYNZmOUfqFhOGFJUqUa5-Mo',
+      live:
+        'https://mega.nz/file/luYB0LSJ#6gzzEFbbew4PBblpc2VvXYNZmOUfqFhOGFJUqUa5-Mo',
     },
   },
   {
@@ -95,6 +121,28 @@ export const Latest = [
 
 export const SoftwareDev = [
   {
+    id: 6,
+    title: 'Automated Project Page Generator',
+    category: 'Software Development',
+    description:
+      'An AI-powered system that automates the creation and deployment of project showcase pages to streamline portfolio updates.',
+    image: pagegeneratorCover,
+    skills: [
+      'n8n Automation Platform',
+      'Git',
+      'GPT Language Models',
+      'Google Drive',
+      'Bash',
+      'Telegram',
+      'Netlify',
+    ],
+    component: <AutomatedProjectPageGenerator />,
+    links: {
+      github: 'https://github.com/nickjs101/My-Portfolio',
+      live: 'https://nickjsportfolio.netlify.app',
+    },
+  },
+  {
     title: "Kody's Adventure",
     category: 'Software Development',
     description:
@@ -104,7 +152,8 @@ export const SoftwareDev = [
     component: <AppProject2 />,
     links: {
       github: 'https://github.com/Nickjs101/Kody-sAdventure',
-      live: 'https://mega.nz/file/luYB0LSJ#6gzzEFbbew4PBblpc2VvXYNZmOUfqFhOGFJUqUa5-Mo',
+      live:
+        'https://mega.nz/file/luYB0LSJ#6gzzEFbbew4PBblpc2VvXYNZmOUfqFhOGFJUqUa5-Mo',
     },
   },
   {
@@ -216,4 +265,10 @@ export const Automation = [
 
 export const DevOps = [];
 
-export const categories = ['All', 'Software Development', 'Automation', 'Cybersecurity', 'DevOps'];
+export const categories = [
+  'All',
+  'Software Development',
+  'Automation',
+  'Cybersecurity',
+  'DevOps',
+];
