@@ -5,6 +5,7 @@ import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
 import YouTubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
 import AppointmentSetterAgentCover from '../../assets/Works/AppointmentSetterAgentCover.png';
+import AutomatedProjectPageGeneratorCover from '../../assets/Works/pagegeneratorCover.png';
 
 import AppProject1 from '../../components/subcomponents/AppProject1';
 import AppProject2 from '../../components/subcomponents/AppProject2';
@@ -13,9 +14,34 @@ import Project2 from '../../components/subcomponents/Project2';
 import Project3 from '../../components/subcomponents/Project3';
 import Project4 from '../../components/subcomponents/Project4';
 import YouTubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation';
-import AppointmentSetterAIAgentSystem from '../../components/subcomponents/AppointmentSetterAIAgentSystem.jsx';
+import AppointmentSetterAIAgentSystem from '../../components/subcomponents/AppointmentSetterAIAgentSystem';
+import AutomatedProjectPageGenerator from '../../components/subcomponents/AutomatedProjectPageGenerator';
 
 export const Latest = [
+  {
+    id: 6,
+    title: 'Automated Project Page Generator',
+    category: 'Software Development',
+    description:
+      'An AI-driven system that automates creation and deployment of project showcase pages, improving developer productivity.',
+    type: 'SoftwareDevelopment',
+    image: AutomatedProjectPageGeneratorCover,
+    skills: [
+      'Git',
+      'n8n',
+      'OpenAI GPT-4',
+      'Google Drive',
+      'Bash',
+      'Netlify',
+      'React',
+      'Telegram',
+    ],
+    component: <AutomatedProjectPageGenerator />,
+    links: {
+      github: 'https://github.com/Nickjs101/My-Portfolio',
+      live: 'https://nickjsportfolio.netlify.app',
+    },
+  },
   {
     id: 5,
     title: 'AI RAG & Appointment System',
@@ -94,6 +120,29 @@ export const Latest = [
 ];
 
 export const SoftwareDev = [
+  {
+    id: 6,
+    title: 'Automated Project Page Generator',
+    category: 'Software Development',
+    description:
+      'An AI-driven system that automates creation and deployment of project showcase pages, improving developer productivity.',
+    image: AutomatedProjectPageGeneratorCover,
+    skills: [
+      'Git',
+      'n8n',
+      'OpenAI GPT-4',
+      'Google Drive',
+      'Bash',
+      'Netlify',
+      'React',
+      'Telegram',
+    ],
+    component: <AutomatedProjectPageGenerator />,
+    links: {
+      github: 'https://github.com/Nickjs101/My-Portfolio',
+      live: 'https://nickjsportfolio.netlify.app',
+    },
+  },
   {
     title: "Kody's Adventure",
     category: 'Software Development',
