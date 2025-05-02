@@ -5,7 +5,6 @@ import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
 import YouTubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
 import AppointmentSetterAgentCover from '../../assets/Works/AppointmentSetterAgentCover.png';
-import pagegeneratorCover from '../../assets/Works/pagegeneratorCover.png';
 
 import AppProject1 from '../../components/subcomponents/AppProject1';
 import AppProject2 from '../../components/subcomponents/AppProject2';
@@ -15,32 +14,8 @@ import Project3 from '../../components/subcomponents/Project3';
 import Project4 from '../../components/subcomponents/Project4';
 import YouTubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation';
 import AppointmentSetterAIAgentSystem from '../../components/subcomponents/AppointmentSetterAIAgentSystem.jsx';
-import AutomatedProjectPageGenerator from '../../components/subcomponents/AutomatedProjectPageGenerator.jsx';
 
 export const Latest = [
-  {
-    id: 6,
-    title: 'Automated Project Page Generator',
-    category: 'Software Development',
-    description:
-      'An AI-powered tool that automates the creation and updating of project showcase pages for my portfolio, streamlining content and code generation.',
-    type: 'Software Development',
-    image: pagegeneratorCover,
-    skills: [
-      'Git',
-      'GPT Language Models',
-      'Google Drive',
-      'n8n automation tool',
-      'Telegram API',
-      'Bash',
-      'Netlify',
-    ],
-    component: <AutomatedProjectPageGenerator />,
-    links: {
-      github: null,
-      live: 'https://nickjsportfolio.netlify.app',
-    },
-  },
   {
     id: 5,
     title: 'AI RAG & Appointment System',
@@ -119,28 +94,6 @@ export const Latest = [
 ];
 
 export const SoftwareDev = [
-  {
-    id: 6,
-    title: 'Automated Project Page Generator',
-    category: 'Software Development',
-    description:
-      'An AI-powered tool that automates the creation and updating of project showcase pages for my portfolio, streamlining content and code generation.',
-    image: pagegeneratorCover,
-    skills: [
-      'Git',
-      'GPT Language Models',
-      'Google Drive',
-      'n8n automation tool',
-      'Telegram API',
-      'Bash',
-      'Netlify',
-    ],
-    component: <AutomatedProjectPageGenerator />,
-    links: {
-      github: null,
-      live: 'https://nickjsportfolio.netlify.app',
-    },
-  },
   {
     title: "Kody's Adventure",
     category: 'Software Development',
