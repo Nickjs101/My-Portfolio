@@ -5,6 +5,7 @@ import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
 import YouTubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
 import AppointmentSetterAgentCover from '../../assets/Works/AppointmentSetterAgentCover.png';
+import PagegeneratorCover from '../../assets/Works/pagegeneratorCover.png';
 
 import AppProject1 from '../../components/subcomponents/AppProject1';
 import AppProject2 from '../../components/subcomponents/AppProject2';
@@ -14,8 +15,32 @@ import Project3 from '../../components/subcomponents/Project3';
 import Project4 from '../../components/subcomponents/Project4';
 import YouTubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation';
 import AppointmentSetterAIAgentSystem from '../../components/subcomponents/AppointmentSetterAIAgentSystem.jsx';
+import AutomatedProjectPageGenerator from '../../components/subcomponents/AutomatedProjectPageGenerator.jsx';
 
 export const Latest = [
+  {
+    id: 6,
+    title: 'Automated Project Page Generator',
+    category: 'Automation',
+    description:
+      'An AI-driven system that automates the creation and deployment of project showcase pages, improving portfolio update efficiency.',
+    type: 'Automation',
+    image: PagegeneratorCover,
+    skills: [
+      'Git',
+      'GPT Language Models',
+      'Google Drive',
+      'Bash',
+      'n8n',
+      'Netlify',
+      'Telegram',
+    ],
+    component: <AutomatedProjectPageGenerator />,
+    links: {
+      github: null,
+      live: null,
+    },
+  },
   {
     id: 5,
     title: 'AI RAG & Appointment System',
@@ -176,6 +201,29 @@ export const Cybersecurity = [
 ];
 
 export const Automation = [
+  {
+    id: 6,
+    title: 'Automated Project Page Generator',
+    category: 'Automation',
+    description:
+      'An AI-driven system that automates the creation and deployment of project showcase pages, improving portfolio update efficiency.',
+    type: 'Automation',
+    image: PagegeneratorCover,
+    skills: [
+      'Git',
+      'GPT Language Models',
+      'Google Drive',
+      'Bash',
+      'n8n',
+      'Netlify',
+      'Telegram',
+    ],
+    component: <AutomatedProjectPageGenerator />,
+    links: {
+      github: null,
+      live: null,
+    },
+  },
   {
     id: 5,
     title: 'AI RAG & Appointment System',
