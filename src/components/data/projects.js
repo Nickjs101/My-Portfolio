@@ -5,7 +5,6 @@ import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
 import YouTubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
 import AppointmentSetterAgentCover from '../../assets/Works/AppointmentSetterAgentCover.png';
-import AutomatedProjectPageGeneratorCover from '../../assets/Works/pagegeneratorCover.png';
 
 import AppProject1 from '../../components/subcomponents/AppProject1';
 import AppProject2 from '../../components/subcomponents/AppProject2';
@@ -15,32 +14,8 @@ import Project3 from '../../components/subcomponents/Project3';
 import Project4 from '../../components/subcomponents/Project4';
 import YouTubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation';
 import AppointmentSetterAIAgentSystem from '../../components/subcomponents/AppointmentSetterAIAgentSystem.jsx';
-import AutomatedProjectPageGenerator from '../../components/subcomponents/AutomatedProjectPageGenerator.jsx';
 
 export const Latest = [
-  {
-    id: 6,
-    title: 'Automated Project Page Generator',
-    category: 'Automation',
-    description:
-      'Streamlines creation and deployment of project documentation pages using AI and automation to save time and reduce manual coding.',
-    type: 'Automation',
-    image: AutomatedProjectPageGeneratorCover,
-    skills: [
-      'Git',
-      'n8n (workflow automation)',
-      'AI language models (OpenAI GPT)',
-      'Google Drive',
-      'Bash',
-      'Telegram',
-      'Netlify',
-    ],
-    component: <AutomatedProjectPageGenerator />,
-    links: {
-      github: null,
-      live: null,
-    },
-  },
   {
     id: 5,
     title: 'AI RAG & Appointment System',
@@ -201,29 +176,6 @@ export const Cybersecurity = [
 ];
 
 export const Automation = [
-  {
-    id: 6,
-    title: 'Automated Project Page Generator',
-    category: 'Automation',
-    description:
-      'Streamlines creation and deployment of project documentation pages using AI and automation to save time and reduce manual coding.',
-    type: 'Automation',
-    image: AutomatedProjectPageGeneratorCover,
-    skills: [
-      'Git',
-      'n8n (workflow automation)',
-      'AI language models (OpenAI GPT)',
-      'Google Drive',
-      'Bash',
-      'Telegram',
-      'Netlify',
-    ],
-    component: <AutomatedProjectPageGenerator />,
-    links: {
-      github: null,
-      live: null,
-    },
-  },
   {
     id: 5,
     title: 'AI RAG & Appointment System',
