@@ -3,7 +3,7 @@ import Timeline from "./subcomponents/Timeline"
 
 const experiences = [
   {
-    title: "Associate Support Engineer",
+    title: "Application Support Engineer",
     company: "Qstrike Innovations Phils. OPC",
     period: "Aug 2024 - Present",
     year: "2025",
