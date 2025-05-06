@@ -71,7 +71,7 @@ const experiences = [
     ],
   },
   {
-    title: "IT Technician (OJT)",
+    title: "IT Technician",
     company: "PC Bytes",
     period: "Oct 2018 - Dec 2018",
     year: "2018",
