@@ -49,11 +49,11 @@ function App() {
             setIsChatVisible(true);
           }}/>
         <Skills />
+        <Work displayProject={displayProject} />
         <Certs />
         <About />
         <Experience />
         <Education />
-        <Work displayProject={displayProject} />
         <Contact />
         <Footer />
         <Chatbox
