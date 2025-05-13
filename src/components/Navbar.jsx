@@ -17,11 +17,11 @@ export default function Navbar() {
   const navItems = [
     { name: 'Home', href: '#home', onclick: (e) => gotoSection(e, 'Home') },
     { name: 'Skills', href: '#skills', onclick: (e) => gotoSection(e, 'Skills') },
-    { name: 'Work', href: '#work', onclick: (e) => gotoSection(e, 'Work') },
     { name: 'Certifications', href: '#certifications', onclick: (e) => gotoSection(e, 'Certifications') },
     { name: 'About', href: '#about', onclick: (e) => gotoSection(e, 'About') },
     { name: 'Experience', href: '#experience', onclick: (e) => gotoSection(e, 'Experience') },
     { name: 'Education', href: '#education', onclick: (e) => gotoSection(e, 'Education') },
+    { name: 'Work', href: '#work', onclick: (e) => gotoSection(e, 'Work') },
   ]
 
   // Update mobile menu button and items
