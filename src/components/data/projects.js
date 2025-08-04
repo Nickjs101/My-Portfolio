@@ -3,7 +3,7 @@ import TradeHistoryImage from '../../assets/Works/tradingjournal.jpg';
 import Linux from '../../assets/Linux/Picture3.png';
 import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
-import YouTubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
+import pagegeneratorCover from '../../assets/Works/pagegeneratorCover.png';
 
 import AppProject1 from '../../components/subcomponents/AppProject1';
 import AppProject2 from '../../components/subcomponents/AppProject2';
@@ -11,28 +11,31 @@ import Project1 from '../../components/subcomponents/Project1';
 import Project2 from '../../components/subcomponents/Project2';
 import Project3 from '../../components/subcomponents/Project3';
 import Project4 from '../../components/subcomponents/Project4';
-import YoutubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation';
+import AutomatedProjectPageGenerator from '../../components/subcomponents/AutomatedProjectPageGenerator';
 
 export const Latest = [
   {
     id: 4,
-    title: 'YouTube Shorts Automation',
+    title: 'Automated Project Page Generator',
     category: 'Automation',
     description:
-      'Automates the creation and uploading of YouTube Shorts from longer videos or podcasts using Klap API and n8n workflows.',
+      'An AI-driven tool that automates the creation and deployment of project showcase pages for portfolios, simplifying content generation and deployment workflows.',
     type: 'Automation',
-    image: YouTubeShortsAutomationCover,
+    image: pagegeneratorCover,
     skills: [
-      'Klap API',
-      'YouTube API',
+      'Git',
+      'GPT Language Models',
+      'GPT Image Model',
+      'Google Drive',
+      'Bash',
+      'Telegram API',
+      'Netlify',
       'n8n Automation Tool',
-      'RSS Feed Integration',
-      'Video Editing Automation',
     ],
-    component: <YoutubeShortsAutomation />,
+    component: <AutomatedProjectPageGenerator />,
     links: {
       github: null,
-      live: 'https://example.com/demo-video-url',
+      live: null,
     },
   },
   {
@@ -161,23 +164,26 @@ export const Cybersecurity = [
 export const Automation = [
   {
     id: 4,
-    title: 'YouTube Shorts Automation',
+    title: 'Automated Project Page Generator',
     category: 'Automation',
     description:
-      'Automates the creation and uploading of YouTube Shorts from longer videos or podcasts using Klap API and n8n workflows.',
+      'An AI-driven tool that automates the creation and deployment of project showcase pages for portfolios, simplifying content generation and deployment workflows.',
     type: 'Automation',
-    image: YouTubeShortsAutomationCover,
+    image: pagegeneratorCover,
     skills: [
-      'Klap API',
-      'YouTube API',
+      'Git',
+      'GPT Language Models',
+      'GPT Image Model',
+      'Google Drive',
+      'Bash',
+      'Telegram API',
+      'Netlify',
       'n8n Automation Tool',
-      'RSS Feed Integration',
-      'Video Editing Automation',
     ],
-    component: <YoutubeShortsAutomation />,
+    component: <AutomatedProjectPageGenerator />,
     links: {
       github: null,
-      live: 'https://example.com/demo-video-url',
+      live: null,
     },
   },
 ];
