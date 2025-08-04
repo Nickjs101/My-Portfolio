@@ -4,7 +4,6 @@ import Linux from '../../assets/Linux/Picture3.png';
 import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
 import pagegeneratorCover from '../../assets/Works/pagegeneratorCover.png';
-import youtubeShortsAutomationCover from '../../assets/Works/youtube-shorts-automation-demo.jpg';
 
 import AppProject1 from '../../components/subcomponents/AppProject1';
 import AppProject2 from '../../components/subcomponents/AppProject2';
@@ -13,31 +12,8 @@ import Project2 from '../../components/subcomponents/Project2';
 import Project3 from '../../components/subcomponents/Project3';
 import Project4 from '../../components/subcomponents/Project4';
 import AutomatedProjectPageGenerator from '../../components/subcomponents/AutomatedProjectPageGenerator';
-import YoutubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation';
 
 export const Latest = [
-  {
-    id: 5,
-    title: 'Youtube Shorts Automation',
-    category: 'Automation',
-    description:
-      'An automation system that streamlines the creation and uploading of YouTube shorts by integrating APIs to automate video editing and publishing workflows.',
-    type: 'Automation',
-    image: youtubeShortsAutomationCover,
-    skills: [
-      'API Integration',
-      'Automation',
-      'Video Editing',
-      'YouTube API',
-      'Klap AI',
-      'RSS Feeds',
-    ],
-    component: <YoutubeShortsAutomation />,
-    links: {
-      github: null,
-      live: 'https://drive.google.com/uc?id=16sFr9l9eBErIwSjewKBW0S--RXzquZEV&export=download',
-    },
-  },
   {
     id: 4,
     title: 'Automated Project Page Generator',
@@ -186,28 +162,6 @@ export const Cybersecurity = [
 ];
 
 export const Automation = [
-  {
-    id: 5,
-    title: 'Youtube Shorts Automation',
-    category: 'Automation',
-    description:
-      'An automation system that streamlines the creation and uploading of YouTube shorts by integrating APIs to automate video editing and publishing workflows.',
-    type: 'Automation',
-    image: youtubeShortsAutomationCover,
-    skills: [
-      'API Integration',
-      'Automation',
-      'Video Editing',
-      'YouTube API',
-      'Klap AI',
-      'RSS Feeds',
-    ],
-    component: <YoutubeShortsAutomation />,
-    links: {
-      github: null,
-      live: 'https://drive.google.com/uc?id=16sFr9l9eBErIwSjewKBW0S--RXzquZEV&export=download',
-    },
-  },
   {
     id: 4,
     title: 'Automated Project Page Generator',
