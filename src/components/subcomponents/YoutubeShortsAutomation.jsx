@@ -1,144 +1,141 @@
-import React from 'react';
-import { projectStyles as styles } from './ProjectStyles';
+import React from 'react'
+import { projectStyles as styles } from './ProjectStyles'
+import CoverImage from '../../assets/Works/youtubeshortsautomationcover.png'
+import WorkflowImage from '../../assets/Works/youtubeshortsautomationworkflow.png'
 
-import YouTubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
-import YouTubeShortsAutomationWorkflow from '../../assets/Works/youtubeshortsautomationworkflow.png';
+const YoutubeShortsAutomation = () => {
+  const title = 'Youtube Shorts Automation'
 
-const YouTubeShortsAutomation = () => {
+  const goals = [
+    'Remove manual editing and upload overhead for podcast/video creators.',
+    'Generate Shorts with captions, subtitles, optimized cuts, and metadata based on preferences.',
+    'Provide a reliable, automated pipeline that requires minimal intervention.'
+  ]
+
+  const features = [
+    'Continuous monitoring via RSS feeds to detect new podcast or video uploads.',
+    'Automated submission of detected videos to KLAP AI for short-generation (captions, subtitles, cut selection, optimization).',
+    'Status polling/IF+wait logic to handle asynchronous conversion and export processes.',
+    'Retrieval of completed short files and metadata.',
+    'Automated upload to the creator’s YouTube account using the YouTube API (including proper metadata and shorts tagging).',
+    'Error handling, retries, and status checks built into the workflow to ensure reliability.'
+  ]
+
+  const architecturePoints = [
+    'Orchestration: n8n handles workflow orchestration and state transitions (trigger → conversion → export → upload).',
+    'Triggering: RSS feed nodes detect new content and start the pipeline automatically.',
+    'Conversion: HTTP POST requests to KLAP AI start short generation with user-defined preferences (captions, subtitles, cuts).',
+    'Polling: Repeated status checks (IF/Wait loops) ensure processing is complete before proceeding.',
+    'Export: Once KLAP reports shorts ready, the workflow exports and fetches the final video assets.',
+    'Upload: YouTube API calls perform authenticated uploads, set titles/descriptions, and mark videos as Shorts.',
+    'Reliability: Built-in retry logic and status verification steps mitigate transient failures and rate limits.'
+  ]
+
+  const results = [
+    'Fully automated end-to-end flow reduces manual editing and upload time for creators.',
+    'Consistent short formatting and captioning across episodes using KLAP AI settings.',
+    'Scales with the number of RSS sources and creators by duplicating or parameterizing the workflow.',
+    'Observed improvements in turnaround time from publish → Shorts live (minutes to hours depending on processing and export latency).'
+  ]
+
+  const challenges = [
+    'Handling asynchronous processing required robust wait-and-check logic to avoid race conditions.',
+    'API rate limits and large media transfers necessitated retries, exponential backoff, and chunked handling for uploads.',
+    'Ensuring accurate captions/subtitles required tuning KLAP settings and occasional post-processing validation.',
+    'Authentication for multiple YouTube accounts required safe credential management and token refresh handling.',
+    'Moving from polling to webhook-based callbacks (where supported) significantly reduced latency and resource usage.'
+  ]
+
   const skills = [
-    'Klap API',
+    'RSS feeds',
+    'KLAP AI (Klap API)',
     'YouTube API',
-    'n8n Automation Tool',
-    'RSS Feed Integration',
-    'Video Editing Automation',
-  ];
-
-  const links = [
-    {
-      label: 'Video Demo',
-      href: 'https://example.com/demo-video-url',
-    },
-  ];
+    'n8n (workflow orchestration)',
+    'HTTP APIs',
+    'OAuth / API authentication',
+    'Retry and backoff strategies',
+    'Media export & format handling'
+  ]
 
   return (
-    <div className="font-sans leading-relaxed tracking-wide flex flex-col items-center">
-      <div className="max-w-4xl w-full p-0 md:p-6 rounded-lg">
+    <div className="font-sans leading-relaxed tracking-wide flex flex-col items-center py-6">
+      <div className="max-w-4xl w-full p-4 md:p-6 rounded-lg">
         <img
-          src={YouTubeShortsAutomationCover}
-          alt="Promotional graphic for YouTube Shorts Automation"
-          className="w-full h-auto mb-6 rounded-lg"
+          src={CoverImage}
+          alt="Cover: Youtube Shorts Automation graphic showing smartphone, icons for bots and automation, and YouTube Shorts logo"
+          className="w-full h-auto mb-6 rounded-lg shadow-md"
         />
 
         <h1 style={styles.heading} className="text-3xl lg:text-5xl font-bold mb-4">
-          YouTube Shorts Automation
+          {title}
         </h1>
 
-        <h2 style={styles.heading} className="text-2xl font-semibold mb-4">
-          Overview
-        </h2>
+        <h2 style={styles.heading} className="text-2xl font-semibold mb-3">Overview</h2>
         <p style={styles.text} className="mb-4">
-          The <strong>YouTube Shorts Automation</strong> project addresses the challenge faced by
-          content creators who require time-consuming video editing for podcasts or lengthy content
-          before uploading to YouTube. By automating the process of generating Shorts from
-          podcasts, this project simplifies and streamlines content creation.
+          An end-to-end automation that detects new long-form video/podcast uploads, generates optimized YouTube Shorts using the KLAP AI API, and uploads the resulting clips to the creator's YouTube account. The pipeline eliminates manual editing and upload steps by continuously monitoring content sources and orchestrating conversion, export, and upload workflows.
         </p>
 
-        <h2 style={styles.heading} className="text-2xl font-semibold mb-4">
-          Goals
-        </h2>
+        <h2 style={styles.heading} className="text-2xl font-semibold mb-3">Goals</h2>
         <ul style={styles.text} className="list-disc list-inside mb-4">
-          <li>Generates short clips from longer videos or podcasts.</li>
-          <li>Utilizes the Klap API to edit and create Shorts according to user preferences.</li>
-          <li>Automatically uploads shorts to YouTube without manual intervention.</li>
+          {goals.map((goal, idx) => (
+            <li key={idx} className="mb-1">
+              {goal}
+            </li>
+          ))}
         </ul>
 
-        <h2 style={styles.heading} className="text-2xl font-semibold mb-4">
-          Features / Workflow
-        </h2>
-        <ol style={styles.text} className="list-decimal list-inside mb-4">
-          <li>
-            <strong>Video Monitoring</strong>: Uses an RSS feed to monitor video uploads to the
-            YouTube channel.
-          </li>
-          <li>
-            <strong>Shorts Generation</strong>: Employs the Klap AI API to convert longer videos into
-            shorter formats, allowing for custom parameters like captions and subtitles.
-          </li>
-          <li>
-            <strong>Automatic Upload</strong>: Once the shorts are created, they are automatically
-            uploaded to the user&apos;s YouTube account.
-          </li>
-        </ol>
+        <h2 style={styles.heading} className="text-2xl font-semibold mb-3">Features & Workflow</h2>
+        <ul style={styles.text} className="list-disc list-inside mb-4">
+          {features.map((feat, idx) => (
+            <li key={idx} className="mb-1">
+              {feat}
+            </li>
+          ))}
+        </ul>
+
+        <h2 style={styles.heading} className="text-2xl font-semibold mb-3">Architecture, Logic & Design</h2>
+        <p style={styles.text} className="mb-4">
+          The automation leverages n8n for orchestration, using RSS triggers to start conversion workflows that call KLAP AI. Status polling, IF/wait loops, and export steps ensure videos are fully processed before upload. Authenticated YouTube API calls handle final uploads and metadata assignment, with retry/backoff logic to improve reliability.
+        </p>
 
         <img
-          src={YouTubeShortsAutomationWorkflow}
-          alt="Automated workflow in the n8n automation tool titled Youtube Shorts Generator"
-          className="w-full h-auto mb-6 rounded-lg"
+          src={WorkflowImage}
+          alt="Screenshot of n8n workflow titled Youtube Shorts Generator showing convert → export → upload blocks"
+          className="w-full h-auto mb-6 rounded-lg shadow-sm"
         />
 
-        <h2 style={styles.heading} className="text-2xl font-semibold mb-4">
-          Architecture / Logic / Design
-        </h2>
-        <ul style={styles.text} className="list-disc list-inside mb-4">
-          <li>
-            <strong>Convert Videos to Shorts</strong>:
-            <ul className="list-disc list-inside ml-5">
-              <li>The process begins with an RSS feed trigger.</li>
-              <li>The video is sent for conversion, and the system checks the conversion status.</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Export Short Videos</strong>:
-            <ul className="list-disc list-inside ml-5">
-              <li>Retrieves a list of the created shorts and processes their exports.</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Upload Videos to YouTube</strong>:
-            <ul className="list-disc list-inside ml-5">
-              <li>
-                An HTTP request is made to the YouTube API to finalize the upload of the newly
-                created short videos.
-              </li>
-            </ul>
-          </li>
-        </ul>
-
-        <h2 style={styles.heading} className="text-2xl font-semibold mb-4">
-          Challenges &amp; Learnings
-        </h2>
-        <ul style={styles.text} className="list-disc list-inside mb-8">
-          <li>Integration complexities between different APIs.</li>
-          <li>Ensuring the reliability and speed of the automation process.</li>
-          <li>Handling various video formats and ensuring quality during conversion.</li>
-        </ul>
-
-        <div className="flex flex-col sm:flex-row justify-center gap-4 my-8">
-          {links.map(({ label, href }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold py-2 px-4 rounded-lg shadow-lg transition-colors duration-300"
-              style={{
-                backgroundColor: 'var(--accent-primary)',
-                color: 'var(--text-primary)',
-              }}
-            >
-              {label}
-            </a>
+        <ul style={styles.text} className="list-disc list-inside mb-6">
+          {architecturePoints.map((point, idx) => (
+            <li key={idx} className="mb-1">
+              {point}
+            </li>
           ))}
-        </div>
+        </ul>
 
-        <h2 style={styles.heading} className="text-2xl font-bold mb-4">
-          Skills &amp; Technologies Used
-        </h2>
-        <div className="flex flex-wrap mb-4">
+        <h2 style={styles.heading} className="text-2xl font-semibold mb-3">Results & Evaluation</h2>
+        <ul style={styles.text} className="list-disc list-inside mb-4">
+          {results.map((res, idx) => (
+            <li key={idx} className="mb-1">
+              {res}
+            </li>
+          ))}
+        </ul>
+
+        <h2 style={styles.heading} className="text-2xl font-semibold mb-3">Challenges & Learnings</h2>
+        <ul style={styles.text} className="list-disc list-inside mb-6">
+          {challenges.map((c, idx) => (
+            <li key={idx} className="mb-1">
+              {c}
+            </li>
+          ))}
+        </ul>
+
+        <h2 style={styles.heading} className="text-2xl font-bold mb-4">Skills & Technologies Used</h2>
+        <div className="flex flex-wrap mb-6">
           {skills.map((skill, index) => (
             <span
               key={index}
-              className="py-1 px-3 m-1 rounded-full font-semibold transition-colors duration-300"
+              className="py-1 px-3 m-1 rounded-full font-semibold text-sm"
               style={styles.tag}
             >
               {skill}
@@ -147,7 +144,7 @@ const YouTubeShortsAutomation = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default YouTubeShortsAutomation;
+export default YoutubeShortsAutomation
