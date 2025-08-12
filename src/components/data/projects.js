@@ -23,6 +23,30 @@ import AutomatedProjectPageGenerator from '../../components/subcomponents/Automa
 
 export const Latest = [
   {
+    id: 5,
+    title: "Youtube Shorts Automation",
+    category: "Automation",
+    description: "An automation pipeline that generates and uploads YouTube Shorts from long-form videos using KLAP AI, n8n, and the YouTube Data API.",
+    type: "Automation",
+    image: YoutubeShortsCover,
+    skills: [
+      "RSS feed monitoring",
+      "KLAP AI API",
+      "YouTube API (OAuth2)",
+      "Background workers / job queue",
+      "Object storage (S3 or equivalent)",
+      "FFmpeg (trimming/encoding)",
+      "Retry/backoff & rate-limit handling",
+      "Logging & monitoring",
+      "Docker & Kubernetes"
+    ],
+    component: <YoutubeShortsAutomation/>,
+    links: {
+      github: null,
+      live: "https://drive.google.com/uc?id=16sFr9l9eBErIwSjewKBW0S--RXzquZEV&export=download"
+    }
+  },
+  {
     id: 4,
     title: "Automated Project Page Generator",
     category: "Automation",
@@ -208,6 +232,30 @@ export const Cybersecurity = [
   },
 ]
 export const Automation = [
+  {
+    id: 5,
+    title: "Youtube Shorts Automation",
+    category: "Automation",
+    description: "An automation pipeline that generates and uploads YouTube Shorts from long-form videos using KLAP AI, n8n, and the YouTube Data API.",
+    type: "Automation",
+    image: YoutubeShortsCover,
+    skills: [
+      "RSS feed monitoring",
+      "KLAP AI API",
+      "YouTube API (OAuth2)",
+      "Background workers / job queue",
+      "Object storage (S3 or equivalent)",
+      "FFmpeg (trimming/encoding)",
+      "Retry/backoff & rate-limit handling",
+      "Logging & monitoring",
+      "Docker & Kubernetes"
+    ],
+    component: <YoutubeShortsAutomation/>,
+    links: {
+      github: null,
+      live: "https://drive.google.com/uc?id=16sFr9l9eBErIwSjewKBW0S--RXzquZEV&export=download"
+    }
+  },
   {
     id: 4,
     title: "Automated Project Page Generator",
