@@ -4,6 +4,7 @@ import TradeHistoryImage from '../../assets/Works/tradingjournal.jpg'
 import Linux from '../../assets/Linux/Picture3.png';
 import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
+import CoverImage from '../../assets/Works/AppointmentSetterAgentCover.png';
 
 //Project Components
 import AppProject1 from '../../components/subcomponents/AppProject1'
@@ -12,10 +13,36 @@ import Project1 from '../../components/subcomponents/Project1'
 import Project2 from '../../components/subcomponents/Project2'
 import Project3 from '../../components/subcomponents/Project3'
 import Project4 from '../../components/subcomponents/Project4'
+import AIRagAppointmentSystem from '../../components/subcomponents/AppointmentSetterAIAgentSystem'
 
 
 
 export const Latest = [
+  {
+    id: 1,
+    title: "AI RAG & Appointment System",
+    category: "Automation",
+    description: "An automated conversational AI system using ManyChat and n8n that captures leads, uses RAG to answer service questions, checks availability, and books appointments end-to-end.",
+    type: "Automation",
+    image: CoverImage,
+    skills: [
+      "ManyChat",
+      "n8n",
+      "Retrieval-Augmented Generation (RAG)",
+      "OpenAI (gpt4o / 4o mini)",
+      "Cal.com (API)",
+      "Google Sheets",
+      "Webhooks & HTTP APIs",
+      "JSON & structured output parsing",
+      "Workflow orchestration",
+      "Prompt engineering"
+    ],
+    component: <AIRagAppointmentSystem/>,
+    links: {
+      github: null,
+      live: null
+    }
+  },
   {
     title: "Kody's Adventure",
     category: "Software Development",
@@ -129,7 +156,31 @@ export const Cybersecurity = [
   },
 ]
 export const Automation = [
-
+  {
+    id: 2,
+    title: "AI RAG & Appointment System",
+    category: "Automation",
+    description: "An automated conversational AI system using ManyChat and n8n that captures leads, uses RAG to answer service questions, checks availability, and books appointments end-to-end.",
+    type: "Automation",
+    image: CoverImage,
+    skills: [
+      "ManyChat",
+      "n8n",
+      "Retrieval-Augmented Generation (RAG)",
+      "OpenAI (gpt4o / 4o mini)",
+      "Cal.com (API)",
+      "Google Sheets",
+      "Webhooks & HTTP APIs",
+      "JSON & structured output parsing",
+      "Workflow orchestration",
+      "Prompt engineering"
+    ],
+    component: <AIRagAppointmentSystem/>,
+    links: {
+      github: null,
+      live: null
+    }
+  }
 ]
 export const DevOps = [
 
