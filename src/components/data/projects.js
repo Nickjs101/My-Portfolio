@@ -6,6 +6,7 @@ import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
 import CoverImage from '../../assets/Works/AppointmentSetterAgentCover.png';
 import YoutubeShortsCover from '../../assets/Works/youtubeshortsautomationcover.png';
+import PageGeneratorCover from '../../assets/Works/pagegeneratorCover.png';
 
 //Project Components
 import AppProject1 from '../../components/subcomponents/AppProject1'
@@ -16,10 +17,36 @@ import Project3 from '../../components/subcomponents/Project3'
 import Project4 from '../../components/subcomponents/Project4'
 import AIRagAppointmentSystem from '../../components/subcomponents/AppointmentSetterAIAgentSystem'
 import YoutubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation'
+import AutomatedProjectPageGenerator from '../../components/subcomponents/AutomatedProjectPageGenerator'
 
 
 
 export const Latest = [
+  {
+    id: 4,
+    title: "Automated Project Page Generator",
+    category: "Automation",
+    description: "An automation pipeline that generates, validates, and deploys React project showcase pages from project artifacts using AI and workflow automation.",
+    type: "Automation",
+    image: PageGeneratorCover,
+    skills: [
+      "Git / GitHub",
+      "n8n",
+      "OpenAI GPT models",
+      "Image analysis models",
+      "Google Drive",
+      "Bash / Shell scripting",
+      "Telegram",
+      "Netlify",
+      "React / JSX",
+      "JavaScript"
+    ],
+    component: <AutomatedProjectPageGenerator/>,
+    links: {
+      github: null,
+      live: null
+    }
+  },
   {
     id: 3,
     title: "Youtube Shorts Automation",
@@ -181,6 +208,31 @@ export const Cybersecurity = [
   },
 ]
 export const Automation = [
+  {
+    id: 4,
+    title: "Automated Project Page Generator",
+    category: "Automation",
+    description: "An automation pipeline that generates, validates, and deploys React project showcase pages from project artifacts using AI and workflow automation.",
+    type: "Automation",
+    image: PageGeneratorCover,
+    skills: [
+      "Git / GitHub",
+      "n8n",
+      "OpenAI GPT models",
+      "Image analysis models",
+      "Google Drive",
+      "Bash / Shell scripting",
+      "Telegram",
+      "Netlify",
+      "React / JSX",
+      "JavaScript"
+    ],
+    component: <AutomatedProjectPageGenerator/>,
+    links: {
+      github: null,
+      live: null
+    }
+  },
   {
     id: 3,
     title: "Youtube Shorts Automation",
