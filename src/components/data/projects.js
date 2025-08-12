@@ -5,6 +5,7 @@ import Linux from '../../assets/Linux/Picture3.png';
 import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
 import CoverImage from '../../assets/Works/AppointmentSetterAgentCover.png';
+import YoutubeShortsCover from '../../assets/Works/youtubeshortsautomationcover.png';
 
 //Project Components
 import AppProject1 from '../../components/subcomponents/AppProject1'
@@ -14,10 +15,34 @@ import Project2 from '../../components/subcomponents/Project2'
 import Project3 from '../../components/subcomponents/Project3'
 import Project4 from '../../components/subcomponents/Project4'
 import AIRagAppointmentSystem from '../../components/subcomponents/AppointmentSetterAIAgentSystem'
+import YoutubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation'
 
 
 
 export const Latest = [
+  {
+    id: 3,
+    title: "Youtube Shorts Automation",
+    category: "Automation",
+    description: "An automation pipeline that generates and uploads YouTube Shorts from long-form videos using Klap AI, n8n, and the YouTube Data API.",
+    type: "Automation",
+    image: YoutubeShortsCover,
+    skills: [
+      "RSS feed monitoring",
+      "Klap AI (Klap API)",
+      "YouTube Data API (OAuth 2.0)",
+      "n8n (workflow automation)",
+      "HTTP APIs / REST",
+      "Polling & async job handling",
+      "Captions & subtitles management",
+      "Error handling & retries"
+    ],
+    component: <YoutubeShortsAutomation/>,
+    links: {
+      github: null,
+      live: null
+    }
+  },
   {
     id: 1,
     title: "AI RAG & Appointment System",
@@ -156,6 +181,29 @@ export const Cybersecurity = [
   },
 ]
 export const Automation = [
+  {
+    id: 3,
+    title: "Youtube Shorts Automation",
+    category: "Automation",
+    description: "An automation pipeline that generates and uploads YouTube Shorts from long-form videos using Klap AI, n8n, and the YouTube Data API.",
+    type: "Automation",
+    image: YoutubeShortsCover,
+    skills: [
+      "RSS feed monitoring",
+      "Klap AI (Klap API)",
+      "YouTube Data API (OAuth 2.0)",
+      "n8n (workflow automation)",
+      "HTTP APIs / REST",
+      "Polling & async job handling",
+      "Captions & subtitles management",
+      "Error handling & retries"
+    ],
+    component: <YoutubeShortsAutomation/>,
+    links: {
+      github: null,
+      live: null
+    }
+  },
   {
     id: 2,
     title: "AI RAG & Appointment System",
