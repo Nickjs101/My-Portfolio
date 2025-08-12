@@ -4,7 +4,6 @@ import Linux from '../../assets/Linux/Picture3.png';
 import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
 import pagegeneratorCover from '../../assets/Works/pagegeneratorCover.png';
-import YoutubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
 
 import AppProject1 from '../../components/subcomponents/AppProject1';
 import AppProject2 from '../../components/subcomponents/AppProject2';
@@ -13,33 +12,8 @@ import Project2 from '../../components/subcomponents/Project2';
 import Project3 from '../../components/subcomponents/Project3';
 import Project4 from '../../components/subcomponents/Project4';
 import AutomatedProjectPageGenerator from '../../components/subcomponents/AutomatedProjectPageGenerator';
-import YoutubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation';
 
 export const Latest = [
-  {
-    id: 5,
-    title: 'Youtube Shorts Automation',
-    category: 'Automation',
-    description:
-      'An n8n-powered pipeline that automatically generates and uploads optimized YouTube Shorts from long-form videos using KLAP AI.',
-    type: 'Automation',
-    image: YoutubeShortsAutomationCover,
-    skills: [
-      'RSS feeds',
-      'KLAP AI (Klap API)',
-      'YouTube API',
-      'n8n (workflow orchestration)',
-      'HTTP APIs',
-      'OAuth / API authentication',
-      'Retry and backoff strategies',
-      'Media export & format handling',
-    ],
-    component: <YoutubeShortsAutomation />,
-    links: {
-      github: null,
-      live: null,
-    },
-  },
   {
     id: 4,
     title: 'Automated Project Page Generator',
@@ -188,30 +162,6 @@ export const Cybersecurity = [
 ];
 
 export const Automation = [
-  {
-    id: 5,
-    title: 'Youtube Shorts Automation',
-    category: 'Automation',
-    description:
-      'An n8n-powered pipeline that automatically generates and uploads optimized YouTube Shorts from long-form videos using KLAP AI.',
-    type: 'Automation',
-    image: YoutubeShortsAutomationCover,
-    skills: [
-      'RSS feeds',
-      'KLAP AI (Klap API)',
-      'YouTube API',
-      'n8n (workflow orchestration)',
-      'HTTP APIs',
-      'OAuth / API authentication',
-      'Retry and backoff strategies',
-      'Media export & format handling',
-    ],
-    component: <YoutubeShortsAutomation />,
-    links: {
-      github: null,
-      live: null,
-    },
-  },
   {
     id: 4,
     title: 'Automated Project Page Generator',
