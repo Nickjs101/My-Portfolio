@@ -49,7 +49,7 @@ export default function Hero({ onWantToKnowMoreClick }) {
   ]
 
   const Ican = [
-    'Cloud', 'AI Automation', 'Cybersecurity', 'Software Development'
+    'Cloud Engineering', 'DevOps', 'AI Automation', 'Cybersecurity', 'Software Development'
   ]
 
   return (
@@ -73,11 +73,11 @@ export default function Hero({ onWantToKnowMoreClick }) {
             <div className="text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 h-8" style={{ color: 'var(--text-secondary)' }}>
               <TypeAnimation
                 sequence={[
-                  'Full-Stack Developer',
+                  'Developer',
                   2000,
                   'DevOps',
                   2000,
-                  'Cybersecurity Enthusiast',
+                  'Automation Specialist',
                   2000,
                 ]}
                 repeat={Infinity}
