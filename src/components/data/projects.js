@@ -21,6 +21,31 @@ import YoutubeShortsAutomation from '../../components/subcomponents/YoutubeShort
 
 export const Latest = [
   {
+    id: 4,
+    title: "Automated Project Page Generator",
+    category: "Automation",
+    description: "An automation pipeline that generates, validates, and deploys React project showcase pages from project artifacts using AI and workflow automation.",
+    type: "Automation",
+    image: PageGeneratorCover,
+    skills: [
+      "Git / GitHub",
+      "n8n",
+      "OpenAI GPT models",
+      "Image analysis models",
+      "Google Drive",
+      "Bash / Shell scripting",
+      "Telegram",
+      "Netlify",
+      "React / JSX",
+      "JavaScript"
+    ],
+    component: <AutomatedProjectPageGenerator/>,
+    links: {
+      github: null,
+      live: null
+    }
+  },
+  {
     id: 3,
     title: "Youtube Shorts Automation",
     category: "Automation",
@@ -181,6 +206,31 @@ export const Cybersecurity = [
   },
 ]
 export const Automation = [
+  {
+    id: 4,
+    title: "Automated Project Page Generator",
+    category: "Automation",
+    description: "An automation pipeline that generates, validates, and deploys React project showcase pages from project artifacts using AI and workflow automation.",
+    type: "Automation",
+    image: PageGeneratorCover,
+    skills: [
+      "Git / GitHub",
+      "n8n",
+      "OpenAI GPT models",
+      "Image analysis models",
+      "Google Drive",
+      "Bash / Shell scripting",
+      "Telegram",
+      "Netlify",
+      "React / JSX",
+      "JavaScript"
+    ],
+    component: <AutomatedProjectPageGenerator/>,
+    links: {
+      github: null,
+      live: null
+    }
+  },
   {
     id: 3,
     title: "Youtube Shorts Automation",

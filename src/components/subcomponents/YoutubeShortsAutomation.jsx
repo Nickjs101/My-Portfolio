@@ -1,155 +1,122 @@
-import React from 'react'
-import { projectStyles as styles } from './ProjectStyles'
-import CoverImage from '../../assets/Works/youtubeshortsautomationcover.png'
-import WorkflowImage from '../../assets/Works/youtubeshortsautomationworkflow.png'
+import React from 'react';
+import { projectStyles as styles } from './ProjectStyles';
+import CoverImage from '/tmp/portfolio/src/assets/Works/youtubeshortsautomationcover.png';
+import WorkflowImage from '/tmp/portfolio/src/assets/Works/youtubeshortsautomationworkflow.png';
 
 const YoutubeShortsAutomation = () => {
   const skills = [
     'RSS feed monitoring',
-    'KLAP AI API',
-    'YouTube API (OAuth2)',
-    'Background workers / job queue',
-    'Object storage (S3 or equivalent)',
-    'FFmpeg (trimming/encoding)',
-    'Retry/backoff & rate-limit handling',
-    'Logging & monitoring',
-    'Docker & Kubernetes'
-  ]
+    'Klap AI (Klap API)',
+    'YouTube Data API (OAuth 2.0)',
+    'n8n (workflow automation)',
+    'HTTP APIs / REST',
+    'Polling & async job handling',
+    'Captions & subtitles management',
+    'Error handling & retries'
+  ];
 
-  const links = [
+  const contentSections = [
     {
-      label: 'Watch Demo',
-      href:
-        'https://drive.google.com/uc?id=16sFr9l9eBErIwSjewKBW0S--RXzquZEV&export=download'
+      heading: 'Overview',
+      paragraphs: [
+        "Many podcast creators rely on human editors to cut long episodes into shareable YouTube Shorts and then upload them manually. This automation pipeline eliminates the manual steps: it detects new uploads, uses Klap AI to generate optimized short clips (with captions/subtitles and cuts), and programmatically uploads the resulting shorts to the creator's YouTube account."
+      ]
+    },
+    {
+      heading: 'Goals',
+      paragraphs: [
+        'Automatically generate short clips from podcast episodes or long-form videos.',
+        'Apply captions/subtitles and optimized cuts using AI.',
+        'Upload completed shorts to YouTube without manual intervention.',
+        'Minimize time-to-publish and reduce editing costs.'
+      ]
+    },
+    {
+      heading: 'Features / Workflow',
+      paragraphs: [
+        'Monitor source content using an RSS feed trigger for new video uploads or published episodes.',
+        'Send the source video to Klap AI to request shorts generation with preferences (captions, subtitle styles, cut heuristics, length).',
+        'Poll Klap API for conversion/export status and retrieve generated short assets.',
+        'Upload finalized shorts to YouTube using the YouTube Data API (with proper metadata and thumbnails).',
+        "End-to-end automation so creators don’t need to manually trigger editing or uploads."
+      ]
+    },
+    {
+      heading: 'Architecture, Logic & Design',
+      paragraphs: [
+        'Orchestration is implemented as an automation workflow (example shown in n8n) with discrete stages: RSS Feed Trigger, HTTP Request to Klap AI, IF + Wait nodes for polling, export retrieval nodes, and YouTube API upload nodes.',
+        'Authentication & security: YouTube uses OAuth 2.0 with refresh token handling; Klap API uses API keys with secure storage.',
+        'Robustness: retries with exponential backoff for rate limits, status checks, and configurable metadata mapping (title, description, hashtags, visibility).'
+      ],
+      image: { src: WorkflowImage, alt: 'Youtube Shorts Generator n8n workflow screenshot' }
+    },
+    {
+      heading: 'Results & Evaluation',
+      paragraphs: [
+        'Reduced turnaround: shorts generated and uploaded automatically as soon as source content is published.',
+        'Cost savings from fewer manual editing hours required.',
+        'Scalability: pipeline can process multiple channels/sources by scaling worker nodes and respecting API quotas.',
+        'Better reach: AI-optimized cuts and auto-generated captions improve discoverability and viewer engagement.'
+      ]
+    },
+    {
+      heading: 'Challenges & Learnings',
+      paragraphs: [
+        'Handling asynchronous conversion required reliable polling and idempotency to avoid duplicate uploads.',
+        'Managing YouTube API quotas and resumable uploads required careful error handling and retry logic.',
+        'Ensuring caption accuracy and stylistic preferences required exposing configuration options for Klap.',
+        'Content policy and copyright checks should be part of the pipeline before publishing.',
+        'Monitoring and observability (logs, alerts) are essential for production reliability.'
+      ]
     }
-  ]
+  ];
 
   return (
-    <div className="font-sans leading-relaxed tracking-wide flex flex-col items-center px-4 py-6">
-      <div className="max-w-4xl w-full md:p-6 rounded-lg">
+    <div className="font-sans leading-relaxed tracking-wide flex flex-col items-center py-6">
+      <div className="max-w-4xl w-full p-4 md:p-6 rounded-lg">
         <img
           src={CoverImage}
-          alt="YouTube Shorts Automation cover with smartphone, robot and automation graphics"
+          alt="YouTube Shorts Automation cover"
           className="w-full h-auto mb-6 rounded-lg shadow-md"
         />
 
-        <h1 style={styles.heading} className="text-3xl lg:text-5xl font-bold mb-4">
+        <h1 style={styles.heading} className="text-3xl lg:text-5xl font-bold mb-6">
           Youtube Shorts Automation
         </h1>
 
-        <h2 style={styles.heading} className="text-2xl font-semibold mb-3">
-          Overview
-        </h2>
-        <p style={styles.text} className="mb-4 text-gray-700">
-          Youtube Shorts Automation monitors new long-form video or podcast uploads and automatically
-          generates short clips (shorts) using the KLAP AI API, then uploads them to the creator's
-          YouTube channel. The system removes the need to manually edit and publish short-form
-          variants, enabling creators to scale clip publishing with consistent style and captions.
-        </p>
+        {contentSections.map((section) => (
+          <section key={section.heading} className="mb-6">
+            <h2 style={styles.heading} className="text-2xl font-semibold mb-3">
+              {section.heading}
+            </h2>
 
-        <h2 style={styles.heading} className="text-2xl font-semibold mb-3">
-          Goals
-        </h2>
-        <ul style={styles.text} className="list-disc list-inside mb-4 text-gray-700">
-          <li>Eliminate manual editing and upload overhead for creators.</li>
-          <li>Generate optimized, captioned shorts automatically from long-form content.</li>
-          <li>Maintain consistent styling, subtitle accuracy, and metadata for uploads.</li>
-          <li>Operate end-to-end with minimal manual intervention while supporting review/override.</li>
-        </ul>
+            {Array.isArray(section.paragraphs)
+              ? section.paragraphs.map((para, idx) => (
+                  <p key={idx} style={styles.text} className="mb-3 text-gray-800">
+                    {para}
+                  </p>
+                ))
+              : (
+                  <p style={styles.text} className="mb-3 text-gray-800">
+                    {section.paragraphs}
+                  </p>
+                )}
 
-        <h2 style={styles.heading} className="text-2xl font-semibold mb-3">
-          Features & Workflow
-        </h2>
-        <p style={styles.text} className="mb-3 text-gray-700">
-          The pipeline automates end-to-end production of shorts:
-        </p>
-        <ul style={styles.text} className="list-disc list-inside mb-4 text-gray-700">
-          <li>RSS monitoring: watch feeds or channels for new long-form uploads.</li>
-          <li>Source retrieval: download the source video or ingest the media URL.</li>
-          <li>
-            KLAP AI processing: submit media and preferences (cuts, captions, subtitle language,
-            clip length, caption style) to KLAP API to produce one or more shorts.
-          </li>
-          <li>Post-processing: add metadata, custom thumbnail, and apply brand overlays.</li>
-          <li>YouTube upload: publish generated shorts via the YouTube API using OAuth credentials.</li>
-          <li>Observability & retries: log jobs, retry transient failures, and surface review items.</li>
-        </ul>
-
-        <h3 style={styles.heading} className="text-xl font-semibold mb-2">
-          Typical flow
-        </h3>
-        <ol style={styles.text} className="list-decimal list-inside mb-4 text-gray-700">
-          <li>RSS detects a new video → enqueue job.</li>
-          <li>Worker downloads or references source media → calls KLAP API with target rules.</li>
-          <li>KLAP returns processed short(s) → store artifact in cloud storage.</li>
-          <li>Uploader posts short(s) to YouTube with captions, title, and description → record outcome.</li>
-        </ol>
-
-        <img
-          src={WorkflowImage}
-          alt="n8n workflow showing RSS trigger, conversion, export, and YouTube upload"
-          className="w-full h-auto mb-6 rounded-lg shadow-sm"
-        />
-
-        <h2 style={styles.heading} className="text-2xl font-semibold mb-3">
-          Architecture & Design
-        </h2>
-        <p style={styles.text} className="mb-3 text-gray-700">
-          Key components include:
-        </p>
-        <ul style={styles.text} className="list-disc list-inside mb-4 text-gray-700">
-          <li>RSS Watcher (pull or webhook) to detect new uploads.</li>
-          <li>Ingest service to fetch and validate source media.</li>
-          <li>Processing workers that call KLAP AI and handle returned assets.</li>
-          <li>Object storage for intermediate artifacts and thumbnails.</li>
-          <li>Uploader service for OAuth-authenticated YouTube API uploads and caption attachments.</li>
-          <li>Database for job state, metadata, and audit logs; monitoring & alerting for failures.</li>
-        </ul>
-
-        <h2 style={styles.heading} className="text-2xl font-semibold mb-3">
-          Results & Evaluation
-        </h2>
-        <p style={styles.text} className="mb-4 text-gray-700">
-          Demo shows end-to-end automation (capture, KLAP processing, and YouTube upload). Primary
-          outcome was reduced manual editing and upload overhead, enabling creators to publish more
-          shorts consistently and quickly. Operational benefits included standardized captioning and
-          automated metadata application.
-        </p>
-
-        <h2 style={styles.heading} className="text-2xl font-semibold mb-3">
-          Challenges & Learnings
-        </h2>
-        <ul style={styles.text} className="list-disc list-inside mb-6 text-gray-700">
-          <li>Rate limits and quotas require batching, backoff, and quota monitoring.</li>
-          <li>Ensure rights and permissions before auto-publishing third-party clips.</li>
-          <li>Automatic clip selection may need human review; provide manual approval paths.</li>
-          <li>Caption timing sometimes requires supplemental FFmpeg subtitle adjustments.</li>
-          <li>Durable job state and robust retries needed for transient network/API errors.</li>
-        </ul>
-
-        <div className="flex justify-center gap-4 my-6">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold py-2 px-4 rounded-lg shadow-lg transition-colors duration-300"
-              style={{
-                backgroundColor: 'var(--accent-primary)',
-                color: 'var(--text-primary)'
-              }}
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
+            {section.image && (
+              <img
+                src={section.image.src}
+                alt={section.image.alt}
+                className="w-full h-auto mb-4 rounded-lg shadow-sm"
+              />
+            )}
+          </section>
+        ))}
 
         <h2 style={styles.heading} className="text-2xl font-bold mb-4">
           Skills & Technologies Used
         </h2>
-        <div className="flex flex-wrap mb-8">
-          {skills.map((skill) => (
+        <div className="flex flex-wrap mb-6">
+          {skills.map((skill, index) => (
             <span
               key={skill}
               className="py-1 px-3 m-1 rounded-full font-semibold text-sm"
@@ -161,7 +128,7 @@ const YoutubeShortsAutomation = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default YoutubeShortsAutomation
+export default YoutubeShortsAutomation;
