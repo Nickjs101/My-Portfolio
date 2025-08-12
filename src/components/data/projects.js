@@ -4,6 +4,7 @@ import TradeHistoryImage from '../../assets/Works/tradingjournal.jpg'
 import Linux from '../../assets/Linux/Picture3.png';
 import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
+import PageGeneratorCover from '../../assets/Works/pagegeneratorCover.png';
 
 //Project Components
 import AppProject1 from '../../components/subcomponents/AppProject1'
@@ -12,10 +13,35 @@ import Project1 from '../../components/subcomponents/Project1'
 import Project2 from '../../components/subcomponents/Project2'
 import Project3 from '../../components/subcomponents/Project3'
 import Project4 from '../../components/subcomponents/Project4'
+import AutomatedProjectPageGenerator from '../../components/subcomponents/AutomatedProjectPageGenerator'
 
 
 
 export const Latest = [
+  {
+    id: 1,
+    title: "Automated Project Page Generator",
+    category: "Automation",
+    description: "Automates generation of coded project pages using n8n and AI models, validates and deploys them to Netlify.",
+    type: "Automation",
+    image: PageGeneratorCover,
+    skills: [
+      "n8n",
+      "Git / GitHub",
+      "Netlify",
+      "GPT (language & image models)",
+      "Google Drive API",
+      "React / JSX",
+      "Bash / Shell scripting",
+      "Telegram",
+      "Code validation tools"
+    ],
+    component: <AutomatedProjectPageGenerator/>,
+    links: {
+      github: null,
+      live: null
+    }
+  },
   {
     title: "Kody's Adventure",
     category: "Software Development",
@@ -129,7 +155,30 @@ export const Cybersecurity = [
   },
 ]
 export const Automation = [
-
+  {
+    id: 1,
+    title: "Automated Project Page Generator",
+    category: "Automation",
+    description: "Automates generation of coded project pages using n8n and AI models, validates and deploys them to Netlify.",
+    type: "Automation",
+    image: PageGeneratorCover,
+    skills: [
+      "n8n",
+      "Git / GitHub",
+      "Netlify",
+      "GPT (language & image models)",
+      "Google Drive API",
+      "React / JSX",
+      "Bash / Shell scripting",
+      "Telegram",
+      "Code validation tools"
+    ],
+    component: <AutomatedProjectPageGenerator/>,
+    links: {
+      github: null,
+      live: null
+    }
+  }
 ]
 export const DevOps = [
 
