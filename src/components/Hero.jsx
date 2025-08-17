@@ -2,8 +2,8 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, FileText } from 'lucide-react'
 import { TypeAnimation } from 'react-type-animation'
-import heroimage from '../assets/headshot.jpg'
-import resume from '../assets/NICK_JOSHUA_MONTEMAYOR_RESUME.pdf'
+const heroimage = 'https://via.placeholder.com/400'
+const resume = 'https://example.com/resume.pdf'
 import { InteractiveHoverButton } from '../components/subcomponents/interactive-hover-button'
 
 export default function Hero({ onWantToKnowMoreClick }) {

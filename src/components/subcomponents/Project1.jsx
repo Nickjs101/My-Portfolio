@@ -1,9 +1,9 @@
 import React from 'react'
-import Linux1 from '../../assets/Linux/Picture1.png'
-import Linux2 from '../../assets/Linux/Picture2.png'
-import Linux3 from '../../assets/Linux/Picture3.png'
-import Linux4 from '../../assets/Linux/Picture4.png'
-import Linux5 from '../../assets/Linux/Picture5.png'
+const Linux1 = 'https://via.placeholder.com/600x400'
+const Linux2 = 'https://via.placeholder.com/600x400'
+const Linux3 = 'https://via.placeholder.com/600x400'
+const Linux4 = 'https://via.placeholder.com/600x400'
+const Linux5 = 'https://via.placeholder.com/600x400'
 
 const Project1 = () => {
   return (

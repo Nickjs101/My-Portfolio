@@ -1,7 +1,7 @@
 import React from 'react'
-import gradpic from '../assets/gradpic.JPG'
-import org from '../assets/org.jpg'
-import comp from '../assets/comp.jpg'
+const gradpic = 'https://via.placeholder.com/400'
+const org = 'https://via.placeholder.com/400'
+const comp = 'https://via.placeholder.com/400'
 
 const achievements = [
   "Graduated Magna Cum Laude",
