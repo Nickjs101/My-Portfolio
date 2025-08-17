@@ -1,7 +1,7 @@
 import React from 'react'
 
-const HCIA = 'https://via.placeholder.com/150'
-const GCC = 'https://via.placeholder.com/150'
+import HCIA from '../assets/Certificates/HCIAlogo.png'
+import GCC from '../assets/Certificates/GCClogo.png'
 
 import Courses from "./Courses";
 
