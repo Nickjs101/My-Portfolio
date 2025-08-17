@@ -1,8 +1,9 @@
 import React from 'react'
-import Courses from "./Courses";
 
 const HCIA = 'https://via.placeholder.com/150'
 const GCC = 'https://via.placeholder.com/150'
+
+import Courses from "./Courses";
 
 const Certs = () => {
   const certifications = [

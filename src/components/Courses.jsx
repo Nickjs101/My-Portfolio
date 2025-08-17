@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import Modal from './subcomponents/imagemodal'
-
 const C2 = 'https://via.placeholder.com/300'
 const C3 = 'https://via.placeholder.com/300'
 const C4 = 'https://via.placeholder.com/300'
@@ -9,6 +7,8 @@ const C6 = 'https://via.placeholder.com/300'
 const C7 = 'https://via.placeholder.com/300'
 const C8 = 'https://via.placeholder.com/300'
 const C9 = 'https://via.placeholder.com/300'
+
+import Modal from './subcomponents/imagemodal'
 const Courses = () => {
   const certifications = [
     {
