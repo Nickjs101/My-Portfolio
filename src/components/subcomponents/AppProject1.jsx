@@ -1,6 +1,6 @@
 import React from 'react'
-const TradeHistoryImage = 'https://via.placeholder.com/600x400'
 import { projectStyles as styles } from './ProjectStyles'
+const TradeHistoryImage = 'https://via.placeholder.com/600x400'
 
 const AppProject1 = () => {
   const technologies = ["Java", "XML", "Android Studio", "SQLite"];
