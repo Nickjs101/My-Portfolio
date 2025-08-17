@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Heart, ExternalLink, Github, FileText } from 'lucide-react'
 
 // You can import the projects array from a separate file
-import { projects, categories } from '../../assets/data/projects'
+import { Latest as projects, categories } from '../data/projects'
 
 const ProjectsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All")

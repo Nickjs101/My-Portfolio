@@ -1,5 +1,5 @@
 import React from 'react'
-import aboutImg from '../assets/about.jpg'
+const aboutImg = 'https://via.placeholder.com/600'
 
 export default function About() {
   return (

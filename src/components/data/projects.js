@@ -1,9 +1,9 @@
 //Display Images
-import KodyAdventureImage from '../../assets/Works/kodymain.jpg';
-import TradeHistoryImage from '../../assets/Works/tradingjournal.jpg'
-import Linux from '../../assets/Linux/Picture3.png';
-import vul from '../../assets/Linux/Picture2.png';
-import Sql from '../../assets/Linux/Picture1.png';
+const KodyAdventureImage = 'https://via.placeholder.com/300';
+const TradeHistoryImage = 'https://via.placeholder.com/300';
+const Linux = 'https://via.placeholder.com/300';
+const vul = 'https://via.placeholder.com/300';
+const Sql = 'https://via.placeholder.com/300';
 
 //Project Components
 import AppProject1 from '../../components/subcomponents/AppProject1'
