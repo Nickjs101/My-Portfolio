@@ -1,9 +1,9 @@
 import React from 'react'
 import { projectStyles as styles } from './ProjectStyles'
-const KodyAdventureImage = 'https://via.placeholder.com/600x400'
-const kodylevel = 'https://via.placeholder.com/600x400'
-const kodylesson = 'https://via.placeholder.com/600x400'
-const kodymap = 'https://via.placeholder.com/600x400'
+import KodyAdventureImage from '../../assets/Works/kodymain.jpg'
+import kodylevel from '../../assets/Works/kodylevel.jpg'
+import kodylesson from '../../assets/Works/kodylesson.jpg'
+import kodymap from '../../assets/Works/kodymap.jpg'
 
 const AppProject2 = () => {
   const skills = ["C#", "Unity", "OOP"]

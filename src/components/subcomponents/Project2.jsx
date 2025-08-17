@@ -1,10 +1,10 @@
 import React from 'react';
-const SQL1 = 'https://via.placeholder.com/600x400';
-const SQL2 = 'https://via.placeholder.com/600x400';
-const SQL3 = 'https://via.placeholder.com/600x400';
-const SQL4 = 'https://via.placeholder.com/600x400';
-const SQL5 = 'https://via.placeholder.com/600x400';
-const SQL6 = 'https://via.placeholder.com/600x400';
+import SQL1 from '../../assets/SQL/Picture1.png';
+import SQL2 from '../../assets/SQL/Picture2.png';
+import SQL3 from '../../assets/SQL/Picture3.png';
+import SQL4 from '../../assets/SQL/Picture4.png';
+import SQL5 from '../../assets/SQL/Picture5.png';
+import SQL6 from '../../assets/SQL/Picture6.png';
 
 const Project2 = () => {
   return (

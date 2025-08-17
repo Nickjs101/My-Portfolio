@@ -1,5 +1,5 @@
 import React from 'react'
-const TradeHistoryImage = 'https://via.placeholder.com/600x400'
+import TradeHistoryImage from '../../assets/Works/tradingjournal.jpg'
 import { projectStyles as styles } from './ProjectStyles'
 
 const AppProject1 = () => {

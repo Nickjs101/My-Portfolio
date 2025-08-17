@@ -1,6 +1,6 @@
 import React from 'react';
 import { Github, Linkedin, Mail, FileText } from 'lucide-react'
-const resume = 'https://example.com/resume.pdf';
+import resume from '../assets/NICK_JOSHUA_MONTEMAYOR_RESUME.pdf';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

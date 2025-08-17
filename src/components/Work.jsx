@@ -21,7 +21,7 @@ const Work = ({ displayProject }) => {
           <div className='grid sm:grid-cols-2 md:grid-cols-2 gap-4 lg:px-[200px]'> {/*Remove padding when element greater than 3*/}
           {Projects[1].SoftwareDev.map((project, index) => (
             <div key={index} className='card p-4 rounded-xl'>
-              <img src={project.image} alt={project.title} className='rounded-xl w-full h-auto'/>
+              {project.image}
               <div className='p-4'>
                   <h1 className='text-lg font-bold' style={{ color: 'var(--text-primary)' }}>
                     {project.title}
@@ -63,7 +63,7 @@ const Work = ({ displayProject }) => {
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
               {Projects[0].Cybersecurity.map((project, index) => (
                   <div key={index} className='card p-4 rounded-xl'>
-                      <img src={project.image} alt={project.title} className='rounded-xl w-full h-auto'/>
+                      {project.image}
                       <h1 className='text-lg font-bold' style={{ color: 'var(--text-primary)' }}>
                           {project.title}
                       </h1>
