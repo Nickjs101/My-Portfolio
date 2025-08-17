@@ -2,10 +2,9 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, FileText } from 'lucide-react'
 import { TypeAnimation } from 'react-type-animation'
-import { InteractiveHoverButton } from '../components/subcomponents/interactive-hover-button'
-
 const heroimage = 'https://via.placeholder.com/400'
 const resume = 'https://example.com/resume.pdf'
+import { InteractiveHoverButton } from '../components/subcomponents/interactive-hover-button'
 
 export default function Hero({ onWantToKnowMoreClick }) {
   const gotoSection = (event, id) => {

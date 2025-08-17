@@ -1,3 +1,10 @@
+//Display Images
+const KodyAdventureImage = 'https://via.placeholder.com/300';
+const TradeHistoryImage = 'https://via.placeholder.com/300';
+const Linux = 'https://via.placeholder.com/300';
+const vul = 'https://via.placeholder.com/300';
+const Sql = 'https://via.placeholder.com/300';
+
 //Project Components
 import AppProject1 from '../../components/subcomponents/AppProject1'
 import AppProject2 from '../../components/subcomponents/AppProject2'
@@ -5,13 +12,6 @@ import Project1 from '../../components/subcomponents/Project1'
 import Project2 from '../../components/subcomponents/Project2'
 import Project3 from '../../components/subcomponents/Project3'
 import Project4 from '../../components/subcomponents/Project4'
-
-//Display Images
-const KodyAdventureImage = 'https://via.placeholder.com/300';
-const TradeHistoryImage = 'https://via.placeholder.com/300';
-const Linux = 'https://via.placeholder.com/300';
-const vul = 'https://via.placeholder.com/300';
-const Sql = 'https://via.placeholder.com/300';
 
 
 
