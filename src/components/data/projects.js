@@ -1,3 +1,4 @@
+import React from 'react';
 //Display Images
 import KodyAdventureImage from '../../assets/Works/kodymain.jpg';
 import TradeHistoryImage from '../../assets/Works/tradingjournal.jpg';
@@ -5,6 +6,7 @@ import Linux from '../../assets/Linux/Picture3.png';
 import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
 import PageGeneratorCover from '../../assets/Works/pagegeneratorCover.png';
+import YoutubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
 
 //Project Components
 import AppProject1 from '../../components/subcomponents/AppProject1';
@@ -14,8 +16,23 @@ import Project2 from '../../components/subcomponents/Project2';
 import Project3 from '../../components/subcomponents/Project3';
 import Project4 from '../../components/subcomponents/Project4';
 import AutomatedProjectPageGenerator from '../../components/subcomponents/AutomatedProjectPageGenerator';
+import YoutubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation';
 
 export const Latest = [
+  {
+    id: 2,
+    title: 'Youtube Shorts Automation',
+    category: 'Automation',
+    description: 'End-to-end n8n workflow that detects new long-form uploads via RSS, generates edited shorts with Klap AI, and publishes them to YouTube with robust async polling, retries, and error handling.',
+    type: 'Automation',
+    image: YoutubeShortsAutomationCover,
+    skills: ['n8n', 'RSS Feed', 'Klap AI API', 'YouTube API', 'HTTP/REST', 'JSON', 'Conditional Logic', 'Asynchronous Polling', 'Retry/Backoff', 'Automation Workflows'],
+    component: <YoutubeShortsAutomation />,
+    links: {
+      github: null,
+      live: null,
+    },
+  },
   {
     id: 1,
     title: 'Automated Project Page Generator',
@@ -27,8 +44,8 @@ export const Latest = [
     component: <AutomatedProjectPageGenerator />,
     links: {
       github: 'https://github.com/Nickjs101/My-Portfolio',
-      live: 'https://nickjsportfolio.netlify.app'
-    }
+      live: 'https://nickjsportfolio.netlify.app',
+    },
   },
   {
     title: "Kody's Adventure",
@@ -39,8 +56,8 @@ export const Latest = [
     component: <AppProject2 />,
     links: {
       github: 'https://github.com/Nickjs101/Kody-sAdventure',
-      live: 'https://mega.nz/file/luYB0LSJ#6gzzEFbbew4PBblpc2VvXYNZmOUfqFhOGFJUqUa5-Mo'
-    }
+      live: 'https://mega.nz/file/luYB0LSJ#6gzzEFbbew4PBblpc2VvXYNZmOUfqFhOGFJUqUa5-Mo',
+    },
   },
   {
     title: 'File Permissions in Linux',
@@ -51,8 +68,8 @@ export const Latest = [
     component: <Project1 />,
     links: {
       github: null,
-      live: null
-    }
+      live: null,
+    },
   },
   {
     title: 'Vulnerability Assessment Report',
@@ -63,8 +80,8 @@ export const Latest = [
     component: <Project3 />,
     links: {
       github: null,
-      live: null
-    }
+      live: null,
+    },
   },
 ];
 
@@ -78,8 +95,8 @@ export const SoftwareDev = [
     component: <AppProject2 />,
     links: {
       github: 'https://github.com/Nickjs101/Kody-sAdventure',
-      live: 'https://mega.nz/file/luYB0LSJ#6gzzEFbbew4PBblpc2VvXYNZmOUfqFhOGFJUqUa5-Mo'
-    }
+      live: 'https://mega.nz/file/luYB0LSJ#6gzzEFbbew4PBblpc2VvXYNZmOUfqFhOGFJUqUa5-Mo',
+    },
   },
   {
     title: 'Trading Journal Mobile App',
@@ -90,9 +107,9 @@ export const SoftwareDev = [
     component: <AppProject1 />,
     links: {
       github: null,
-      live: 'https://mega.nz/file/FjIXSKDS#ynkMDEXFHDVzyDC34741AO-lSooazd5NhZx8qK78fOY'
-    }
-  }
+      live: 'https://mega.nz/file/FjIXSKDS#ynkMDEXFHDVzyDC34741AO-lSooazd5NhZx8qK78fOY',
+    },
+  },
 ];
 
 export const Cybersecurity = [
@@ -105,8 +122,8 @@ export const Cybersecurity = [
     component: <Project1 />,
     links: {
       github: null,
-      live: null
-    }
+      live: null,
+    },
   },
   {
     title: 'Apply Filters to SQL Queries',
@@ -116,8 +133,8 @@ export const Cybersecurity = [
     component: <Project2 />,
     links: {
       github: null,
-      live: null
-    }
+      live: null,
+    },
   },
   {
     title: 'Vulnerability Assessment Report',
@@ -128,8 +145,8 @@ export const Cybersecurity = [
     component: <Project3 />,
     links: {
       github: null,
-      live: null
-    }
+      live: null,
+    },
   },
   {
     title: 'Security Audit Report',
@@ -139,8 +156,8 @@ export const Cybersecurity = [
     component: <Project4 />,
     links: {
       github: null,
-      live: null
-    }
+      live: null,
+    },
   },
 ];
 
@@ -154,9 +171,21 @@ export const Automation = [
     component: <AutomatedProjectPageGenerator />,
     links: {
       github: 'https://github.com/Nickjs101/My-Portfolio',
-      live: 'https://nickjsportfolio.netlify.app'
-    }
-  }
+      live: 'https://nickjsportfolio.netlify.app',
+    },
+  },
+  {
+    title: 'Youtube Shorts Automation',
+    category: 'Automation',
+    description: 'End-to-end n8n workflow that detects new long-form uploads via RSS, generates edited shorts with Klap AI, and publishes them to YouTube with robust async polling, retries, and error handling.',
+    image: YoutubeShortsAutomationCover,
+    skills: ['n8n', 'RSS Feed', 'Klap AI API', 'YouTube API', 'HTTP/REST', 'JSON', 'Conditional Logic', 'Asynchronous Polling', 'Retry/Backoff', 'Automation Workflows'],
+    component: <YoutubeShortsAutomation />,
+    links: {
+      github: null,
+      live: null,
+    },
+  },
 ];
 
 export const DevOps = [
@@ -168,5 +197,5 @@ export const categories = [
   'Software Development',
   'Automation',
   'Cybersecurity',
-  'DevOps'
+  'DevOps',
 ];
