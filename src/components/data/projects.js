@@ -1,5 +1,5 @@
 import React from 'react';
-// Display Images
+//Display Images
 import KodyAdventureImage from '../../assets/Works/kodymain.jpg';
 import TradeHistoryImage from '../../assets/Works/tradingjournal.jpg';
 import Linux from '../../assets/Linux/Picture3.png';
@@ -8,7 +8,7 @@ import Sql from '../../assets/Linux/Picture1.png';
 import PageGeneratorCover from '../../assets/Works/pagegeneratorCover.png';
 import YoutubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
 
-// Project Components
+//Project Components
 import AppProject1 from '../../components/subcomponents/AppProject1';
 import AppProject2 from '../../components/subcomponents/AppProject2';
 import Project1 from '../../components/subcomponents/Project1';
@@ -19,20 +19,6 @@ import AutomatedProjectPageGenerator from '../../components/subcomponents/Automa
 import YoutubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation';
 
 export const Latest = [
-  {
-    id: 3,
-    title: 'YouTube Shorts Automation',
-    category: 'Automation',
-    description: 'Hands-off pipeline that detects new uploads via RSS, generates shorts with Klap AI, and posts to YouTube with robust retries and monitoring.',
-    type: 'Automation',
-    image: YoutubeShortsAutomationCover,
-    skills: ['RSS/Atom Feeds', 'Klap AI API', 'YouTube Data API', 'OAuth 2.0', 'Webhooks/Cron', 'Job Queueing', 'Retries/Backoff', 'Logging/Monitoring', 'n8n'],
-    component: <YoutubeShortsAutomation />,
-    links: {
-      github: null,
-      live: 'https://drive.google.com/uc?id=16sFr9l9eBErIwSjewKBW0S--RXzquZEV&export=download',
-    },
-  },
   {
     id: 2,
     title: 'Youtube Shorts Automation',
@@ -176,18 +162,6 @@ export const Cybersecurity = [
 ];
 
 export const Automation = [
-  {
-    title: 'YouTube Shorts Automation',
-    category: 'Automation',
-    description: 'Hands-off pipeline that detects new uploads via RSS, generates shorts with Klap AI, and posts to YouTube with robust retries and monitoring.',
-    image: YoutubeShortsAutomationCover,
-    skills: ['RSS/Atom Feeds', 'Klap AI API', 'YouTube Data API', 'OAuth 2.0', 'Webhooks/Cron', 'Job Queueing', 'Retries/Backoff', 'Logging/Monitoring', 'n8n'],
-    component: <YoutubeShortsAutomation />,
-    links: {
-      github: null,
-      live: 'https://drive.google.com/uc?id=16sFr9l9eBErIwSjewKBW0S--RXzquZEV&export=download',
-    },
-  },
   {
     title: 'Automated Project Page Generator',
     category: 'Automation',
