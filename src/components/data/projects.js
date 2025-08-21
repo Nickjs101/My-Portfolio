@@ -1,5 +1,4 @@
-import React from 'react';
-//Display Images
+// Display Images
 import KodyAdventureImage from '../../assets/Works/kodymain.jpg';
 import TradeHistoryImage from '../../assets/Works/tradingjournal.jpg';
 import Linux from '../../assets/Linux/Picture3.png';
@@ -7,8 +6,9 @@ import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
 import PageGeneratorCover from '../../assets/Works/pagegeneratorCover.png';
 import YoutubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
+import AppointmentSetterAgentCover from '../../assets/Works/AppointmentSetterAgentCover.png';
 
-//Project Components
+// Project Components
 import AppProject1 from '../../components/subcomponents/AppProject1';
 import AppProject2 from '../../components/subcomponents/AppProject2';
 import Project1 from '../../components/subcomponents/Project1';
@@ -17,8 +17,23 @@ import Project3 from '../../components/subcomponents/Project3';
 import Project4 from '../../components/subcomponents/Project4';
 import AutomatedProjectPageGenerator from '../../components/subcomponents/AutomatedProjectPageGenerator';
 import YoutubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation';
+import AIRAGAppointmentSystem from '../../components/subcomponents/AppointmentSetterAIAgentSystem';
 
 export const Latest = [
+  {
+    id: 3,
+    title: 'AI RAG & Appointment System',
+    category: 'Automation',
+    description: 'End-to-end AI RAG appointment system that replies to social leads, answers FAQs with provider context, checks availability, and books via Cal.com—synced to Google Sheets.',
+    type: 'Automation',
+    image: AppointmentSetterAgentCover,
+    skills: ['ManyChat', 'n8n', 'OpenAI GPT-4o', 'RAG', 'Cal.com', 'Google Sheets', 'Webhooks', 'REST APIs', 'Structured Outputs', 'Error Handling'],
+    component: <AIRAGAppointmentSystem />,
+    links: {
+      github: null,
+      live: null,
+    },
+  },
   {
     id: 2,
     title: 'Youtube Shorts Automation',
@@ -162,6 +177,18 @@ export const Cybersecurity = [
 ];
 
 export const Automation = [
+  {
+    title: 'AI RAG & Appointment System',
+    category: 'Automation',
+    description: 'End-to-end AI RAG appointment system that replies to social leads, answers FAQs with provider context, checks availability, and books via Cal.com—synced to Google Sheets.',
+    image: AppointmentSetterAgentCover,
+    skills: ['ManyChat', 'n8n', 'OpenAI GPT-4o', 'RAG', 'Cal.com', 'Google Sheets', 'Webhooks', 'REST APIs', 'Structured Outputs', 'Error Handling'],
+    component: <AIRAGAppointmentSystem />,
+    links: {
+      github: null,
+      live: null,
+    },
+  },
   {
     title: 'Automated Project Page Generator',
     category: 'Automation',
