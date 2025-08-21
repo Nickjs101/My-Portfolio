@@ -1,4 +1,3 @@
-import React from 'react';
 //Display Images
 import KodyAdventureImage from '../../assets/Works/kodymain.jpg';
 import TradeHistoryImage from '../../assets/Works/tradingjournal.jpg';
@@ -7,6 +6,7 @@ import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
 import PageGeneratorCover from '../../assets/Works/pagegeneratorCover.png';
 import YoutubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
+import AppointmentSetterAgentCover from '../../assets/Works/AppointmentSetterAgentCover.png';
 
 //Project Components
 import AppProject1 from '../../components/subcomponents/AppProject1';
@@ -17,8 +17,23 @@ import Project3 from '../../components/subcomponents/Project3';
 import Project4 from '../../components/subcomponents/Project4';
 import AutomatedProjectPageGenerator from '../../components/subcomponents/AutomatedProjectPageGenerator';
 import YoutubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation';
+import AppointmentSetterAIAgentSystem from '../../components/subcomponents/AppointmentSetterAIAgentSystem';
 
 export const Latest = [
+  {
+    id: 3,
+    title: 'AI RAG & Appointment System',
+    category: 'Automation',
+    description: 'AI-driven ManyChat + n8n system that uses RAG to answer lead questions, check availability, and book appointments via Cal.com with Google Sheets logging.',
+    type: 'Automation',
+    image: AppointmentSetterAgentCover,
+    skills: ['ManyChat', 'n8n', 'Retrieval-Augmented Generation (RAG)', 'OpenAI GPT-4o', 'Google Sheets', 'Cal.com', 'Webhooks', 'HTTP APIs', 'Conversation Memory', 'Structured Output Parsing', 'Facebook Messenger / Social Messaging Automation'],
+    component: <AppointmentSetterAIAgentSystem />,
+    links: {
+      github: null,
+      live: null,
+    },
+  },
   {
     id: 2,
     title: 'Youtube Shorts Automation',
@@ -181,6 +196,18 @@ export const Automation = [
     image: YoutubeShortsAutomationCover,
     skills: ['n8n', 'RSS Feed', 'Klap AI API', 'YouTube API', 'HTTP/REST', 'JSON', 'Conditional Logic', 'Asynchronous Polling', 'Retry/Backoff', 'Automation Workflows'],
     component: <YoutubeShortsAutomation />,
+    links: {
+      github: null,
+      live: null,
+    },
+  },
+  {
+    title: 'AI RAG & Appointment System',
+    category: 'Automation',
+    description: 'AI-driven ManyChat + n8n system that uses RAG to answer lead questions, check availability, and book appointments via Cal.com with Google Sheets logging.',
+    image: AppointmentSetterAgentCover,
+    skills: ['ManyChat', 'n8n', 'Retrieval-Augmented Generation (RAG)', 'OpenAI GPT-4o', 'Google Sheets', 'Cal.com', 'Webhooks', 'HTTP APIs', 'Conversation Memory', 'Structured Output Parsing', 'Facebook Messenger / Social Messaging Automation'],
+    component: <AppointmentSetterAIAgentSystem />,
     links: {
       github: null,
       live: null,
