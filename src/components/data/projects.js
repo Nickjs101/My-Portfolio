@@ -1,21 +1,52 @@
+import React from 'react';
 //Display Images
 import KodyAdventureImage from '../../assets/Works/kodymain.jpg';
 import TradeHistoryImage from '../../assets/Works/tradingjournal.jpg'
 import Linux from '../../assets/Linux/Picture3.png';
 import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
+import PageGeneratorCover from '../../assets/Works/pagegeneratorCover.png';
+import YoutubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
 
 //Project Components
-import AppProject1 from '../../components/subcomponents/AppProject1'
-import AppProject2 from '../../components/subcomponents/AppProject2'
-import Project1 from '../../components/subcomponents/Project1'
-import Project2 from '../../components/subcomponents/Project2'
-import Project3 from '../../components/subcomponents/Project3'
-import Project4 from '../../components/subcomponents/Project4'
-
-
+import AppProject1 from '../../components/subcomponents/AppProject1';
+import AppProject2 from '../../components/subcomponents/AppProject2';
+import Project1 from '../../components/subcomponents/Project1';
+import Project2 from '../../components/subcomponents/Project2';
+import Project3 from '../../components/subcomponents/Project3';
+import Project4 from '../../components/subcomponents/Project4';
+import AutomatedProjectPageGenerator from '../../components/subcomponents/AutomatedProjectPageGenerator';
+import YoutubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation';
 
 export const Latest = [
+  {
+    id: 2,
+    title: 'Youtube Shorts Automation',
+    category: 'Automation',
+    description: 'End-to-end n8n workflow that detects new long-form uploads via RSS, generates edited shorts with Klap AI, and publishes them to YouTube with robust async polling, retries, and error handling.',
+    type: 'Automation',
+    image: YoutubeShortsAutomationCover,
+    skills: ['n8n', 'RSS Feed', 'Klap AI API', 'YouTube API', 'HTTP/REST', 'JSON', 'Conditional Logic', 'Asynchronous Polling', 'Retry/Backoff', 'Automation Workflows'],
+    component: <YoutubeShortsAutomation />,
+    links: {
+      github: null,
+      live: null,
+    },
+  },
+  {
+    id: 1,
+    title: 'Automated Project Page Generator',
+    category: 'Automation',
+    description: 'Automates the end-to-end creation of React project pages—gathers assets, generates JSX via GPT, validates code, commits, deploys to Netlify, and notifies with rollback support.',
+    type: 'Automation',
+    image: PageGeneratorCover,
+    skills: ['n8n', 'Git', 'GitHub', 'React', 'JSX', 'OpenAI GPT', 'Google Drive', 'Bash', 'Netlify', 'Telegram'],
+    component: <AutomatedProjectPageGenerator />,
+    links: {
+      github: 'https://github.com/Nickjs101/My-Portfolio',
+      live: 'https://nickjsportfolio.netlify.app',
+    },
+  },
   {
     title: "Kody's Adventure",
     category: "Software Development",
@@ -129,6 +160,31 @@ export const Cybersecurity = [
   },
 ]
 export const Automation = [
+  {
+    title: 'Automated Project Page Generator',
+    category: 'Automation',
+    description: 'Automates the end-to-end creation of React project pages—gathers assets, generates JSX via GPT, validates code, commits, deploys to Netlify, and notifies with rollback support.',
+    image: PageGeneratorCover,
+    skills: ['n8n', 'Git', 'GitHub', 'React', 'JSX', 'OpenAI GPT', 'Google Drive', 'Bash', 'Netlify', 'Telegram'],
+    component: <AutomatedProjectPageGenerator />,
+    links: {
+      github: 'https://github.com/Nickjs101/My-Portfolio',
+      live: 'https://nickjsportfolio.netlify.app',
+    },
+  },
+  {
+    title: 'Youtube Shorts Automation',
+    category: 'Automation',
+    description: 'End-to-end n8n workflow that detects new long-form uploads via RSS, generates edited shorts with Klap AI, and publishes them to YouTube with robust async polling, retries, and error handling.',
+    image: YoutubeShortsAutomationCover,
+    skills: ['n8n', 'RSS Feed', 'Klap AI API', 'YouTube API', 'HTTP/REST', 'JSON', 'Conditional Logic', 'Asynchronous Polling', 'Retry/Backoff', 'Automation Workflows'],
+    component: <YoutubeShortsAutomation />,
+    links: {
+      github: null,
+      live: null,
+    },
+  },
+];
 
 ]
 export const DevOps = [
