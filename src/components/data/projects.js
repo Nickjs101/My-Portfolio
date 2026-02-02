@@ -1,22 +1,10 @@
-import React from 'react';
 //Display Images
 import KodyAdventureImage from '../../assets/Works/kodymain.jpg';
 import TradeHistoryImage from '../../assets/Works/tradingjournal.jpg'
 import Linux from '../../assets/Linux/Picture3.png';
 import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
-import PageGeneratorCover from '../../assets/Works/pagegeneratorCover.png';
 import YoutubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
-
-//Project Components
-import AppProject1 from '../../components/subcomponents/AppProject1';
-import AppProject2 from '../../components/subcomponents/AppProject2';
-import Project1 from '../../components/subcomponents/Project1';
-import Project2 from '../../components/subcomponents/Project2';
-import Project3 from '../../components/subcomponents/Project3';
-import Project4 from '../../components/subcomponents/Project4';
-import AutomatedProjectPageGenerator from '../../components/subcomponents/AutomatedProjectPageGenerator';
-import YoutubeShortsAutomation from '../../components/subcomponents/YoutubeShortsAutomation';
 
 export const Latest = [
   {
@@ -27,7 +15,7 @@ export const Latest = [
     type: 'Automation',
     image: YoutubeShortsAutomationCover,
     skills: ['n8n', 'RSS Feed', 'Klap AI API', 'YouTube API', 'HTTP/REST', 'JSON', 'Conditional Logic', 'Asynchronous Polling', 'Retry/Backoff', 'Automation Workflows'],
-    component: <YoutubeShortsAutomation />,
+    componentKey: 'YoutubeShortsAutomation',
     links: {
       github: null,
       live: null,
@@ -39,9 +27,9 @@ export const Latest = [
     category: 'Automation',
     description: 'Automates the end-to-end creation of React project pages—gathers assets, generates JSX via GPT, validates code, commits, deploys to Netlify, and notifies with rollback support.',
     type: 'Automation',
-    image: PageGeneratorCover,
+    image: YoutubeShortsAutomationCover,
     skills: ['n8n', 'Git', 'GitHub', 'React', 'JSX', 'OpenAI GPT', 'Google Drive', 'Bash', 'Netlify', 'Telegram'],
-    component: <AutomatedProjectPageGenerator />,
+    componentKey: 'AutomatedProjectPageGenerator',
     links: {
       github: 'https://github.com/Nickjs101/My-Portfolio',
       live: 'https://nickjsportfolio.netlify.app',
@@ -53,7 +41,7 @@ export const Latest = [
     description: "A 2D side-scrolling educational game developed in Unity using C# to teach basic Python programming concepts. Features interactive coding challenges and puzzle-solving elements.",
     image: KodyAdventureImage,
     skills: ["C#", "Unity", "Game Design", "Educational Games"],
-    component: <AppProject2/>,
+    componentKey: 'AppProject2',
     links: {
       github: "https://github.com/Nickjs101/Kody-sAdventure",
       live: "https://mega.nz/file/luYB0LSJ#6gzzEFbbew4PBblpc2VvXYNZmOUfqFhOGFJUqUa5-Mo"
@@ -62,10 +50,10 @@ export const Latest = [
   {
     title: "File Permissions in Linux",
     category: "Cybersecurity",
-    description: "In the realm of cybersecurity, ensuring proper file permissions is paramount to maintaining system integrity and security. As a security professional at a large organization, my role involves collaborating with the research team to ensure that only authorized users have the appropriate permissions on critical files and directories. In this section, I’ll walk you through a recent project where I managed file permissions in a Linux environment to bolster system security.",
-    image: Linux, 
+    description: "In the realm of cybersecurity, ensuring proper file permissions is paramount to maintaining system integrity and security. As a security professional at a large organization, my role involves collaborating with the research team to ensure that only authorized users have the appropriate permissions on critical files and directories. In this section, I'll walk you through a recent project where I managed file permissions in a Linux environment to bolster system security.",
+    image: Linux,
     skills: ["Linux", "File Permissions", "Cybersecurity"],
-    component: <Project1/>,
+    componentKey: 'Project1',
     links: {
       github: null,
       live: null,
@@ -75,9 +63,9 @@ export const Latest = [
     title: "Vulnerability Assessment Report",
     category: "Cybersecurity",
     description: "The scope of this vulnerability assessment relates to the current access controls of the system. The assessment will cover a period of three months from June 20XX to August 20XX. NIST SP 800-30 Rev. 1 is used to guide the risk analysis of the information system.",
-    image: vul, 
+    image: vul,
     skills: ["Risk Analysis", "Access Controls", "Cybersecurity"],
-    component: <Project3/>,
+    componentKey: 'Project3',
     links: {
       github: null,
       live: null,
@@ -92,44 +80,46 @@ export const SoftwareDev = [
     description: "A 2D side-scrolling educational game developed in Unity using C# to teach basic Python programming concepts. Features interactive coding challenges and puzzle-solving elements.",
     image: KodyAdventureImage,
     skills: ["C#", "Unity", "Game Design", "Educational Games"],
-    component: <AppProject2/>,
+    componentKey: 'AppProject2',
     links: {
       github: "https://github.com/Nickjs101/Kody-sAdventure",
       live: "https://mega.nz/file/luYB0LSJ#6gzzEFbbew4PBblpc2VvXYNZmOUfqFhOGFJUqUa5-Mo"
     }
   },
   {
-      title: 'Trading Journal Mobile App', 
-      category: "Cybersecurity",
-      description: 'A mobile app for tracking trades with Java, XML, and SQLite, featuring a line graph to display trade performance.', 
+      title: 'Trading Journal Mobile App',
+      category: "Software Development",
+      description: 'A mobile app for tracking trades with Java, XML, and SQLite, featuring a line graph to display trade performance.',
       image: TradeHistoryImage,
       skills: ["Java", "XML", "Android Studio", "SQLite"],
-      component: <AppProject1/>,
+      componentKey: 'AppProject1',
       links: {
         github: null,
         live: "https://mega.nz/file/FjIXSKDS#ynkMDEXFHDVzyDC34741AO-lSooazd5NhZx8qK78fOY"
       }
   }
 ]
+
 export const Cybersecurity = [
   {
     title: "File Permissions in Linux",
     category: "Cybersecurity",
-    description: "In the realm of cybersecurity, ensuring proper file permissions is paramount to maintaining system integrity and security. As a security professional at a large organization, my role involves collaborating with the research team to ensure that only authorized users have the appropriate permissions on critical files and directories. In this section, I’ll walk you through a recent project where I managed file permissions in a Linux environment to bolster system security.",
-    image: Linux, 
+    description: "In the realm of cybersecurity, ensuring proper file permissions is paramount to maintaining system integrity and security. As a security professional at a large organization, my role involves collaborating with the research team to ensure that only authorized users have the appropriate permissions on critical files and directories. In this section, I'll walk you through a recent project where I managed file permissions in a Linux environment to bolster system security.",
+    image: Linux,
     skills: ["Linux", "File Permissions", "Cybersecurity"],
-    component: <Project1/>,
+    componentKey: 'Project1',
     links: {
       github: null,
       live: null,
     },
   },
   {
-    title: 'Apply Filters to SQL Queries', 
-    description: 'My organization is working to make their system secure. My job is to ensure the system is safe, investigate all potential security issues, and update employee computers as needed. The following steps provide examples of how I used SQL with filters to perform security-related tasks.', 
-    image: Sql, 
+    title: 'Apply Filters to SQL Queries',
+    category: "Cybersecurity",
+    description: 'My organization is working to make their system secure. My job is to ensure the system is safe, investigate all potential security issues, and update employee computers as needed. The following steps provide examples of how I used SQL with filters to perform security-related tasks.',
+    image: Sql,
     skills: ["SQL", "Cybersecurity"],
-    component: <Project2/>,
+    componentKey: 'Project2',
     links: {
       github: null,
       live: null,
@@ -139,34 +129,36 @@ export const Cybersecurity = [
     title: "Vulnerability Assessment Report",
     category: "Cybersecurity",
     description: "The scope of this vulnerability assessment relates to the current access controls of the system. The assessment will cover a period of three months from June 20XX to August 20XX. NIST SP 800-30 Rev. 1 is used to guide the risk analysis of the information system.",
-    image: vul, 
+    image: vul,
     skills: ["Risk Analysis", "Access Controls", "Cybersecurity"],
-    component: <Project3/>,
+    componentKey: 'Project3',
     links: {
       github: null,
       live: null,
     },
   },
   {
-      title: 'Security Audit Report', 
-      description: 'To address security controls issues, we need to implement confidentiality of the organization’s assets such as customers’ private data. Implementing data encryption both at rest and in transit should also be considered.', 
-      image: Linux, 
+      title: 'Security Audit Report',
+      category: "Cybersecurity",
+      description: "To address security controls issues, we need to implement confidentiality of the organization's assets such as customers' private data. Implementing data encryption both at rest and in transit should also be considered.",
+      image: Linux,
       skills: ["Security Audit", "Data Encryption", "Cybersecurity"],
-      component: <Project4/>,
+      componentKey: 'Project4',
       links: {
         github: null,
         live: null
       }
   },
 ]
+
 export const Automation = [
   {
     title: 'Automated Project Page Generator',
     category: 'Automation',
     description: 'Automates the end-to-end creation of React project pages—gathers assets, generates JSX via GPT, validates code, commits, deploys to Netlify, and notifies with rollback support.',
-    image: PageGeneratorCover,
+    image: YoutubeShortsAutomationCover,
     skills: ['n8n', 'Git', 'GitHub', 'React', 'JSX', 'OpenAI GPT', 'Google Drive', 'Bash', 'Netlify', 'Telegram'],
-    component: <AutomatedProjectPageGenerator />,
+    componentKey: 'AutomatedProjectPageGenerator',
     links: {
       github: 'https://github.com/Nickjs101/My-Portfolio',
       live: 'https://nickjsportfolio.netlify.app',
@@ -178,7 +170,7 @@ export const Automation = [
     description: 'End-to-end n8n workflow that detects new long-form uploads via RSS, generates edited shorts with Klap AI, and publishes them to YouTube with robust async polling, retries, and error handling.',
     image: YoutubeShortsAutomationCover,
     skills: ['n8n', 'RSS Feed', 'Klap AI API', 'YouTube API', 'HTTP/REST', 'JSON', 'Conditional Logic', 'Asynchronous Polling', 'Retry/Backoff', 'Automation Workflows'],
-    component: <YoutubeShortsAutomation />,
+    componentKey: 'YoutubeShortsAutomation',
     links: {
       github: null,
       live: null,
@@ -186,10 +178,7 @@ export const Automation = [
   },
 ];
 
-]
-export const DevOps = [
-
-]
+export const DevOps = []
 
 export const categories = [
   "All",
@@ -198,3 +187,22 @@ export const categories = [
   "Cybersecurity",
   "DevOps"
 ]
+
+// Helper to get all projects
+export const getAllProjects = () => [
+  ...SoftwareDev,
+  ...Cybersecurity,
+  ...Automation,
+  ...DevOps,
+];
+
+// Helper to get projects by category
+export const getProjectsByCategory = (category) => {
+  const categoryMap = {
+    "Software Development": SoftwareDev,
+    "Cybersecurity": Cybersecurity,
+    "Automation": Automation,
+    "DevOps": DevOps,
+  };
+  return categoryMap[category] || [];
+};
