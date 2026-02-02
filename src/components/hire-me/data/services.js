@@ -1,0 +1,82 @@
+// Service tier definitions for the Hire Me landing page
+
+export const services = [
+  {
+    id: 1,
+    tier: 'basic',
+    name: 'Automations',
+    tagline: 'Streamline Your Workflows',
+    price: 'Starting at $500',
+    description: 'Basic workflow automation using industry-standard tools to eliminate repetitive tasks and connect your apps.',
+    features: [
+      'Workflow automation (Zapier, Make, n8n)',
+      'Up to 5 connected apps',
+      'Basic error handling',
+      'Documentation & training',
+      '30-day support included',
+    ],
+    notIncluded: [
+      'Custom AI integrations',
+      'Dashboard development',
+      'Ongoing maintenance',
+    ],
+    popular: false,
+    ctaText: 'Get Started',
+    icon: 'Workflow',
+  },
+  {
+    id: 2,
+    tier: 'professional',
+    name: 'AI Automations',
+    tagline: 'Intelligent Workflow Solutions',
+    price: 'Starting at $2,000',
+    description: 'AI-powered workflows with custom dashboards to automate complex business processes and gain actionable insights.',
+    features: [
+      'Everything in Automations, plus:',
+      'AI/ML integrations (OpenAI, Claude, etc.)',
+      'Custom monitoring dashboard',
+      'Advanced error handling & alerts',
+      'Unlimited connected apps',
+      'Performance analytics',
+      '90-day support included',
+    ],
+    notIncluded: [
+      'Autonomous decision-making',
+      'Multi-agent systems',
+    ],
+    popular: true,
+    ctaText: 'Most Popular',
+    icon: 'Brain',
+  },
+  {
+    id: 3,
+    tier: 'enterprise',
+    name: 'Agentic AI Assistant',
+    tagline: 'Autonomous AI That Works For You',
+    price: 'Custom Quote',
+    description: 'Fully autonomous AI agents that handle complex, multi-step tasks with minimal supervision. Perfect for scaling operations.',
+    features: [
+      'Everything in AI Automations, plus:',
+      'Autonomous task execution',
+      'Multi-agent orchestration',
+      'Custom knowledge base integration',
+      'Advanced reasoning & decision-making',
+      'Self-healing workflows',
+      'Dedicated support & maintenance',
+      'Priority response times',
+    ],
+    notIncluded: [],
+    popular: false,
+    ctaText: 'Contact Me',
+    icon: 'Bot',
+  },
+];
+
+export const toolLogos = [
+  { name: 'Zapier', icon: 'Zap' },
+  { name: 'Make', icon: 'Layers' },
+  { name: 'n8n', icon: 'GitBranch' },
+  { name: 'OpenAI', icon: 'Sparkles' },
+  { name: 'Python', icon: 'Code' },
+  { name: 'React', icon: 'Atom' },
+];
