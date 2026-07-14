@@ -106,7 +106,7 @@ export default function Navbar() {
               className="ml-4 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300"
               style={{
                 backgroundColor: 'var(--button-bg)',
-                color: 'var(--text-primary)'
+                color: 'var(--button-text)'
               }}
             >
               Contact Me
@@ -196,7 +196,7 @@ export default function Navbar() {
                 className="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
                 style={{
                   backgroundColor: 'var(--button-bg)',
-                  color: 'var(--text-primary)'
+                  color: 'var(--button-text)'
                 }}
                 onClick={(e) => handleNavClick(e, 'Contact')}
               >

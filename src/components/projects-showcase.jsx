@@ -166,7 +166,7 @@ export default function ProjectsShowcase({ displayProject }) {
             className="group inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-colors duration-300"
             style={{
               backgroundColor: 'var(--button-bg)',
-              color: 'var(--text-primary)'
+              color: 'var(--button-text)'
             }}
           >
             See All Projects

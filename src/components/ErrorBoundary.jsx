@@ -66,7 +66,7 @@ class ErrorBoundary extends React.Component {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-md font-medium transition-colors duration-200"
               style={{
                 backgroundColor: 'var(--button-bg)',
-                color: 'var(--text-primary)',
+                color: 'var(--button-text)',
               }}
             >
               <RefreshCw className="w-4 h-4" />

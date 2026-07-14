@@ -7,44 +7,46 @@
 
 /* Theme configuration using CSS variables */
 :root {
-    /* Light theme defaults */
-    --bg-primary: #F2F8FC;
-    --bg-secondary: #e9ecef;
-    --bg-tertiary: #f8f9fa;
-    --text-primary: #141d2b;
-    --text-secondary: #4a5568;
-    --accent-primary: #9fef00;
-    --accent-secondary: #82cc00;
-    --nav-bg: rgba(255, 255, 255, 0.8);
-    --nav-border: #e2e8f0;
-    --hover-bg: #f1f5f9;
+    /* Light theme: green-tinted paper, ink text, forest-lime accent */
+    --bg-primary: #f8faf5;
+    --bg-secondary: #eef2e8;
+    --bg-tertiary: #e5ebdc;
+    --text-primary: #1a2114;
+    --text-secondary: #4d5945;
+    --accent-primary: #4d7c0f;
+    --accent-secondary: #3f6212;
+    --nav-bg: rgba(248, 250, 245, 0.85);
+    --nav-border: #dde5d1;
+    --hover-bg: #e9efe0;
     --card-bg: #ffffff;
-    --card-border: #e2e8f0;
-    --button-bg: #9fef00;
-    --button-hover: #82cc00;
-    --input-bg: #f8f9fa;
-    --input-border: #e2e8f0;
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --card-border: #dde5d1;
+    --button-bg: #84cc16;
+    --button-hover: #65a30d;
+    --button-text: #16200c;
+    --input-bg: #ffffff;
+    --input-border: #d3ddc4;
+    --shadow-color: rgba(31, 42, 18, 0.1);
 }
 
 [data-theme='dark'] {
     --bg-primary: #0b121f;
     --bg-secondary: #1a2332;
     --bg-tertiary: #141d2b;
-    --text-primary: #ffffff;
+    --text-primary: #f2f6fc;
     --text-secondary: #A4B1CD;
-    --accent-primary: #82cc00;
-    --accent-secondary: #9fef00;
+    --accent-primary: #9fef00;
+    --accent-secondary: #82cc00;
     --nav-bg: rgba(15, 23, 42, 0.8);
     --nav-border: #1e293b;
     --hover-bg: #1e293b;
     --card-bg: #1a2332;
-    --card-border: #1e293b;
+    --card-border: #243043;
     --button-bg: #82cc00;
     --button-hover: #9fef00;
+    --button-text: #0b121f;
     --input-bg: #141d2b;
-    --input-border: #1e293b;
-    --shadow-color: rgba(0, 0, 0, 0.3);
+    --input-border: #243043;
+    --shadow-color: rgba(0, 0, 0, 0.45);
 }
 
 /* Container for consistent width */
@@ -276,7 +278,7 @@ h1, h2, h3 {
 /* Button styles */
 .button {
     background-color: var(--button-bg);
-    color: var(--text-primary);
+    color: var(--button-text);
     @apply transition-colors duration-200;
     &:hover {
         background-color: var(--button-hover);

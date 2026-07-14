@@ -261,7 +261,7 @@ export default function Contact() {
                     className='w-full p-4 mt-2 text-lg font-semibold rounded-md flex items-center justify-center gap-2 transition-colors duration-200 disabled:opacity-70'
                     style={{
                       backgroundColor: 'var(--button-bg)',
-                      color: 'var(--text-primary)'
+                      color: 'var(--button-text)'
                     }}
                   >
                     {isSubmitting ? (

@@ -37,7 +37,7 @@ export default function ScrollToTop() {
           className="fixed bottom-6 left-6 z-40 p-3 rounded-full shadow-lg transition-colors duration-200"
           style={{
             backgroundColor: 'var(--button-bg)',
-            color: 'var(--text-primary)',
+            color: 'var(--button-text)',
             boxShadow: '0 4px 14px 0 var(--shadow-color)',
           }}
           aria-label="Scroll to top"
