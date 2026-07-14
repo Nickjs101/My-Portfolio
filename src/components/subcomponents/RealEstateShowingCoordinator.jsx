@@ -1,6 +1,7 @@
 import React from 'react'
 import { projectStyles as styles } from './ProjectStyles'
 import CoverImage from '../../assets/Works/realestatecoordinatorcover.svg'
+import CanvasImage from '../../assets/Works/realestatecoordinatorcanvas.png'
 
 const DiagramNode = ({ title, subtitle, accent }) => (
   <div
@@ -192,7 +193,22 @@ const RealEstateShowingCoordinator = () => {
                 </p>
               ))}
 
-            {section.diagram && <ArchitectureDiagram />}
+            {section.diagram && (
+              <>
+                <ArchitectureDiagram />
+                <figure className="my-6">
+                  <img
+                    src={CanvasImage}
+                    alt="The actual n8n canvas of the main coordination workflow: two AI agent clusters surrounded by extensive documentation notes"
+                    className="w-full h-auto rounded-lg border"
+                    style={{ borderColor: 'var(--card-border)' }}
+                  />
+                  <figcaption className="text-xs mt-2 text-center" style={{ color: 'var(--text-secondary)' }}>
+                    The real n8n canvas of the main workflow — two agent clusters and the documentation that ships with them (client details anonymized).
+                  </figcaption>
+                </figure>
+              </>
+            )}
 
             {Array.isArray(section.list) && (
               <ul className="list-disc pl-6 mb-4 space-y-2">

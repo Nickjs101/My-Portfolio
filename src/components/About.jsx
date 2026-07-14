@@ -1,5 +1,6 @@
 import React from 'react'
 import aboutImg from '../assets/about.jpg'
+import SectionHeading from './ui/SectionHeading'
 
 export default function About() {
   return (
@@ -9,14 +10,12 @@ export default function About() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
           <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8">
-            <div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4" style={{
-                color: 'var(--text-primary)'
-              }}>
-                About Me
-              </h1>
-              <div className="h-1 w-20" style={{ backgroundColor: 'var(--accent-primary)' }}></div>
-            </div>
+            <SectionHeading
+              eyebrow="About"
+              title="About Me"
+              align="left"
+              className="mb-0"
+            />
 
             <div className="prose prose-invert max-w-none">
               <p style={{ color: 'var(--text-secondary)' }} className="text-base sm:text-lg leading-relaxed">

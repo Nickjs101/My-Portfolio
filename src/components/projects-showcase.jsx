@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { ExternalLink, Github, ArrowRight, FileText } from 'lucide-react'
 import { Latest, SoftwareDev } from '../components/data/projects'
 import Badge from './ui/Badge'
+import SectionHeading from './ui/SectionHeading'
 
 export default function ProjectsShowcase({ displayProject }) {
   const containerVariants = {
@@ -45,20 +46,11 @@ export default function ProjectsShowcase({ displayProject }) {
       backgroundColor: 'var(--bg-primary)'
     }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col items-center mb-8 sm:mb-12"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--text-primary)' }}>
-            Featured Projects
-          </h2>
-          <div className="h-1 w-20 mx-auto rounded-full" style={{
-            backgroundColor: 'var(--button-bg)'
-          }}></div>
-        </motion.div>
+        <SectionHeading
+          eyebrow="Selected Work"
+          title="Featured Projects"
+          subtitle="Real systems built for real clients — AI agents, document pipelines, and automations running in production."
+        />
 
         <motion.div
           variants={containerVariants}
@@ -73,11 +65,7 @@ export default function ProjectsShowcase({ displayProject }) {
               variants={itemVariants}
               whileHover={{ y: -8 }}
               transition={{ duration: 0.3 }}
-              className="group cursor-pointer rounded-xl overflow-hidden border transition-all duration-300"
-              style={{
-                backgroundColor: 'var(--card-bg)',
-                borderColor: 'var(--card-border)',
-              }}
+              className="premium-card group cursor-pointer rounded-2xl overflow-hidden"
               onClick={() => handleProjectClick(project)}
             >
               <div className="relative aspect-video overflow-hidden">

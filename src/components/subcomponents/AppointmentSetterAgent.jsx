@@ -1,6 +1,7 @@
 import React from 'react'
 import { projectStyles as styles } from './ProjectStyles'
 import CoverImage from '../../assets/Works/appointmentsettercover.svg'
+import CanvasImage from '../../assets/Works/appointmentsettercanvas.png'
 
 const AppointmentSetterAgent = () => {
   const skills = [
@@ -41,7 +42,12 @@ const AppointmentSetterAgent = () => {
         'Set Appointment Tool (published sub-workflow): creates the booking and returns the confirmation to the agent.',
         'Channel adapters: Telegram trigger/sender nodes and ManyChat webhook endpoints with custom-field responses.',
         'Tools are separate published workflows, so they are reusable by other agents and testable in isolation.'
-      ]
+      ],
+      image: {
+        src: CanvasImage,
+        alt: 'The n8n canvas showing the Telegram Setup and Facebook Setup agent groups, each with an AI agent, memory, and appointment tool nodes',
+        caption: 'The actual n8n workflow — one agent brain deployed to both the Telegram and Facebook Messenger channels.'
+      }
     },
     {
       heading: 'Design Decisions',
@@ -95,6 +101,22 @@ const AppointmentSetterAgent = () => {
                   </li>
                 ))}
               </ul>
+            )}
+
+            {section.image?.src && (
+              <figure className="my-6">
+                <img
+                  src={section.image.src}
+                  alt={section.image.alt || 'Workflow canvas'}
+                  className="w-full h-auto rounded-lg border"
+                  style={{ borderColor: 'var(--card-border)' }}
+                />
+                {section.image.caption && (
+                  <figcaption className="text-xs mt-2 text-center" style={{ color: 'var(--text-secondary)' }}>
+                    {section.image.caption}
+                  </figcaption>
+                )}
+              </figure>
             )}
           </div>
         ))}

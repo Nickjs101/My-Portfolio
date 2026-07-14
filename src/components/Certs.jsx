@@ -4,6 +4,7 @@ import HCIA from '../assets/Certificates/HCIAlogo.png'
 import GCC from '../assets/Certificates/GCClogo.png'
 
 import Courses from "./Courses";
+import SectionHeading from './ui/SectionHeading';
 
 const Certs = () => {
   const certifications = [
@@ -32,14 +33,10 @@ const Certs = () => {
       }}
     >
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4" style={{
-            color: 'var(--text-primary)'
-          }}>
-            Professional Certifications
-        </h2>
-        <div className="h-1 w-20 mx-auto rounded-full mb-8"style={{
-            backgroundColor: 'var(--button-bg)'
-          }}></div>
+        <SectionHeading
+          eyebrow="Credentials"
+          title="Professional Certifications"
+        />
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4 place-items-center">
           {certifications.map((cert) => (

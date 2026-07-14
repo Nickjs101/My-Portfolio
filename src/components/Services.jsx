@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Bot, Workflow, Plug, MonitorSmartphone, ArrowRight } from 'lucide-react'
 import { useNavigation } from '../contexts'
+import SectionHeading from './ui/SectionHeading'
 
 const services = [
   {
@@ -59,21 +60,11 @@ export default function Services() {
       backgroundColor: 'var(--bg-primary)'
     }}>
       <div className="max-w-[1200px] mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col items-center mb-8 sm:mb-12"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-center" style={{ color: 'var(--text-primary)' }}>
-            What I Can Do for You
-          </h2>
-          <div className="h-1 w-20 mx-auto rounded-full" style={{ backgroundColor: 'var(--button-bg)' }}></div>
-          <p className="mt-4 text-base sm:text-lg text-center max-w-2xl" style={{ color: 'var(--text-secondary)' }}>
-            I take repetitive processes off your plate and turn them into systems that run on their own.
-          </p>
-        </motion.div>
+        <SectionHeading
+          eyebrow="Services"
+          title="What I Can Do for You"
+          subtitle="I take repetitive processes off your plate and turn them into systems that run on their own."
+        />
 
         <motion.div
           variants={containerVariants}
@@ -88,11 +79,7 @@ export default function Services() {
               variants={itemVariants}
               whileHover={{ y: -8 }}
               transition={{ duration: 0.3 }}
-              className="rounded-xl border p-5 sm:p-6 flex flex-col"
-              style={{
-                backgroundColor: 'var(--card-bg)',
-                borderColor: 'var(--card-border)',
-              }}
+              className="premium-card rounded-2xl p-5 sm:p-6 flex flex-col"
             >
               <div
                 className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"

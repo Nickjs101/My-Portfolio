@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SectionHeading from './ui/SectionHeading';
 
 import {
   SiGithubactions,
@@ -67,21 +68,10 @@ const Skills = () => {
       backgroundColor: 'var(--bg-primary)'
     }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4" style={{
-            color: 'var(--text-primary)'
-          }}>
-            My Tech Stack
-          </h2>
-          <div className="h-1 w-20 mx-auto rounded-full mb-8" style={{
-            backgroundColor: 'var(--button-bg)'
-          }}></div>
-        </motion.div>
+        <SectionHeading
+          eyebrow="Toolbox"
+          title="My Tech Stack"
+        />
 
         <motion.div
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10"

@@ -85,7 +85,87 @@
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
+    font-family: 'Manrope', 'Segoe UI', system-ui, sans-serif;
     @apply transition-colors duration-200;
+}
+
+h1, h2, h3 {
+    font-family: 'Sora', 'Segoe UI', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+}
+
+/* ========================================
+   PREMIUM DESIGN UTILITIES
+   ======================================== */
+
+/* Mono uppercase section label */
+.eyebrow {
+    font-family: 'Fira Code', Consolas, monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--accent-primary);
+}
+
+/* Soft radial accent glows behind hero / sections */
+.hero-bg {
+    background-image:
+        radial-gradient(640px 420px at 12% 18%, color-mix(in srgb, var(--accent-primary) 10%, transparent), transparent 70%),
+        radial-gradient(560px 400px at 88% 72%, color-mix(in srgb, var(--accent-primary) 6%, transparent), transparent 70%);
+}
+
+/* Faint blueprint grid, fading toward edges */
+.grid-overlay {
+    position: relative;
+}
+.grid-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(color-mix(in srgb, var(--text-secondary) 7%, transparent) 1px, transparent 1px),
+        linear-gradient(90deg, color-mix(in srgb, var(--text-secondary) 7%, transparent) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 30%, transparent 75%);
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 30%, transparent 75%);
+}
+
+/* Card with hover lift + accent glow */
+.premium-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.premium-card:hover {
+    border-color: color-mix(in srgb, var(--accent-primary) 55%, var(--card-border));
+    box-shadow:
+        0 24px 48px -24px var(--shadow-color),
+        0 0 32px -12px color-mix(in srgb, var(--accent-primary) 45%, transparent);
+}
+
+/* Conic accent ring for the portrait */
+.portrait-ring {
+    position: relative;
+    border-radius: 9999px;
+    padding: 5px;
+    background: conic-gradient(from 210deg, var(--accent-primary), transparent 40%, color-mix(in srgb, var(--accent-primary) 35%, transparent) 65%, var(--accent-primary));
+}
+.portrait-glow {
+    position: absolute;
+    inset: -12%;
+    border-radius: 9999px;
+    background: radial-gradient(circle, color-mix(in srgb, var(--accent-primary) 22%, transparent), transparent 65%);
+    z-index: -1;
+}
+
+/* Frosted floating chip */
+.glass-chip {
+    background: color-mix(in srgb, var(--card-bg) 78%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent-primary) 35%, var(--card-border));
+    backdrop-filter: blur(8px);
+    box-shadow: 0 12px 32px -16px var(--shadow-color);
 }
 
 .border-primary {

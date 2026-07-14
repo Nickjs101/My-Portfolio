@@ -1,6 +1,7 @@
 import React from 'react'
 import { projectStyles as styles } from './ProjectStyles'
 import CoverImage from '../../assets/Works/offerrecapcover.svg'
+import CanvasImage from '../../assets/Works/offerrecapcanvas.png'
 
 const OfferRecapAutomation = () => {
   const skills = [
@@ -32,7 +33,12 @@ const OfferRecapAutomation = () => {
         '4. The pages are split and looped through an AI agent with an information-extractor schema that pulls out structured fields: buyer, offer price, earnest money, contingencies, and key dates.',
         '5. The structured terms are appended as a row in a Google Sheets deal log.',
         '6. After a short wait for consistency, the row is read back and a recap email is drafted in Gmail — summarizing the offer in plain language.'
-      ]
+      ],
+      image: {
+        src: CanvasImage,
+        alt: 'The n8n canvas: Gmail trigger flowing through Mistral OCR upload and extraction nodes into an AI agent loop, with a Google Sheets and Gmail draft finishing row',
+        caption: 'The actual n8n workflow — OCR pipeline, AI extraction loop, and the sheet-log + recap-draft finishing row.'
+      }
     },
     {
       heading: 'Design Decisions',
@@ -93,6 +99,22 @@ const OfferRecapAutomation = () => {
                   </li>
                 ))}
               </ul>
+            )}
+
+            {section.image?.src && (
+              <figure className="my-6">
+                <img
+                  src={section.image.src}
+                  alt={section.image.alt || 'Workflow canvas'}
+                  className="w-full h-auto rounded-lg border"
+                  style={{ borderColor: 'var(--card-border)' }}
+                />
+                {section.image.caption && (
+                  <figcaption className="text-xs mt-2 text-center" style={{ color: 'var(--text-secondary)' }}>
+                    {section.image.caption}
+                  </figcaption>
+                )}
+              </figure>
             )}
           </div>
         ))}

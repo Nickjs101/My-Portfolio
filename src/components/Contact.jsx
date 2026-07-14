@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Send, CheckCircle, AlertCircle } from 'lucide-react'
+import SectionHeading from './ui/SectionHeading'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -94,31 +95,11 @@ export default function Contact() {
       className='max-w-[1200px] mx-auto px-5 py-24 md:py-20'
       style={{ backgroundColor: 'var(--bg-secondary)' }}
     >
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className='text-center'
-      >
-        <h2
-          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
-          style={{ color: 'var(--text-primary)' }}
-        >
-          Have a Project in Mind?
-        </h2>
-        <div
-          className="h-1 w-20 mx-auto rounded-full"
-          style={{ backgroundColor: 'var(--button-bg)' }}
-        />
-        <p
-          className="mt-4 text-base sm:text-lg max-w-2xl mx-auto"
-          style={{ color: 'var(--text-secondary)' }}
-        >
-          Tell me about the process you want to automate or the product you want to build.
-          I usually reply within 24 hours.
-        </p>
-      </motion.div>
+      <SectionHeading
+        eyebrow="Contact"
+        title="Have a Project in Mind?"
+        subtitle="Tell me about the process you want to automate or the product you want to build. I usually reply within 24 hours."
+      />
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}

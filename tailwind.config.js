@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         code: ['"Fira Code"', 'monospace'],
+        display: ['Sora', '"Segoe UI"', 'system-ui', 'sans-serif'],
+        sans: ['Manrope', '"Segoe UI"', 'system-ui', 'sans-serif'],
       },
       colors: {
         accent: {

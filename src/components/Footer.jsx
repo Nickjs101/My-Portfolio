@@ -55,7 +55,7 @@ export default function Footer() {
               Nick.Js
             </h2>
             <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-              Crafting digital solutions with code and creativity
+              AI automation &amp; web development — systems that run your busywork.
             </p>
             <p className="text-sm mt-2" style={{ color: 'var(--text-secondary)' }}>
               © {currentYear} Nick Joshua Montemayor. All rights reserved.
