@@ -5,8 +5,24 @@ import Linux from '../../assets/Linux/Picture3.png';
 import vul from '../../assets/Linux/Picture2.png';
 import Sql from '../../assets/Linux/Picture1.png';
 import YoutubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
+import RealEstateCoordinatorCover from '../../assets/Works/realestatecoordinatorcover.svg';
+import ProjectPageGeneratorCover from '../../assets/Works/projectpagegeneratorcover.svg';
 
 export const Latest = [
+  {
+    id: 3,
+    title: 'AI Real Estate Showing Coordinator',
+    category: 'Automation',
+    description: 'Multi-agent AI system that books property showings over SMS — one text from the realtor triggers route optimization, listing-agent negotiation, conflict-free scheduling, and calendar booking with human approval gates.',
+    type: 'Automation',
+    image: RealEstateCoordinatorCover,
+    skills: ['n8n', 'OpenAI GPT-4.1', 'Multi-Agent AI', 'OpenPhone SMS', 'Google Maps API', 'Web Scraping', 'Google Sheets', 'MCP Tools', 'Calendar API'],
+    componentKey: 'RealEstateShowingCoordinator',
+    links: {
+      github: null,
+      live: null,
+    },
+  },
   {
     id: 2,
     title: 'Youtube Shorts Automation',
@@ -27,7 +43,7 @@ export const Latest = [
     category: 'Automation',
     description: 'Automates the end-to-end creation of React project pages—gathers assets, generates JSX via GPT, validates code, commits, deploys to Netlify, and notifies with rollback support.',
     type: 'Automation',
-    image: YoutubeShortsAutomationCover,
+    image: ProjectPageGeneratorCover,
     skills: ['n8n', 'Git', 'GitHub', 'React', 'JSX', 'OpenAI GPT', 'Google Drive', 'Bash', 'Netlify', 'Telegram'],
     componentKey: 'AutomatedProjectPageGenerator',
     links: {
@@ -153,10 +169,22 @@ export const Cybersecurity = [
 
 export const Automation = [
   {
+    title: 'AI Real Estate Showing Coordinator',
+    category: 'Automation',
+    description: 'Multi-agent AI system that books property showings over SMS — one text from the realtor triggers route optimization, listing-agent negotiation, conflict-free scheduling, and calendar booking with human approval gates.',
+    image: RealEstateCoordinatorCover,
+    skills: ['n8n', 'OpenAI GPT-4.1', 'Multi-Agent AI', 'OpenPhone SMS', 'Google Maps API', 'Web Scraping', 'Google Sheets', 'MCP Tools', 'Calendar API'],
+    componentKey: 'RealEstateShowingCoordinator',
+    links: {
+      github: null,
+      live: null,
+    },
+  },
+  {
     title: 'Automated Project Page Generator',
     category: 'Automation',
     description: 'Automates the end-to-end creation of React project pages—gathers assets, generates JSX via GPT, validates code, commits, deploys to Netlify, and notifies with rollback support.',
-    image: YoutubeShortsAutomationCover,
+    image: ProjectPageGeneratorCover,
     skills: ['n8n', 'Git', 'GitHub', 'React', 'JSX', 'OpenAI GPT', 'Google Drive', 'Bash', 'Netlify', 'Telegram'],
     componentKey: 'AutomatedProjectPageGenerator',
     links: {

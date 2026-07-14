@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#1e293b"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="accentFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9fef00"/>
+      <stop offset="1" stop-color="#9fef00" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="#0b121f"/>
+  <rect width="1280" height="720" fill="url(#dots)"/>
+
+  <!-- Title -->
+  <text x="64" y="96" font-family="'Segoe UI', system-ui, sans-serif" font-size="56" font-weight="700" fill="#ffffff">AI Showing Coordinator</text>
+  <rect x="64" y="118" width="120" height="6" rx="3" fill="#9fef00"/>
+  <text x="64" y="164" font-family="'Fira Code', Consolas, monospace" font-size="26" fill="#A4B1CD">Multi-agent SMS scheduling system &#183; n8n + GPT-4.1</text>
+
+  <!-- Connections -->
+  <g stroke="#3d4a5c" stroke-width="3" fill="none" stroke-dasharray="8 8">
+    <path d="M 268 400 C 330 400 330 400 392 400"/>
+    <path d="M 704 400 C 790 400 790 348 866 348"/>
+    <path d="M 704 420 C 790 420 790 496 866 496"/>
+    <path d="M 470 470 C 420 540 360 560 300 574"/>
+    <path d="M 530 470 C 520 540 480 580 452 592"/>
+    <path d="M 590 470 C 600 540 630 580 660 592"/>
+    <path d="M 650 470 C 700 540 770 570 826 585"/>
+    <path d="M 1052 348 C 1110 348 1110 400 1052 452"/>
+  </g>
+
+  <!-- Inbound SMS node -->
+  <g>
+    <rect x="96" y="356" width="172" height="88" rx="14" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <circle cx="134" cy="400" r="14" fill="#0b121f" stroke="#9fef00" stroke-width="3"/>
+    <path d="M 128 396 h 12 v 8 h -8 l -4 4 z" fill="#9fef00"/>
+    <text x="162" y="393" font-family="'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="600" fill="#ffffff">Inbound</text>
+    <text x="162" y="421" font-family="'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="600" fill="#ffffff">SMS</text>
+  </g>
+
+  <!-- Main agent node -->
+  <g filter="url(#glow)">
+    <rect x="392" y="330" width="312" height="140" rx="18" fill="#141d2b" stroke="#9fef00" stroke-width="3"/>
+  </g>
+  <text x="548" y="380" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="700" fill="#ffffff">AI Coordinator</text>
+  <text x="548" y="414" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="20" fill="#9fef00">agent &#183; tools &#183; memory</text>
+  <text x="548" y="446" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="18" fill="#A4B1CD">GPT-4.1 + fallback</text>
+
+  <!-- Sub agent node -->
+  <g>
+    <rect x="866" y="300" width="186" height="96" rx="14" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="959" y="340" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="600" fill="#ffffff">Negotiation</text>
+    <text x="959" y="370" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="600" fill="#ffffff">Sub-Agent</text>
+  </g>
+
+  <!-- SMS out node -->
+  <g>
+    <rect x="866" y="448" width="186" height="96" rx="14" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="959" y="488" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="600" fill="#ffffff">Confirmations</text>
+    <text x="959" y="518" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="19" fill="#9fef00">SMS &#183; email &#183; cal</text>
+  </g>
+
+  <!-- Tool chips -->
+  <g font-family="'Fira Code', Consolas, monospace" font-size="19" fill="#A4B1CD">
+    <rect x="180" y="574" width="196" height="52" rx="26" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="278" y="606" text-anchor="middle">route optimizer</text>
+    <rect x="396" y="592" width="180" height="52" rx="26" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="486" y="624" text-anchor="middle">MLS scraper</text>
+    <rect x="596" y="592" width="160" height="52" rx="26" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="676" y="624" text-anchor="middle">status db</text>
+    <rect x="776" y="574" width="190" height="52" rx="26" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="871" y="606" text-anchor="middle">follow-ups</text>
+  </g>
+
+  <!-- Accent line bottom -->
+  <rect x="0" y="712" width="1280" height="8" fill="url(#accentFade)"/>
+</svg>

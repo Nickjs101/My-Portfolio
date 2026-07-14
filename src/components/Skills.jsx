@@ -1,20 +1,21 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-import { 
-  SiGithubactions, 
-  SiTerraform, 
-  SiPython, 
-  SiMysql, 
-  SiGnubash, 
-  SiTailwindcss, 
-  SiReact, 
-  SiGit, 
-  SiJavascript, 
-  SiLinux, 
-  SiUnity, 
+import {
+  SiGithubactions,
+  SiTerraform,
+  SiPython,
+  SiMysql,
+  SiGnubash,
+  SiTailwindcss,
+  SiReact,
+  SiGit,
+  SiJavascript,
+  SiLinux,
+  SiUnity,
   SiOpenai,
   SiN8N,
-  SiMake 
+  SiMake
 } from 'react-icons/si';
 import { FaAws, FaSlack } from 'react-icons/fa';
 import { PiFileCSharp } from "react-icons/pi";
@@ -40,42 +41,80 @@ const Skills = () => {
     { name: 'Slack', icon: <FaSlack /> },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
     <section id='Skills' className='py-24 md:py-20 relative' style={{
       backgroundColor: 'var(--bg-primary)'
     }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4" style={{
-          color: 'var(--text-primary)'
-        }}>
-          My Tech Stack
-        </h2>
-        <div className="h-1 w-20 mx-auto rounded-full mb-8" style={{
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4" style={{
+            color: 'var(--text-primary)'
+          }}>
+            My Tech Stack
+          </h2>
+          <div className="h-1 w-20 mx-auto rounded-full mb-8" style={{
             backgroundColor: 'var(--button-bg)'
           }}></div>
+        </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10">
+        <motion.div
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
+        >
           {skills.map((skill, index) => (
-            <div key={index} className="flex flex-col items-center group">
-              <div className="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-3 transition-colors duration-300"
-                style={{
-                  color: 'var(--text-secondary)',
-                  ':hover': { color: 'var(--accent-primary)' }
+            <motion.div
+              key={index}
+              className="flex flex-col items-center group cursor-pointer"
+              variants={itemVariants}
+            >
+              <motion.div
+                className="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-3 transition-colors duration-300"
+                style={{ color: 'var(--text-secondary)' }}
+                whileHover={{
+                  scale: 1.2,
+                  color: 'var(--accent-primary)',
                 }}
               >
                 {skill.icon}
-              </div>
-              <span className="text-xs sm:text-sm md:text-base font-medium text-center transition-colors duration-300"
-                style={{
-                  color: 'var(--text-secondary)',
-                  ':hover': { color: 'var(--accent-primary)' }
-                }}
+              </motion.div>
+              <span
+                className="text-xs sm:text-sm md:text-base font-medium text-center transition-colors duration-300 group-hover:text-accent-primary"
+                style={{ color: 'var(--text-secondary)' }}
               >
                 {skill.name}
               </span>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

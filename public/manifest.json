@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Nick JS",
+  "name": "Nick JS | Full Stack Developer & Automation Engineer",
+  "description": "Full Stack Developer specializing in React, automation workflows, and cybersecurity.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0b121f",
+  "background_color": "#0b121f"
 }

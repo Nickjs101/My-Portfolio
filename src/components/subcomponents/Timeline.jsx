@@ -38,10 +38,19 @@ const Timeline = ({ data }) => {
         {data.map((item, index) => (
           <div key={index} className="flex justify-start pt-10 md:pt-40 md:gap-10">
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-              <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
-                <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
+              <div
+                className="h-10 absolute left-3 md:left-3 w-10 rounded-full flex items-center justify-center"
+                style={{ backgroundColor: 'var(--bg-secondary)' }}
+              >
+                <div
+                  className="h-4 w-4 rounded-full p-2"
+                  style={{
+                    backgroundColor: 'var(--bg-tertiary)',
+                    border: '1px solid var(--card-border)'
+                  }}
+                />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold "style={{ color: 'var(--text-secondary)' }}>
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold" style={{ color: 'var(--text-secondary)' }}>
                 {item.year}
               </h3>
             </div>
@@ -51,19 +60,19 @@ const Timeline = ({ data }) => {
                 {item.title}
               </h3>
               <h4 className="text-lg font-semibold mb-2" style={{ color: 'var(--accent-primary)' }}>{item.company}</h4>
-              <p className="block text-sm mb-4"style={{ color: 'var(--text-secondary)' }}>{item.period}</p>
+              <p className="block text-sm mb-4" style={{ color: 'var(--text-secondary)' }}>{item.period}</p>
               <ul className="space-y-3 sm:space-y-4">
-                      {item.responsibilities.map((resp, idx) => (
-                        <li key={idx} className="space-y-1">
-                          <h4 className="font-medium text-sm sm:text-base" style={{ color: 'var(--accent-primary)' }}>
-                            {resp.title}
-                          </h4>
-                          <p className="text-xs sm:text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                            {resp.description}
-                          </p>
-                        </li>
-                      ))}
-                    </ul>
+                {item.responsibilities.map((resp, idx) => (
+                  <li key={idx} className="space-y-1">
+                    <h4 className="font-medium text-sm sm:text-base" style={{ color: 'var(--accent-primary)' }}>
+                      {resp.title}
+                    </h4>
+                    <p className="text-xs sm:text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                      {resp.description}
+                    </p>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         ))}
@@ -71,14 +80,21 @@ const Timeline = ({ data }) => {
           style={{
             height: height + "px",
           }}
-          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
+          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
         >
-          <motion.div
+          <div
+            className="absolute inset-0 w-[2px]"
             style={{
+              background: 'linear-gradient(to bottom, transparent, var(--bg-tertiary), transparent)'
+            }}
+          />
+          <motion.div
+            className="absolute inset-x-0 top-0 w-[2px] rounded-full"
+            style={{
+              background: 'linear-gradient(to top, transparent, var(--accent-secondary), var(--accent-primary))',
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-green-900 via-green-500 to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
       </div>
@@ -87,4 +103,3 @@ const Timeline = ({ data }) => {
 }
 
 export default Timeline
-

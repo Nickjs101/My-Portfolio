@@ -20,32 +20,32 @@ export default function About() {
 
             <div className="prose prose-invert max-w-none">
               <p style={{ color: 'var(--text-secondary)' }} className="text-base sm:text-lg leading-relaxed">
-                I am <span style={{ color: 'var(--accent-primary)' }} className="font-semibold">Nick Joshua Montemayor</span>, 
-                an IT professional from Angeles City, Pampanga, with a passion for 
-                <span style={{ color: 'var(--accent-primary)' }}> software development</span>, 
-                <span style={{ color: 'var(--accent-primary)' }}> cybersecurity</span>, and 
-                <span style={{ color: 'var(--accent-primary)' }}> innovative technology solutions</span>.
+                I am <span style={{ color: 'var(--accent-primary)' }} className="font-semibold">Nick Joshua Montemayor</span>,
+                a freelance developer specializing in
+                <span style={{ color: 'var(--accent-primary)' }}> AI automation</span>,
+                <span style={{ color: 'var(--accent-primary)' }}> workflow engineering</span>, and
+                <span style={{ color: 'var(--accent-primary)' }}> web development</span>.
               </p>
-              
+
               <p style={{ color: 'var(--text-secondary)' }} className="text-base sm:text-lg leading-relaxed mt-4">
-                With a strong foundation in programming and hands-on experience in developing 
-                a variety of projects, I am driven by the desire to create impactful and 
-                efficient technological solutions.
+                I build systems that do real work for real businesses: AI agents that coordinate
+                appointments over SMS, content pipelines that publish themselves, and integrations
+                that keep your tools in sync — so you and your team can focus on the work only
+                humans can do.
               </p>
             </div>
 
             <div className="space-y-3">
               <div style={{ color: 'var(--text-secondary)' }} className="text-base sm:text-lg leading-relaxed">
                 <p>
-                  My expertise spans multiple programming languages and technologies. I have 
-                  successfully led and contributed to projects involving game development, 
-                  AI chatbots, and mobile applications. In addition to my development skills, 
-                  I excel in troubleshooting and computer maintenance, ensuring optimal 
-                  performance and resolving technical issues efficiently.
+                  My background spans software development, IT instruction, and cybersecurity,
+                  which means the automations I ship are not just clever — they are documented,
+                  secure, and built to keep running after I hand them over. I work with n8n,
+                  Make, Zapier, the OpenAI API, and custom code when the problem calls for it.
                 </p>
                 <p className="mt-4">
-                  I am constantly seeking new challenges and opportunities to apply my skills 
-                  in dynamic and growth-oriented tech environments.
+                  If a task in your business happens more than once a week, there is a good
+                  chance I can automate it. Tell me about it — I enjoy the puzzle.
                 </p>
               </div>
             </div>

@@ -56,11 +56,10 @@ const Certs = () => {
                 className="relative w-full aspect-square"
                 title={cert.title}
               >
-                <img src={cert.badge} alt={cert.title} fill className="object-cover" />
+                <img src={cert.badge} alt={cert.title} className="object-cover" loading="lazy" />
               </a>
             </div>
           ))}
-          <div class="hexagon"></div>
         </div>
       </div>
       <Courses />

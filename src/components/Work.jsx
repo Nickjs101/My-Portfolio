@@ -1,11 +1,8 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-
-import { useSelector } from 'react-redux'
+import { SoftwareDev, Cybersecurity } from './data/projects'
 
 const Work = ({ displayProject }) => {
-  const Projects = useSelector((state) => state.project.projects);
   
   return (
     <div id='Work' className='max-w-[1200px] py-20 px-4 sm:px-6 lg:px-8 mx-auto'>
@@ -19,7 +16,7 @@ const Work = ({ displayProject }) => {
             Software Development
           </div>
           <div className='grid sm:grid-cols-2 md:grid-cols-2 gap-4 lg:px-[200px]'> {/*Remove padding when element greater than 3*/}
-          {Projects[1].SoftwareDev.map((project, index) => (
+          {SoftwareDev.map((project, index) => (
             <div key={index} className='card p-4 rounded-xl'>
               {project.image}
               <div className='p-4'>
@@ -61,7 +58,7 @@ const Work = ({ displayProject }) => {
                 CyberSecurity
             </div>
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
-              {Projects[0].Cybersecurity.map((project, index) => (
+              {Cybersecurity.map((project, index) => (
                   <div key={index} className='card p-4 rounded-xl'>
                       {project.image}
                       <h1 className='text-lg font-bold' style={{ color: 'var(--text-primary)' }}>

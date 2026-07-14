@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <pattern id="dots2" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#1e293b"/>
+    </pattern>
+    <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="accentFade2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9fef00"/>
+      <stop offset="1" stop-color="#9fef00" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="#0b121f"/>
+  <rect width="1280" height="720" fill="url(#dots2)"/>
+
+  <!-- Title -->
+  <text x="64" y="96" font-family="'Segoe UI', system-ui, sans-serif" font-size="52" font-weight="700" fill="#ffffff">Automated Project Page Generator</text>
+  <rect x="64" y="118" width="120" height="6" rx="3" fill="#9fef00"/>
+  <text x="64" y="164" font-family="'Fira Code', Consolas, monospace" font-size="26" fill="#A4B1CD">Docs in &#8594; deployed React pages out &#183; n8n + GPT</text>
+
+  <!-- Pipeline connections -->
+  <g stroke="#3d4a5c" stroke-width="3" fill="none" stroke-dasharray="8 8">
+    <path d="M 300 400 L 372 400"/>
+    <path d="M 604 400 L 676 400"/>
+    <path d="M 908 400 L 980 400"/>
+    <path d="M 488 470 C 488 530 560 560 620 570"/>
+    <path d="M 792 470 C 792 530 720 560 660 570"/>
+  </g>
+
+  <!-- Stage 1: Drive -->
+  <g>
+    <rect x="96" y="352" width="204" height="96" rx="14" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="198" y="392" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="23" font-weight="600" fill="#ffffff">Google Drive</text>
+    <text x="198" y="424" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="19" fill="#9fef00">assets + docs</text>
+  </g>
+
+  <!-- Stage 2: GPT -->
+  <g filter="url(#glow2)">
+    <rect x="372" y="340" width="232" height="120" rx="16" fill="#141d2b" stroke="#9fef00" stroke-width="3"/>
+  </g>
+  <text x="488" y="390" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="26" font-weight="700" fill="#ffffff">GPT Codegen</text>
+  <text x="488" y="424" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="19" fill="#9fef00">JSX + validation</text>
+
+  <!-- Stage 3: GitHub -->
+  <g>
+    <rect x="676" y="352" width="232" height="96" rx="14" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="792" y="392" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="23" font-weight="600" fill="#ffffff">Git Commit</text>
+    <text x="792" y="424" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="19" fill="#9fef00">auto PR + rollback</text>
+  </g>
+
+  <!-- Stage 4: Netlify -->
+  <g>
+    <rect x="980" y="352" width="204" height="96" rx="14" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="1082" y="392" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="23" font-weight="600" fill="#ffffff">Netlify Deploy</text>
+    <text x="1082" y="424" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="19" fill="#9fef00">live in minutes</text>
+  </g>
+
+  <!-- Notify chip -->
+  <g>
+    <rect x="524" y="556" width="232" height="52" rx="26" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="640" y="588" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="19" fill="#A4B1CD">telegram notify</text>
+  </g>
+
+  <rect x="0" y="712" width="1280" height="8" fill="url(#accentFade2)"/>
+</svg>

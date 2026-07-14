@@ -71,13 +71,13 @@ export default function Education() {
           <div className="relative h-[60vh] w-full md:w-2/3 my-[50px] px-[10px] lg:w-1/3 md:mx-auto">
             <img className='absolute top-[-30px] left-2 w-auto h-2/5 rounded-xl border border-white shadow-2xl' style={{
                 borderColor: 'var(--card-border)'
-              }} src={comp} alt="About " width={300} height={300} />
+              }} src={comp} alt="Huawei ICT Competition" width={300} height={300} loading="lazy" />
             <img className='absolute top-1/4 right-3 lg:right-0 w-auto h-3/5 z-10 rounded-xl border border-white shadow-2xl' style={{
                 borderColor: 'var(--card-border)'
-              }} src={gradpic} alt="About " width={300} height={300} />
+              }} src={gradpic} alt="Nick Joshua at graduation ceremony - Magna Cum Laude" width={300} height={300} loading="lazy" />
             <img className='absolute bottom-[-50px] lg:bottom-[-30px] left-2 lg:left-[-20px] w-auto h-2/5 rounded-xl border border-white shadow-2xl' style={{
                 borderColor: 'var(--card-border)'
-              }} src={org} alt="About " width={300} height={300} />
+              }} src={org} alt="Tech Matrix Organization President" width={300} height={300} loading="lazy" />
           </div>
         </div>
       </div>
