@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <pattern id="dots4" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#1e293b"/>
+    </pattern>
+    <filter id="glow4" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="accentFade4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9fef00"/>
+      <stop offset="1" stop-color="#9fef00" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="#0b121f"/>
+  <rect width="1280" height="720" fill="url(#dots4)"/>
+
+  <!-- Title -->
+  <text x="64" y="96" font-family="'Segoe UI', system-ui, sans-serif" font-size="56" font-weight="700" fill="#ffffff">AI Appointment Setter</text>
+  <rect x="64" y="118" width="120" height="6" rx="3" fill="#9fef00"/>
+  <text x="64" y="164" font-family="'Fira Code', Consolas, monospace" font-size="26" fill="#A4B1CD">RAG chatbot that answers &amp; books &#183; Telegram + Messenger</text>
+
+  <!-- Connections -->
+  <g stroke="#3d4a5c" stroke-width="3" fill="none" stroke-dasharray="8 8">
+    <path d="M 296 356 C 350 356 380 380 420 392"/>
+    <path d="M 296 466 C 350 466 380 440 420 424"/>
+    <path d="M 736 400 L 812 400"/>
+    <path d="M 540 470 C 520 540 470 570 430 584"/>
+    <path d="M 620 470 C 640 540 690 570 730 584"/>
+  </g>
+
+  <!-- Channel: Telegram -->
+  <g>
+    <rect x="96" y="308" width="200" height="96" rx="14" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="196" y="348" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="23" font-weight="600" fill="#ffffff">Telegram</text>
+    <text x="196" y="380" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="19" fill="#9fef00">bot channel</text>
+  </g>
+
+  <!-- Channel: Messenger -->
+  <g>
+    <rect x="96" y="418" width="200" height="96" rx="14" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="196" y="458" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="23" font-weight="600" fill="#ffffff">Messenger</text>
+    <text x="196" y="490" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="19" fill="#9fef00">via ManyChat</text>
+  </g>
+
+  <!-- Agent -->
+  <g filter="url(#glow4)">
+    <rect x="420" y="330" width="316" height="140" rx="18" fill="#141d2b" stroke="#9fef00" stroke-width="3"/>
+  </g>
+  <text x="578" y="382" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="700" fill="#ffffff">AI Agent</text>
+  <text x="578" y="416" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="20" fill="#9fef00">RAG &#183; memory &#183; tools</text>
+  <text x="578" y="448" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="18" fill="#A4B1CD">answers questions, books slots</text>
+
+  <!-- Output -->
+  <g>
+    <rect x="812" y="352" width="220" height="96" rx="14" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="922" y="392" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="23" font-weight="600" fill="#ffffff">Booked ✓</text>
+    <text x="922" y="424" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="19" fill="#9fef00">no double-booking</text>
+  </g>
+
+  <!-- Tool chips -->
+  <g font-family="'Fira Code', Consolas, monospace" font-size="19" fill="#A4B1CD">
+    <rect x="280" y="566" width="240" height="52" rx="26" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="400" y="598" text-anchor="middle">check_availability</text>
+    <rect x="600" y="566" width="240" height="52" rx="26" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="720" y="598" text-anchor="middle">set_appointment</text>
+  </g>
+
+  <rect x="0" y="712" width="1280" height="8" fill="url(#accentFade4)"/>
+</svg>

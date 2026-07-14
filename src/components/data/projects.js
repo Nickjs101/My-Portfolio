@@ -7,6 +7,8 @@ import Sql from '../../assets/Linux/Picture1.png';
 import YoutubeShortsAutomationCover from '../../assets/Works/youtubeshortsautomationcover.png';
 import RealEstateCoordinatorCover from '../../assets/Works/realestatecoordinatorcover.svg';
 import ProjectPageGeneratorCover from '../../assets/Works/projectpagegeneratorcover.svg';
+import OfferRecapCover from '../../assets/Works/offerrecapcover.svg';
+import AppointmentSetterCover from '../../assets/Works/appointmentsettercover.svg';
 
 export const Latest = [
   {
@@ -18,6 +20,34 @@ export const Latest = [
     image: RealEstateCoordinatorCover,
     skills: ['n8n', 'OpenAI GPT-4.1', 'Multi-Agent AI', 'OpenPhone SMS', 'Google Maps API', 'Web Scraping', 'Google Sheets', 'MCP Tools', 'Calendar API'],
     componentKey: 'RealEstateShowingCoordinator',
+    links: {
+      github: null,
+      live: null,
+    },
+  },
+  {
+    id: 5,
+    title: 'AI Offer Intake & Recap',
+    category: 'Automation',
+    description: 'Document-AI pipeline that reads scanned real-estate offer PDFs the moment they hit the inbox — OCR, AI extraction of deal terms, a structured Google Sheets deal log, and an auto-drafted recap email.',
+    type: 'Automation',
+    image: OfferRecapCover,
+    skills: ['n8n', 'Mistral OCR', 'OpenAI', 'Information Extraction', 'Gmail API', 'Google Sheets', 'Document AI'],
+    componentKey: 'OfferRecapAutomation',
+    links: {
+      github: null,
+      live: null,
+    },
+  },
+  {
+    id: 4,
+    title: 'AI Appointment-Setting Chatbot',
+    category: 'Automation',
+    description: 'RAG chatbot on Telegram and Facebook Messenger that answers business questions from a knowledge base and books real appointments in chat — with availability checks so it never double-books.',
+    type: 'Automation',
+    image: AppointmentSetterCover,
+    skills: ['n8n', 'OpenAI GPT-4o-mini', 'RAG', 'Tool Calling', 'Telegram Bot API', 'ManyChat', 'Calendar Integration'],
+    componentKey: 'AppointmentSetterAgent',
     links: {
       github: null,
       live: null,
@@ -175,6 +205,30 @@ export const Automation = [
     image: RealEstateCoordinatorCover,
     skills: ['n8n', 'OpenAI GPT-4.1', 'Multi-Agent AI', 'OpenPhone SMS', 'Google Maps API', 'Web Scraping', 'Google Sheets', 'MCP Tools', 'Calendar API'],
     componentKey: 'RealEstateShowingCoordinator',
+    links: {
+      github: null,
+      live: null,
+    },
+  },
+  {
+    title: 'AI Offer Intake & Recap',
+    category: 'Automation',
+    description: 'Document-AI pipeline that reads scanned real-estate offer PDFs the moment they hit the inbox — OCR, AI extraction of deal terms, a structured Google Sheets deal log, and an auto-drafted recap email.',
+    image: OfferRecapCover,
+    skills: ['n8n', 'Mistral OCR', 'OpenAI', 'Information Extraction', 'Gmail API', 'Google Sheets', 'Document AI'],
+    componentKey: 'OfferRecapAutomation',
+    links: {
+      github: null,
+      live: null,
+    },
+  },
+  {
+    title: 'AI Appointment-Setting Chatbot',
+    category: 'Automation',
+    description: 'RAG chatbot on Telegram and Facebook Messenger that answers business questions from a knowledge base and books real appointments in chat — with availability checks so it never double-books.',
+    image: AppointmentSetterCover,
+    skills: ['n8n', 'OpenAI GPT-4o-mini', 'RAG', 'Tool Calling', 'Telegram Bot API', 'ManyChat', 'Calendar Integration'],
+    componentKey: 'AppointmentSetterAgent',
     links: {
       github: null,
       live: null,

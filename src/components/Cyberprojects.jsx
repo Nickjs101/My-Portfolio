@@ -14,6 +14,8 @@ const componentRegistry = {
   AutomatedProjectPageGenerator: lazy(() => import('./subcomponents/AutomatedProjectPageGenerator')),
   YoutubeShortsAutomation: lazy(() => import('./subcomponents/YoutubeShortsAutomation')),
   RealEstateShowingCoordinator: lazy(() => import('./subcomponents/RealEstateShowingCoordinator')),
+  OfferRecapAutomation: lazy(() => import('./subcomponents/OfferRecapAutomation')),
+  AppointmentSetterAgent: lazy(() => import('./subcomponents/AppointmentSetterAgent')),
 };
 
 const LoadingFallback = () => (
