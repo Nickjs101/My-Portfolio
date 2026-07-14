@@ -199,12 +199,12 @@ const RealEstateShowingCoordinator = () => {
                 <figure className="my-6">
                   <img
                     src={CanvasImage}
-                    alt="The actual n8n canvas of the main coordination workflow: two AI agent clusters surrounded by extensive documentation notes"
+                    alt="The actual n8n canvas: an inbound webhook routes by sender into the coordinator agent and the negotiation sub-agent, each wired to its own row of tools"
                     className="w-full h-auto rounded-lg border"
                     style={{ borderColor: 'var(--card-border)' }}
                   />
                   <figcaption className="text-xs mt-2 text-center" style={{ color: 'var(--text-secondary)' }}>
-                    The real n8n canvas of the main workflow — two agent clusters and the documentation that ships with them (client details anonymized).
+                    The real n8n canvas — one webhook routes each inbound SMS to the coordinator agent (top) or the negotiation sub-agent (bottom), each with its own toolset (client details anonymized).
                   </figcaption>
                 </figure>
               </>
