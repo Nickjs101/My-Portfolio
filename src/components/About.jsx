@@ -37,10 +37,11 @@ export default function About() {
             <div className="space-y-3">
               <div style={{ color: 'var(--text-secondary)' }} className="text-base sm:text-lg leading-relaxed">
                 <p>
-                  My background spans software development, IT instruction, and cybersecurity,
-                  which means the automations I ship are not just clever — they are documented,
-                  secure, and built to keep running after I hand them over. I work with n8n,
-                  Make, Zapier, the OpenAI API, and custom code when the problem calls for it.
+                  My background spans DevOps engineering on AWS, software development, and IT
+                  instruction, which means the automations I ship are not just clever — they are
+                  documented, secure, and built to keep running after I hand them over. I work
+                  with n8n, Make, Zapier, the OpenAI API, and custom code when the problem
+                  calls for it.
                 </p>
                 <p className="mt-4">
                   If a task in your business happens more than once a week, there is a good

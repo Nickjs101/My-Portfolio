@@ -3,58 +3,78 @@ import Timeline from "./subcomponents/Timeline"
 
 const experiences = [
   {
-    title: "Freelance Automation Specialist",
-    company: "Self-Employed",
-    period: "2024 - Present",
-    year: "2025",
+    title: "AI Automation Specialist",
+    company: "Freelance",
+    period: "Dec 2024 - Present",
+    year: "Now",
     responsibilities: [
       {
-        title: "Workflow Automation",
-        description: "Designed and implemented automated workflows for small businesses using tools like n8n, Zapier, and custom Python scripts to reduce manual tasks."
+        title: "AI Agents & Workflow Automation",
+        description: "Design and ship automation systems for business clients using n8n and Make.com — from multi-agent SMS schedulers to hands-off content pipelines."
       },
       {
-        title: "Data Integration",
-        description: "Integrated APIs, databases, and cloud services to enable seamless data synchronization between platforms."
+        title: "Operational Impact",
+        description: "Achieved up to a 90% reduction in operational time on automated processes and boosted client workflow efficiency by 45%."
       },
       {
-        title: "Custom Tool Development",
-        description: "Created tailored automation scripts and utilities to solve client-specific challenges and boost operational efficiency."
+        title: "Systems Integration",
+        description: "Connect CRMs, spreadsheets, calendars, email, SMS, and scraping pipelines into single automated flows with error handling and human approval gates."
       },
       {
-        title: "Reporting & Analytics Automation",
-        description: "Automated generation of business reports and analytics dashboards to support data-driven decision-making."
+        title: "Process Discovery",
+        description: "Collaborate directly with owners and teams to identify the highest-leverage automation opportunities before writing a single node."
       }
     ]
   },
   {
     title: "DevOps Engineer",
     company: "Qstrike Innovations Phils. OPC",
-    period: "Aug 2024 - Present",
+    period: "Aug 2025 - Jun 2026",
+    year: "2026",
+    responsibilities: [
+      {
+        title: "AWS Cloud Infrastructure",
+        description: "Designed, implemented, and maintained AWS infrastructure for high-availability web applications — EC2, Auto Scaling, ALB, Aurora MySQL, CloudWatch, S3, CloudFront, IAM, SSM, EventBridge, and Secrets Manager."
+      },
+      {
+        title: "CI/CD Pipelines",
+        description: "Built and standardized deployment pipelines with Jenkins and GitHub Actions, improving deployment reliability across projects."
+      },
+      {
+        title: "Automation & Tooling",
+        description: "Automated infrastructure management, deployments, reporting, and server administration with Bash and the AWS CLI — cutting a 10-minute operational task to under 1 minute (90%+ faster)."
+      },
+      {
+        title: "Server Administration",
+        description: "Administered Linux and FreeBSD servers running Nginx, PHP-FPM, Redis, and Supervisor; managed production incidents across servers, databases, and cloud services."
+      },
+      {
+        title: "Cost & Performance Optimization",
+        description: "Optimized AWS infrastructure for performance, scalability, and cost efficiency, including Aurora MySQL backup, restoration, and synchronization."
+      }
+    ]
+  },
+  {
+    title: "Application Support Engineer - DevOps",
+    company: "Qstrike Innovations Phils. OPC",
+    period: "Aug 2024 - Aug 2025",
     year: "2025",
     responsibilities: [
       {
-        title: "Technical Support & Incident Management",
-        description: "Provide expert-level technical support to U.S.-based employees and end-users, diagnosing and resolving issues across the platform’s customization tools and infrastructure."
+        title: "Expert-Level Platform Support",
+        description: "Supported U.S.-based employees and end-users of a sports apparel customization platform, collaborating with developers, QA, and project managers to resolve technical issues fast."
       },
       {
-        title: "Infrastructure & Cloud Management",
-        description: "Manage and configure AWS infrastructure—including EC2 instances, VPC networks, S3 storage, Route 53 DNS, and CloudFront CDN—ensuring high availability, scalability, and security."
+        title: "DevOps Support",
+        description: "Troubleshot servers, databases, and AWS cloud infrastructure to keep the platform performant and reliable."
       },
       {
-        title: "CI/CD & Automation",
-        description: "Implement and maintain CI/CD pipelines using Jenkins, GitHub Actions, and Ansible to streamline code deployment, testing, and infrastructure provisioning."
+        title: "Automation Tooling",
+        description: "Developed and deployed the automation tool that cut command execution from 10 minutes to under 1 minute, transforming developer workflow."
       },
       {
-        title: "Infrastructure as Code",
-        description: "Use Terraform and Bash scripting to automate provisioning, configuration, and deployment processes, reducing manual intervention and improving system reliability."
-      },
-      {
-        title: "Monitoring & Maintenance",
-        description: "Set up monitoring tools (e.g., CloudWatch) for system performance tracking, proactively address issues, and perform regular maintenance to ensure optimal performance."
-      },
-      {
-        title: "Custom Automation Tool Development",
-        description: "Developed a custom automation tool that reduced command execution times by 90%, significantly improving developer productivity and operational efficiency."
+        title: "Infrastructure Delivery",
+        description: "Designed cloud infrastructure for new company projects and client-facing websites using Jenkins, GitHub Actions, Ansible, Terraform, and Bash."
       }
     ]
   },
@@ -85,7 +105,7 @@ const experiences = [
   {
     title: "Service Crew",
     company: "Fusion Manpower (Jollibee)",
-    period: "Jul 2019 - Sep 2019",
+    period: "Jun 2019 - Sep 2019",
     year: "2019",
     responsibilities: [
       {
