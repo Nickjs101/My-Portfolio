@@ -2,6 +2,8 @@ import React from 'react'
 import { projectStyles as styles } from './ProjectStyles'
 import CoverImage from '../../assets/Works/realestatecoordinatorcover.svg'
 import CanvasImage from '../../assets/Works/realestatecoordinatorcanvas.png'
+import ReroutingCanvas from '../../assets/Works/reroutingtoolcanvas.png'
+import CheckBatchCanvas from '../../assets/Works/checkbatchcanvas.png'
 
 const DiagramNode = ({ title, subtitle, accent }) => (
   <div
@@ -140,6 +142,24 @@ const RealEstateShowingCoordinator = () => {
       ]
     },
     {
+      heading: 'Inside the Supporting Workflows',
+      paragraphs: [
+        'The agents stay simple because the heavy lifting lives in dedicated tool workflows — each one testable in isolation and reusable by any agent. Two examples:'
+      ],
+      images: [
+        {
+          src: ReroutingCanvas,
+          alt: 'The ReroutingTool n8n canvas: 60+ nodes of parallel per-property branches for geocoding, map URL generation, SQL updates, merging and re-aggregation',
+          caption: 'ReroutingTool — 60+ nodes. When the realtor wants a different property order, parallel branches re-geocode every stop, rebuild map links, recalculate drive times, and write the new schedule back to the database.'
+        },
+        {
+          src: CheckBatchCanvas,
+          alt: 'The CheckBatchCompletion n8n canvas: a branching pipeline that sorts tentative appointments, checks ordering conflicts, and triggers rerouting or owner notification',
+          caption: 'CheckBatchCompletion — watches every batch of showings, sorts confirmed times, detects out-of-order routes, and automatically triggers the rerouting tool or notifies the realtor.'
+        }
+      ]
+    },
+    {
       heading: 'Guardrails & Reliability',
       list: [
         'Hard confirmation gates: context lock, same-day check, time-window check, and cross-property conflict detection must all pass before a time is held.',
@@ -219,6 +239,21 @@ const RealEstateShowingCoordinator = () => {
                 ))}
               </ul>
             )}
+
+            {Array.isArray(section.images) &&
+              section.images.map((img) => (
+                <figure key={img.src} className="my-6">
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-auto rounded-lg border"
+                    style={{ borderColor: 'var(--card-border)' }}
+                  />
+                  <figcaption className="text-xs mt-2 text-center" style={{ color: 'var(--text-secondary)' }}>
+                    {img.caption}
+                  </figcaption>
+                </figure>
+              ))}
 
             {Array.isArray(section.groups) &&
               section.groups.map((group) => (
