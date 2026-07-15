@@ -4,6 +4,7 @@ import CoverImage from '../../assets/Works/realestatecoordinatorcover.svg'
 import CanvasImage from '../../assets/Works/realestatecoordinatorcanvas.png'
 import ReroutingCanvas from '../../assets/Works/reroutingtoolcanvas.png'
 import CheckBatchCanvas from '../../assets/Works/checkbatchcanvas.png'
+import MapAnalyzerCanvas from '../../assets/Works/mapanalyzercanvas.png'
 
 const DiagramNode = ({ title, subtitle, accent }) => (
   <div
@@ -144,9 +145,14 @@ const RealEstateShowingCoordinator = () => {
     {
       heading: 'Inside the Supporting Workflows',
       paragraphs: [
-        'The agents stay simple because the heavy lifting lives in dedicated tool workflows — each one testable in isolation and reusable by any agent. Two examples:'
+        'The agents stay simple because the heavy lifting lives in dedicated tool workflows — each one testable in isolation and reusable by any agent. Three examples:'
       ],
       images: [
+        {
+          src: MapAnalyzerCanvas,
+          alt: 'The MapAnalyzerTool n8n canvas: 66 nodes of parallel destination branches, property detail fetching, drive-time sorting, and ordered aggregation',
+          caption: 'MapAnalyzerTool — 66 nodes that turn a raw list of addresses into the optimal showing order: parallel branches fetch each property, compute drive times, and sort the route before anything is scheduled.'
+        },
         {
           src: ReroutingCanvas,
           alt: 'The ReroutingTool n8n canvas: 60+ nodes of parallel per-property branches for geocoding, map URL generation, SQL updates, merging and re-aggregation',
