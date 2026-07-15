@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 960" width="1280" height="960">
+  <defs>
+    <pattern id="d3" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#1e293b"/></pattern>
+    <filter id="g3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="a3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9fef00"/><stop offset="1" stop-color="#9fef00" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="1280" height="960" fill="#0b121f"/>
+  <rect width="1280" height="960" fill="url(#d3)"/>
+  <text x="64" y="150" font-family="'Segoe UI',system-ui,sans-serif" font-size="58" font-weight="700" fill="#ffffff">Website + Built-in Automations</text>
+  <rect x="64" y="176" width="130" height="6" rx="3" fill="#9fef00"/>
+  <text x="64" y="228" font-family="'Fira Code',Consolas,monospace" font-size="28" fill="#A4B1CD">A site that works while you sleep &#183; leads answered 24/7</text>
+
+  <!-- browser mock -->
+  <rect x="150" y="300" width="620" height="500" rx="16" fill="#141d2b" stroke="#243043" stroke-width="2"/>
+  <rect x="150" y="300" width="620" height="56" rx="16" fill="#1a2332"/>
+  <circle cx="184" cy="328" r="7" fill="#3d4a5c"/><circle cx="210" cy="328" r="7" fill="#3d4a5c"/><circle cx="236" cy="328" r="7" fill="#3d4a5c"/>
+  <rect x="300" y="316" width="360" height="24" rx="12" fill="#0b121f"/>
+  <rect x="190" y="400" width="300" height="40" rx="8" fill="#243043"/>
+  <rect x="190" y="460" width="440" height="18" rx="9" fill="#1e293b"/>
+  <rect x="190" y="492" width="400" height="18" rx="9" fill="#1e293b"/>
+  <rect x="190" y="560" width="220" height="60" rx="10" fill="#9fef00"/>
+  <text x="300" y="598" text-anchor="middle" font-family="'Segoe UI',system-ui" font-size="24" font-weight="700" fill="#0b121f">Get a Quote</text>
+  <rect x="190" y="660" width="500" height="100" rx="10" fill="#1a2332" stroke="#2e3b4f"/>
+  <text x="214" y="700" font-family="'Fira Code',monospace" font-size="18" fill="#A4B1CD">contact form</text>
+  <text x="214" y="732" font-family="'Segoe UI',system-ui" font-size="20" fill="#ffffff">Name &#183; Email &#183; Message</text>
+
+  <!-- automation side -->
+  <g stroke="#3d4a5c" stroke-width="3" fill="none" stroke-dasharray="8 8"><path d="M 770 560 L 860 560"/></g>
+  <g filter="url(#g3)"><rect x="860" y="500" width="270" height="120" rx="16" fill="#141d2b" stroke="#9fef00" stroke-width="3"/></g>
+  <text x="995" y="552" text-anchor="middle" font-family="'Segoe UI',system-ui" font-size="26" font-weight="700" fill="#ffffff">AI Auto-Reply</text>
+  <text x="995" y="586" text-anchor="middle" font-family="'Fira Code',monospace" font-size="19" fill="#9fef00">reply &#183; log &#183; book</text>
+  <g>
+    <rect x="860" y="360" width="270" height="90" rx="12" fill="#1a2332" stroke="#2e3b4f"/>
+    <text x="995" y="415" text-anchor="middle" font-family="'Segoe UI',system-ui" font-size="22" font-weight="600" fill="#ffffff">CRM + Calendar</text>
+  </g>
+  <text x="640" y="880" text-anchor="middle" font-family="'Fira Code',monospace" font-size="22" fill="#5b6b81">React &#183; chatbot &#183; CRM &#183; cloud-hosted &#183; SEO-ready</text>
+  <rect x="0" y="952" width="1280" height="8" fill="url(#a3)"/>
+</svg>
