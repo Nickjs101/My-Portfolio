@@ -8,7 +8,7 @@
   <rect width="1280" height="960" fill="url(#d3)"/>
   <text x="64" y="150" font-family="'Segoe UI',system-ui,sans-serif" font-size="58" font-weight="700" fill="#ffffff">Website + Built-in Automations</text>
   <rect x="64" y="176" width="130" height="6" rx="3" fill="#9fef00"/>
-  <text x="64" y="228" font-family="'Fira Code',Consolas,monospace" font-size="28" fill="#A4B1CD">A site that works while you sleep &#183; leads answered 24/7</text>
+  <text x="64" y="228" font-family="'Fira Code',Consolas,monospace" font-size="28" fill="#A4B1CD">A site that works while you sleep &#183; every inquiry answered 24/7</text>
 
   <!-- browser mock -->
   <rect x="150" y="300" width="620" height="500" rx="16" fill="#141d2b" stroke="#243043" stroke-width="2"/>
