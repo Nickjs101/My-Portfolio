@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 960" width="1280" height="960">
+  <defs>
+    <pattern id="d4" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#1e293b"/></pattern>
+    <filter id="g4" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="a4" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9fef00"/><stop offset="1" stop-color="#9fef00" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="1280" height="960" fill="#0b121f"/>
+  <rect width="1280" height="960" fill="url(#d4)"/>
+  <text x="64" y="150" font-family="'Segoe UI',system-ui,sans-serif" font-size="60" font-weight="700" fill="#ffffff">Private AI Server Setup</text>
+  <rect x="64" y="176" width="130" height="6" rx="3" fill="#9fef00"/>
+  <text x="64" y="228" font-family="'Fira Code',Consolas,monospace" font-size="28" fill="#A4B1CD">Your own AI stack &#183; no monthly SaaS fees &#183; online in days</text>
+
+  <!-- server rack -->
+  <g filter="url(#g4)"><rect x="150" y="300" width="380" height="480" rx="18" fill="#141d2b" stroke="#9fef00" stroke-width="3"/></g>
+  <text x="340" y="352" text-anchor="middle" font-family="'Segoe UI',system-ui" font-size="26" font-weight="700" fill="#ffffff">Your VPS</text>
+  <g>
+    <rect x="182" y="380" width="316" height="76" rx="10" fill="#1a2332" stroke="#2e3b4f"/>
+    <circle cx="212" cy="418" r="7" fill="#9fef00"/>
+    <text x="234" y="426" font-family="'Segoe UI',system-ui" font-size="24" font-weight="600" fill="#ffffff">n8n</text>
+    <text x="470" y="426" text-anchor="end" font-family="'Fira Code',monospace" font-size="17" fill="#9fef00">running</text>
+  </g>
+  <g>
+    <rect x="182" y="470" width="316" height="76" rx="10" fill="#1a2332" stroke="#2e3b4f"/>
+    <circle cx="212" cy="508" r="7" fill="#9fef00"/>
+    <text x="234" y="516" font-family="'Segoe UI',system-ui" font-size="24" font-weight="600" fill="#ffffff">OpenClaw</text>
+    <text x="470" y="516" text-anchor="end" font-family="'Fira Code',monospace" font-size="17" fill="#9fef00">running</text>
+  </g>
+  <g>
+    <rect x="182" y="560" width="316" height="76" rx="10" fill="#1a2332" stroke="#2e3b4f"/>
+    <circle cx="212" cy="598" r="7" fill="#9fef00"/>
+    <text x="234" y="606" font-family="'Segoe UI',system-ui" font-size="24" font-weight="600" fill="#ffffff">AI agents + DB</text>
+    <text x="470" y="606" text-anchor="end" font-family="'Fira Code',monospace" font-size="17" fill="#9fef00">running</text>
+  </g>
+  <g>
+    <rect x="182" y="650" width="316" height="60" rx="10" fill="#0b121f" stroke="#2e3b4f"/>
+    <text x="340" y="688" text-anchor="middle" font-family="'Fira Code',monospace" font-size="18" fill="#A4B1CD">HTTPS &#183; firewall &#183; backups</text>
+  </g>
+
+  <!-- connections -->
+  <g stroke="#3d4a5c" stroke-width="3" fill="none" stroke-dasharray="8 8">
+    <path d="M 530 430 L 840 380"/><path d="M 530 520 L 840 520"/><path d="M 530 610 L 840 660"/>
+  </g>
+  <g>
+    <rect x="840" y="336" width="290" height="88" rx="14" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="985" y="374" text-anchor="middle" font-family="'Segoe UI',system-ui" font-size="23" font-weight="600" fill="#ffffff">Telegram / WhatsApp</text>
+    <text x="985" y="404" text-anchor="middle" font-family="'Fira Code',monospace" font-size="18" fill="#9fef00">your AI assistant</text>
+  </g>
+  <g>
+    <rect x="840" y="476" width="290" height="88" rx="14" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="985" y="514" text-anchor="middle" font-family="'Segoe UI',system-ui" font-size="23" font-weight="600" fill="#ffffff">Business apps</text>
+    <text x="985" y="544" text-anchor="middle" font-family="'Fira Code',monospace" font-size="18" fill="#9fef00">CRM &#183; email &#183; sheets</text>
+  </g>
+  <g>
+    <rect x="840" y="616" width="290" height="88" rx="14" fill="#1a2332" stroke="#2e3b4f" stroke-width="2"/>
+    <text x="985" y="654" text-anchor="middle" font-family="'Segoe UI',system-ui" font-size="23" font-weight="600" fill="#ffffff">Monitoring</text>
+    <text x="985" y="684" text-anchor="middle" font-family="'Fira Code',monospace" font-size="18" fill="#9fef00">uptime alerts</text>
+  </g>
+
+  <text x="640" y="880" text-anchor="middle" font-family="'Fira Code',monospace" font-size="22" fill="#5b6b81">n8n &#183; OpenClaw &#183; Docker &#183; Ollama &#183; HTTPS &#183; automated backups</text>
+  <rect x="0" y="952" width="1280" height="8" fill="url(#a4)"/>
+</svg>
