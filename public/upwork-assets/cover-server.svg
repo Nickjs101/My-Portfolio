@@ -28,7 +28,7 @@
   <g>
     <rect x="182" y="560" width="316" height="76" rx="10" fill="#1a2332" stroke="#2e3b4f"/>
     <circle cx="212" cy="598" r="7" fill="#9fef00"/>
-    <text x="234" y="606" font-family="'Segoe UI',system-ui" font-size="24" font-weight="600" fill="#ffffff">AI agents + DB</text>
+    <text x="234" y="606" font-family="'Segoe UI',system-ui" font-size="24" font-weight="600" fill="#ffffff">AI apps + DB</text>
     <text x="470" y="606" text-anchor="end" font-family="'Fira Code',monospace" font-size="17" fill="#9fef00">running</text>
   </g>
   <g>
